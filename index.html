@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Spenda — The Multiplayer FinTech Ecosystem</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Spenda — The Multiplayer FinTech Ecosystem" />
+  <meta property="og:description" content="Execute payment protocols to unlock Spenda's investor pitch. Inclusive, seamless, and secure voucher payments across 800,000+ merchants." />
+  <meta property="og:site_name" content="Spenda Holdings" />
+  <meta property="og:url" content="https://www.spenda-sa.com/deck" />
+  <meta property="og:image" content="https://www.spenda-sa.com/og-deck.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spenda — The Multiplayer FinTech Ecosystem" />
+  <meta name="twitter:description" content="Execute payment protocols to unlock Spenda's investor pitch." />
+  <meta name="twitter:image" content="https://www.spenda-sa.com/og-deck.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Spenda Deck" />
+  <meta name="theme-color" content="#0E0B14" />
+  <meta name="description" content="Spenda's interactive investor pitch deck. Execute payment protocols to unlock market data, revenue models, traction, and funding allocation." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239B4DE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --spenda-purple: #9B4DE0;
+      --spenda-purple-light: #D6B8F2;
+      --spenda-purple-dim: #7B3BB8;
+      --spenda-purple-deep: #3D1F66;
+      --spenda-purple-glow: #D6B8F2;
+      --spenda-gold: #ffb407;
+      --spenda-gold-dim: #cc9005;
+      --bg-primary: #0E0B14;
+      --bg-secondary: #1A1525;
+      --bg-card: #1E1828;
+      --bg-card-hover: #241D30;
+      --bg-terminal: #0A0710;
+      --text-primary: #F5F2EC;
+      --text-secondary: #B0A8B8;
+      --text-muted: #6B5F78;
+      --border-color: #2E2640;
+      --border-hover: rgba(155, 77, 224, 0.45);
+      --danger: #ee4444;
+      --glow-purple: 0 0 20px rgba(155, 77, 224, 0.3), 0 0 60px rgba(155, 77, 224, 0.1);
+      --glow-gold: 0 0 20px rgba(255, 180, 7, 0.3), 0 0 60px rgba(255, 180, 7, 0.1);
+    }
+    html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grid-bg {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(155, 77, 224, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155, 77, 224, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+
+    /* Header */
+    .header { padding: 60px 0 40px; text-align: center; position: relative; }
+    .header::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 500px;
+      background: radial-gradient(circle, rgba(155, 77, 224, 0.12) 0%, rgba(214, 184, 242, 0.03) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-area { display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.25);
+      border-radius: 100px; padding: 6px 16px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 24px;
+    }
+    .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spenda-gold); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 6px var(--spenda-gold); }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .title {
+      font-family: 'Fraunces', serif; font-size: clamp(26px, 5vw, 44px); font-weight: 600;
+      letter-spacing: -0.5px; margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--spenda-purple-light) 50%, var(--spenda-purple-glow) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.15;
+    }
+    .subtitle { font-size: 15px; color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.75; }
+    .subtitle strong { color: var(--spenda-gold); font-weight: 600; }
+
+    /* Progress + Tally */
+    .progress-area { margin: 32px 0 48px; }
+    .progress-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+    .progress-segment { flex: 1; height: 3px; border-radius: 3px; background: var(--border-color); transition: background 0.6s ease, box-shadow 0.6s ease; }
+    .progress-segment.unlocked { background: var(--spenda-purple); box-shadow: 0 0 10px rgba(155, 77, 224, 0.5); }
+    .progress-labels { display: flex; justify-content: space-between; align-items: center; }
+    .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 1px; white-space: nowrap; }
+    .voucher-tally {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--spenda-gold);
+      letter-spacing: 0.5px; transition: color 0.3s ease;
+    }
+
+    /* Section */
+    .section { margin-bottom: 40px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .section-number {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-purple-light);
+      background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.2);
+      padding: 4px 10px; border-radius: 6px; letter-spacing: 1px;
+    }
+    .section-title { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.2px; }
+
+    /* Locked Card */
+    .locked-card {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      overflow: hidden; transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .locked-card:hover { border-color: var(--border-hover); }
+    .locked-body { padding: 28px; }
+    .lock-icon-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .lock-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(255, 107, 107, 0.1); border: 1px solid rgba(255, 107, 107, 0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 14px;
+    }
+    .lock-status { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--danger); }
+    .lock-message { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+    .action-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
+      color: #fff; border: none; border-radius: 10px; padding: 14px 28px;
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.5px; transition: transform 0.15s ease, box-shadow 0.3s ease;
+      box-shadow: var(--glow-purple); min-height: 48px; -webkit-tap-highlight-color: transparent;
+    }
+    .action-btn:hover { transform: translateY(-1px); box-shadow: 0 0 30px rgba(155, 77, 224, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3); }
+    .action-btn:active { transform: translateY(0) scale(0.98); }
+    .action-btn .arrow { transition: transform 0.2s ease; }
+    .action-btn:hover .arrow { transform: translateX(3px); }
+
+    /* Terminal */
+    .terminal-output {
+      display: none; background: var(--bg-terminal); border-top: 1px solid var(--border-color);
+      padding: 20px 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+      line-height: 2; color: var(--spenda-purple-glow); min-height: 60px;
+    }
+    .terminal-output.active { display: block; }
+    .terminal-line { opacity: 0; transform: translateX(-5px); }
+    .terminal-line.visible { opacity: 1; transform: translateX(0); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .terminal-line .prompt { color: var(--spenda-purple-light); margin-right: 4px; }
+    .terminal-line.success { color: var(--spenda-gold); }
+    .cursor-blink {
+      display: inline-block; width: 8px; height: 15px; background: var(--spenda-purple-light);
+      margin-left: 4px; vertical-align: text-bottom; animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* Unlocked */
+    .unlocked-content { display: none; padding: 28px; }
+    .unlocked-content.active { display: block; animation: fadeUp 0.6s ease forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .unlocked-card.revealed { border-color: rgba(155, 77, 224, 0.35); box-shadow: var(--glow-purple); }
+    .unlocked-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 20px;
+    }
+    .unlocked-badge .check {
+      width: 18px; height: 18px; border-radius: 50%; background: rgba(155, 77, 224, 0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 10px;
+    }
+
+    /* Data Items */
+    .data-item {
+      background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 20px 24px; margin-bottom: 12px; opacity: 0; transform: translateY(10px);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .data-item:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+    .data-item.visible { animation: itemReveal 0.5s ease forwards; }
+    @keyframes itemReveal { to { opacity: 1; transform: translateY(0); } }
+    .data-item-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px;
+    }
+    .data-item-value { font-size: 15px; color: var(--text-primary); line-height: 1.7; }
+    .data-item-value .highlight { color: var(--spenda-gold); font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; }
+
+    /* Steps Row */
+    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .step-card {
+      background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 10px;
+      padding: 16px; text-align: center;
+    }
+    .step-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700;
+      color: var(--spenda-purple); margin-bottom: 6px;
+    }
+    .step-label { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Product Screenshots */
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .demo-card {
+      background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 14px;
+    }
+    .demo-card:hover { border-color: var(--border-hover); }
+    .product-img {
+      width: 100%; max-width: 220px; border-radius: 12px;
+      border: 1px solid var(--border-color); object-fit: contain;
+    }
+    .demo-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--spenda-purple-light); text-transform: uppercase; text-align: center; }
+    .demo-desc { font-size: 12px; color: var(--text-secondary); text-align: center; line-height: 1.5; }
+    .hero-img-row { display: flex; justify-content: center; margin: 16px 0 8px; }
+    .hero-img { width: 100%; max-width: 280px; border-radius: 16px; }
+    .merchant-logos-strip {
+      width: 100%; max-width: 420px; margin-top: 16px; overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .merchant-logos-track {
+      display: flex; gap: 32px; align-items: center;
+      width: max-content;
+      animation: scrollLogos 20s linear infinite;
+    }
+    .merchant-logos-track img {
+      height: 36px; opacity: 0.85; flex-shrink: 0;
+      filter: grayscale(0.2) brightness(1.1);
+      transition: opacity 0.3s, filter 0.3s;
+    }
+    .merchant-logos-track img:hover { opacity: 1; filter: grayscale(0) brightness(1.2); }
+    @keyframes scrollLogos {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .section-img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 12px; }
+    .logo-header-img { height: 48px; border-radius: 0; }
+    .pipeline-badge {
+      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-gold);
+      background: rgba(255, 180, 7, 0.1); border: 1px solid rgba(255, 180, 7, 0.2);
+      padding: 2px 8px; border-radius: 4px; margin-top: 4px;
+    }
+
+    /* Allocation Bars */
+    .allocation-bar-container { margin-top: 10px; }
+    .allocation-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .allocation-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); min-width: 200px; }
+    .allocation-track { flex: 1; height: 6px; background: var(--bg-primary); border-radius: 6px; overflow: hidden; }
+    .allocation-fill { height: 100%; border-radius: 6px; width: 0; transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+    .allocation-pct { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-gold); min-width: 36px; text-align: right; }
+
+    /* Financial Tables */
+    .fin-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 8px; font-size: 13px; }
+    .fin-table thead th {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--spenda-purple-light); text-align: right;
+      padding: 8px 12px; border-bottom: 1px solid var(--border-color); white-space: nowrap;
+    }
+    .fin-table thead th:first-child { text-align: left; }
+    .fin-table tbody td {
+      padding: 10px 12px; text-align: right; color: var(--text-primary);
+      border-bottom: 1px solid rgba(37, 40, 48, 0.5); font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; white-space: nowrap;
+    }
+    .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 13px; }
+    .fin-table tbody tr:last-child td { border-bottom: none; }
+    .fin-table .row-highlight td { color: var(--spenda-gold); font-weight: 600; }
+    .fin-table .row-bold td { font-weight: 600; }
+    .fin-table .row-separator td { border-top: 1px solid var(--border-color); }
+    .fin-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -4px; padding: 0 4px; }
+
+    /* Year Cards */
+    .year-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px; }
+    .year-card {
+      background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 10px;
+      padding: 14px; text-align: center; transition: border-color 0.2s ease;
+    }
+    .year-card:hover { border-color: var(--border-hover); }
+    .year-card-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .year-card-value { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: var(--spenda-gold); }
+    .year-card-sub { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+
+    /* Team Grid */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .team-card {
+      background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 20px; text-align: center; transition: border-color 0.2s ease;
+    }
+    .team-card:hover { border-color: var(--border-hover); }
+    .team-avatar {
+      width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 12px;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
+    }
+    .team-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
+    .team-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px; }
+    .team-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Milestones */
+    .milestone-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+    .milestone-marker {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(155, 77, 224, 0.15); border: 1px solid rgba(155, 77, 224, 0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: var(--spenda-purple-light);
+    }
+    .milestone-text { font-size: 14px; color: var(--text-primary); line-height: 1.6; padding-top: 3px; }
+    .milestone-text .highlight { color: var(--spenda-gold); font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; }
+
+    /* Voucher Reward Overlay */
+    .voucher-overlay {
+      position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center;
+      background: rgba(7, 12, 20, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+    }
+    .voucher-overlay.active { opacity: 1; pointer-events: auto; }
+    .voucher-card {
+      width: 320px; border-radius: 20px; overflow: hidden; position: relative;
+      transform: translateY(40px) scale(0.9); transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .voucher-overlay.active .voucher-card { transform: translateY(0) scale(1); }
+    .voucher-card-top {
+      padding: 28px 24px 20px; text-align: center; position: relative;
+    }
+    .voucher-card-top.grocery { background: linear-gradient(135deg, #1a6b3c, #0d4025); }
+    .voucher-card-top.airtime { background: linear-gradient(135deg, #1a3d6b, #0d2540); }
+    .voucher-card-top.fuel { background: linear-gradient(135deg, #6b4a1a, #402d0d); }
+    .voucher-card-top.shopping { background: linear-gradient(135deg, var(--spenda-purple-deep), #3a0f4d); }
+    .voucher-card-top.business { background: linear-gradient(135deg, #1a4a6b, #0d2d40); }
+    .voucher-card-top.investor { background: linear-gradient(135deg, #6b5a1a, #4d420d); }
+    .voucher-card-top.founder { background: linear-gradient(135deg, var(--spenda-gold-dim), #8a6a02); }
+    .voucher-emoji { font-size: 40px; margin-bottom: 8px; }
+    .voucher-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+    .voucher-amount { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+    .voucher-desc { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .voucher-card-bottom {
+      background: var(--bg-card); padding: 16px 24px; display: flex; align-items: center;
+      justify-content: space-between; border-top: 2px dashed var(--border-color);
+    }
+    .voucher-brand { display: flex; align-items: center; gap: 8px; }
+    .voucher-brand-mark {
+      width: 24px; height: 24px; border-radius: 6px;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Inter', sans-serif; font-weight: 800; font-size: 12px; color: #fff;
+    }
+    .voucher-brand-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }
+    .voucher-redeem { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.5px; text-align: right; line-height: 1.4; }
+    .voucher-tap { text-align: center; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); animation: pulseDot 2s ease-in-out infinite; }
+
+    /* Share */
+    .share-btn {
+      position: fixed; bottom: 24px; right: 24px; width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
+      color: #fff; border: none; cursor: pointer; z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(155, 77, 224, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease; -webkit-tap-highlight-color: transparent;
+    }
+    .share-btn:hover { transform: scale(1.08); box-shadow: 0 6px 30px rgba(155, 77, 224, 0.5); }
+    .share-btn:active { transform: scale(0.95); }
+    .share-btn svg { width: 22px; height: 22px; }
+    .share-toast {
+      position: fixed; bottom: 88px; right: 24px; background: var(--bg-card);
+      border: 1px solid var(--border-color); border-radius: 10px; padding: 10px 16px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-purple-light);
+      z-index: 100; opacity: 0; transform: translateY(8px);
+      transition: opacity 0.3s ease, transform 0.3s ease; pointer-events: none;
+    }
+    .share-toast.visible { opacity: 1; transform: translateY(0); }
+
+    /* All Unlocked */
+    .all-unlocked { text-align: center; padding: 60px 0 40px; display: none; }
+    .all-unlocked.active { display: block; animation: fadeUp 0.8s ease forwards; }
+    .all-unlocked h2 {
+      font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; margin-bottom: 12px;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-glow));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .all-unlocked p { color: var(--text-secondary); font-size: 15px; max-width: 520px; margin: 0 auto 12px; line-height: 1.7; }
+    .final-tally {
+      font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+      color: var(--spenda-gold); margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-gold-dim));
+      color: var(--bg-primary); border: none; border-radius: 12px; padding: 16px 36px;
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
+      letter-spacing: 0.3px; box-shadow: var(--glow-gold);
+      transition: transform 0.15s ease, box-shadow 0.3s ease; min-height: 52px;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255, 180, 7, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3); }
+    .cta-btn:active { transform: translateY(0) scale(0.98); }
+
+    /* Footer */
+    .footer { text-align: center; padding: 32px 0 48px; border-top: 1px solid var(--border-color); }
+    .footer-brand { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+    .footer-links { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; transition: color 0.2s ease; display: flex; align-items: center; gap: 4px; }
+    .footer-links a:hover { color: var(--spenda-purple-light); }
+    .footer-links svg { width: 16px; height: 16px; }
+    .footer-legal { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; }
+
+    /* E-commerce Flow */
+    .ecom-flow {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 14px; padding: 10px 0;
+    }
+    .ecom-step { text-align: center; }
+    .ecom-icon {
+      width: 40px; height: 40px; border-radius: 10px; background: var(--bg-secondary);
+      border: 1px solid var(--border-color); display: flex; align-items: center;
+      justify-content: center; font-size: 18px; margin: 0 auto 4px;
+    }
+    .ecom-icon-active {
+      background: rgba(155, 77, 224, 0.15); border-color: var(--spenda-purple);
+      box-shadow: 0 0 12px rgba(155, 77, 224, 0.3);
+    }
+    .ecom-step-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+      color: var(--text-muted); text-transform: uppercase;
+    }
+    .ecom-arrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px;
+      color: var(--spenda-purple-light); margin-top: -16px;
+    }
+    .ecom-checkout-mock {
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 10px; padding: 12px; text-align: left; font-size: 11px;
+      font-family: 'JetBrains Mono', monospace; margin-bottom: 14px;
+    }
+    .ecom-checkout-header {
+      font-size: 9px; font-weight: 700; letter-spacing: 2px; color: var(--text-muted);
+      text-align: center; margin-bottom: 10px; padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .ecom-checkout-row {
+      display: flex; justify-content: space-between; padding: 3px 0;
+      color: var(--text-secondary); font-size: 10px;
+    }
+    .ecom-total {
+      font-weight: 700; color: var(--text-primary); border-top: 1px solid var(--border-color);
+      margin-top: 4px; padding-top: 6px;
+    }
+    .ecom-pay-options {
+      display: flex; gap: 6px; margin: 10px 0 8px;
+    }
+    .ecom-pay-option {
+      flex: 1; text-align: center; font-size: 8px; letter-spacing: 0.5px;
+      padding: 5px 2px; border-radius: 6px; border: 1px solid var(--border-color);
+      color: var(--text-muted); text-transform: uppercase;
+    }
+    .ecom-pay-selected {
+      background: rgba(155, 77, 224, 0.15); border-color: var(--spenda-purple);
+      color: var(--spenda-purple-light); font-weight: 600;
+    }
+    .ecom-pay-btn {
+      text-align: center; background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
+      color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+      padding: 8px; border-radius: 8px;
+    }
+
+    /* Batch disbursement code panel */
+    .batch-code-panel {
+      width: 100%; max-width: 220px; text-align: left;
+      background: #050a12; border: 1px solid var(--border-color); border-radius: 10px;
+      overflow: hidden; font-family: 'JetBrains Mono', monospace;
+    }
+    .batch-code-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 10px; font-size: 8px; letter-spacing: 0.5px;
+      color: var(--text-muted); text-transform: uppercase;
+      background: rgba(155, 77, 224, 0.08); border-bottom: 1px solid var(--border-color);
+    }
+    .batch-code-header span { color: var(--spenda-gold); font-weight: 600; }
+    .batch-code-pre {
+      margin: 0; padding: 10px; font-size: 8px; line-height: 1.55;
+      color: var(--text-secondary); white-space: pre-wrap; word-break: break-all;
+    }
+    .batch-code-pre .c-k { color: var(--spenda-purple-light); }
+    .batch-code-pre .c-s { color: #6ee7b7; }
+    .batch-code-pre .c-n { color: var(--spenda-gold); }
+    .batch-code-pre .c-c { color: var(--text-muted); }
+    .batch-code-footer {
+      padding: 6px 10px; font-size: 7px; letter-spacing: 0.3px;
+      color: #4ade80; border-top: 1px solid var(--border-color);
+      background: rgba(74, 222, 128, 0.06);
+    }
+
+    /* Space Invaders Game */
+    .game-section {
+      display: none; margin: 48px 0; text-align: center;
+      border: 1px solid var(--border-color); border-radius: 14px;
+      background: var(--bg-card); overflow: hidden;
+    }
+    .game-section.visible { display: block; animation: fadeUp 0.8s ease forwards; }
+    .game-header {
+      padding: 24px 20px 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .game-header h3 {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .game-header p {
+      font-size: 13px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;
+    }
+    .game-arena { position: relative; padding: 12px; }
+    #game-canvas {
+      display: block; margin: 0 auto; border-radius: 8px;
+      background: #030712; border: 1px solid var(--border-color);
+      image-rendering: pixelated; max-width: 100%;
+    }
+    .game-hud {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      letter-spacing: 1px; color: var(--text-secondary);
+    }
+    .hud-lives { color: var(--danger); }
+    .hud-score { color: var(--spenda-purple-glow); font-weight: 600; }
+    .hud-level { color: var(--spenda-purple-light); }
+    .hud-discount { color: var(--spenda-gold); font-weight: 700; }
+    .game-overlay {
+      position: absolute; inset: 12px; border-radius: 8px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: rgba(3, 7, 18, 0.92); z-index: 10;
+    }
+    .game-overlay.hidden { display: none; }
+    .game-overlay h4 {
+      font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+      color: var(--spenda-gold); letter-spacing: 2px; margin-bottom: 8px;
+    }
+    .game-overlay p {
+      font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; max-width: 320px; line-height: 1.6;
+    }
+    .game-overlay .game-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
+      color: #fff; border: none; border-radius: 10px; padding: 14px 28px;
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.5px; box-shadow: var(--glow-purple);
+      transition: transform 0.15s ease;
+    }
+    .game-overlay .game-btn:hover { transform: scale(1.03); }
+    .game-result {
+      padding: 28px 20px; border-top: 1px solid var(--border-color);
+      display: none;
+    }
+    .game-result.visible { display: block; animation: fadeUp 0.6s ease forwards; }
+    .game-result .discount-earned {
+      font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 800;
+      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 8px;
+    }
+    .game-result .discount-code {
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 2px;
+      color: var(--spenda-gold); background: rgba(255, 180, 7, 0.08);
+      border: 1px solid rgba(255, 180, 7, 0.2); border-radius: 8px;
+      padding: 10px 20px; display: inline-block; margin: 12px 0 20px;
+    }
+    .game-result p { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .touch-controls {
+      display: none; justify-content: center; gap: 12px; padding: 12px;
+    }
+    .touch-btn {
+      width: 60px; height: 60px; border-radius: 12px; border: 1px solid var(--border-color);
+      background: var(--bg-secondary); color: var(--text-primary); font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation; user-select: none;
+    }
+    .touch-btn:active { background: rgba(155, 77, 224, 0.2); border-color: var(--spenda-purple); }
+    .touch-btn-fire {
+      width: 80px; background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
+      border-color: var(--spenda-purple); font-size: 14px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
+    }
+    @media (pointer: coarse) {
+      .touch-controls { display: flex; }
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .header { padding: 40px 0 28px; }
+      .locked-body, .unlocked-content { padding: 20px; }
+      .terminal-output { padding: 16px 20px; }
+      .allocation-row { flex-wrap: wrap; }
+      .allocation-label { min-width: 140px; font-size: 11px; }
+      .progress-bar { display: none; }
+      .progress-labels { justify-content: center; gap: 16px; }
+      .section-title { font-size: 15px; }
+      .share-btn { bottom: 16px; right: 16px; width: 48px; height: 48px; }
+      .share-toast { bottom: 76px; right: 16px; }
+      .demo-grid { grid-template-columns: 1fr; }
+      .steps-row { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .year-cards { grid-template-columns: repeat(2, 1fr); }
+      .year-cards .year-card:last-child { grid-column: span 2; }
+      .voucher-card { width: 280px; }
+    }
+    @media (max-width: 380px) {
+      .title { font-size: 22px; }
+      .logo-header-img { height: 36px; }
+      .action-btn { width: 100%; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    @supports (padding: env(safe-area-inset-bottom)) {
+      .footer { padding-bottom: calc(48px + env(safe-area-inset-bottom)); }
+      .share-btn { bottom: calc(24px + env(safe-area-inset-bottom)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- Voucher Reward Overlay -->
+  <div class="voucher-overlay" id="voucher-overlay" onclick="dismissVoucher()">
+    <div>
+      <div class="voucher-card" id="voucher-card">
+        <div class="voucher-card-top" id="voucher-top">
+          <div class="voucher-emoji" id="voucher-emoji"></div>
+          <div class="voucher-type" id="voucher-type-label"></div>
+          <div class="voucher-amount" id="voucher-amount"></div>
+          <div class="voucher-desc" id="voucher-desc"></div>
+        </div>
+        <div class="voucher-card-bottom">
+          <div class="voucher-brand">
+            <div class="voucher-brand-mark">S</div>
+            <div class="voucher-brand-name">Spenda Voucher</div>
+          </div>
+          <div class="voucher-redeem">Redeemable at<br/>800,000+ locations</div>
+        </div>
+      </div>
+      <div class="voucher-tap">Tap anywhere to continue</div>
+    </div>
+  </div>
+
+  <!-- Share -->
+  <button class="share-btn" onclick="shareDeck()" aria-label="Share this deck">
+    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  </button>
+  <div id="share-toast" class="share-toast">Link copied!</div>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <img src="img/spenda-logo-horizontal-white.png" alt="Spenda Holdings" class="logo-header-img" />
+      </div>
+      <div class="badge"><span class="dot"></span> INVESTOR BRIEFING</div>
+      <h1 class="title">THE MULTIPLAYER<br />FINTECH ECOSYSTEM</h1>
+      <p class="subtitle">Welcome, <strong>Investor</strong>. This pitch contains proprietary data protected by Spenda payment protocols. Execute each protocol to unlock the next layer of our ecosystem and earn <strong>Spenda vouchers</strong> along the way.</p>
+    </header>
+
+    <div class="progress-area">
+      <div class="progress-bar">
+        <div class="progress-segment" data-segment="0"></div>
+        <div class="progress-segment" data-segment="1"></div>
+        <div class="progress-segment" data-segment="2"></div>
+        <div class="progress-segment" data-segment="3"></div>
+        <div class="progress-segment" data-segment="4"></div>
+        <div class="progress-segment" data-segment="5"></div>
+        <div class="progress-segment" data-segment="6"></div>
+      </div>
+      <div class="progress-labels">
+        <span class="progress-label" id="progress-text">0 / 7 PROTOCOLS</span>
+        <span class="voucher-tally" id="voucher-tally">VOUCHERS EARNED: R0</span>
+      </div>
+    </div>
+
+    <!-- S1: The Pain Point -->
+    <div class="section" id="section-0">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">The Pain Point — Why Spenda Exists</h2>
+      </div>
+      <div class="locked-card" id="card-0">
+        <div class="locked-body" id="locked-0">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Simulate a cash-only grocery payment for an unbanked worker.</p>
+          <button class="action-btn" onclick="unlockSection(0)">Simulate Cash Payment <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-0">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> PROCESSING CASH TRANSACTION... NO DIGITAL TRAIL.<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> PAYMENT COMPLETE — BUT AT WHAT COST? ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-0">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">Liquidity Fragmentation</div>
+            <div class="data-item-value">Over <span class="highlight">11 million</span> South Africans are economically sidelined by legacy banking infrastructure. They are locked out of digital liquidity, resulting in high-friction transactions and suppressed purchasing power.</div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">Opaque &amp; High-Friction Capital Flows</div>
+            <div class="data-item-value"><span class="highlight">R150 billion</span> in annual cash transactions represents a catastrophic data void. This creates systemic security vulnerabilities, exorbitant cash-handling logistics, and zero transactional telemetry for merchants.</div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">Stranded Digital Assets</div>
+            <div class="data-item-value">Billions of rands in loyalty value remain locked in closed-loop, siloed ledgers. Spenda solves this interoperability failure, turning <span class="highlight">dormant rewards</span> into liquid, spendable capital.</div>
+          </div>
+          <div class="data-item" data-reveal="3">
+            <div class="data-item-label">Inefficient Last-Mile Value Distribution</div>
+            <div class="data-item-value">Enterprises, NGOs, and state entities lack an <span class="highlight">API-driven, bank-agnostic</span> disbursement rail to deploy capital instantly to unbanked endpoints.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S2: The Solution -->
+    <div class="section" id="section-1">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">The Solution — What Spenda Does</h2>
+      </div>
+      <div class="locked-card" id="card-1">
+        <div class="locked-body" id="locked-1">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Send a R10 airtime voucher to a colleague via Spenda.</p>
+          <button class="action-btn" onclick="unlockSection(1)">Send Airtime Voucher <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-1">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> INITIATING SPENDA VOUCHER TRANSFER...<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> AIRTIME VOUCHER DELIVERED INSTANTLY ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-1">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">The One-Liner</div>
+            <div class="data-item-value" style="font-size:17px;font-weight:600;">Spenda is a <span class="highlight">bank-agnostic, interoperable settlement layer</span> that tokenises fiat and rewards into liquid digital assets—enabling frictionless P2P, B2B, and B2C value transfer without legacy banking dependencies.</div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">How It Works</div>
+            <div class="data-item-value">
+              <div class="steps-row">
+                <div class="step-card"><div class="step-num">01</div><div class="step-label">Load value via bank transfer, card, or cash</div></div>
+                <div class="step-card"><div class="step-num">02</div><div class="step-label">Send or receive Spenda vouchers instantly</div></div>
+                <div class="step-card"><div class="step-num">03</div><div class="step-label">Pay at 800,000+ merchants via QR</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">Key Differentiators</div>
+            <div class="data-item-value"><span class="highlight">KYC-light, telecom-linked onboarding</span>—bypassing traditional banking rails. <span class="highlight">Hardware-free, QR-based settlement protocol.</span> <span class="highlight">Engineered on bank-grade EFT Corporation infrastructure.</span> <span class="highlight">Headless, white-label REST APIs</span> ready for rapid ecosystem integration.
+              <img src="img/features.png" alt="Spenda Features" class="section-img" style="max-width:420px;margin-top:14px;" />
+            </div>
+          </div>
+          <div class="data-item" data-reveal="3">
+            <div class="data-item-label">The Spenda App</div>
+            <div class="data-item-value">
+              <div class="hero-img-row"><img src="img/app-hero.png" alt="Spenda App" class="hero-img" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3: Market Opportunity -->
+    <div class="section" id="section-2">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">The Arena — Market Opportunity</h2>
+      </div>
+      <div class="locked-card" id="card-2">
+        <div class="locked-body" id="locked-2">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Execute a Spenda Scan-to-Pay transaction to bypass the paywall.</p>
+          <button class="action-btn" onclick="unlockSection(2)">Simulate Scan-to-Pay <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-2">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> INVESTOR INITIATING SCAN...<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> PAYMENT OF R0.00 PROCESSED INSTANTLY ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-2">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">TAM — Total Addressable Market</div>
+            <div class="data-item-value">Loyalty and rewards total addressable market: <span class="highlight">R20.1 billion</span> (14% CAGR through 2030).</div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">SAM — Serviceable Market</div>
+            <div class="data-item-value"><span class="highlight">73%</span> loyalty program participation converging with <span class="highlight">11 million+</span> unbanked—the majority of South African consumers.</div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">SOM — Our Target</div>
+            <div class="data-item-value">Positioned at the intersection of a rapidly scaling <span class="highlight">R20.1 billion</span> localised rewards economy and an unbanked super-demographic. Spenda’s architecture is designed to capture and monetise high-velocity micro-transactions across this <span class="highlight">unbanked super-demographic</span>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S4: Product Suite + Demos -->
+    <div class="section" id="section-3">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">The Arsenal — Product Suite</h2>
+      </div>
+      <div class="locked-card" id="card-3">
+        <div class="locked-body" id="locked-3">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Convert 500 expiring retail loyalty points into Spenda Cash.</p>
+          <button class="action-btn" onclick="unlockSection(3)">Convert Points <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-3">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> CONNECTING TO SPENDA V2 API...<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> POINTS SUCCESSFULLY CONVERTED ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-3">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">Live Product Demonstrations</div>
+            <div class="data-item-value">
+              <div class="demo-grid">
+                <div class="demo-card">
+                  <img src="img/product-scan.png" alt="Spenda Scan to Pay" class="product-img" />
+                  <div class="demo-label">Scan-to-Pay</div>
+                  <div class="demo-desc">Seamless capital deployment across 800,000+ merchant nodes. No intermediary banking dependencies required.</div>
+                </div>
+                <div class="demo-card">
+                  <div class="batch-code-panel">
+                    <div class="batch-code-header">POST <span>/v2/disbursements/batch</span> · REST</div>
+                    <pre class="batch-code-pre">{
+  <span class="c-k">"batch_id"</span><span class="c-c">:</span> <span class="c-s">"bd_8f2a9c1e"</span><span class="c-c">,</span>
+  <span class="c-k">"voucher_class"</span><span class="c-c">:</span> <span class="c-s">"GROCERY"</span><span class="c-c">,</span>
+  <span class="c-k">"recipients"</span><span class="c-c">:</span> <span class="c-c">[</span>
+    <span class="c-c">{</span> <span class="c-k">"msisdn"</span><span class="c-c">:</span> <span class="c-s">"+27******321"</span><span class="c-c">,</span> <span class="c-k">"zar"</span><span class="c-c">:</span> <span class="c-n">500</span> <span class="c-c">},</span>
+    <span class="c-c">{</span> <span class="c-k">"msisdn"</span><span class="c-c">:</span> <span class="c-s">"+27******104"</span><span class="c-c">,</span> <span class="c-k">"zar"</span><span class="c-c">:</span> <span class="c-n">500</span> <span class="c-c">}</span>
+  <span class="c-c">],</span>
+  <span class="c-k">"notify_channel"</span><span class="c-c">:</span> <span class="c-s">"WHATSAPP"</span>
+<span class="c-c">}</span></pre>
+                    <div class="batch-code-footer">200 OK — batch accepted · 847 rows queued for settlement</div>
+                  </div>
+                  <div class="demo-label">Voucher Sales Plug-in</div>
+                  <div class="demo-desc">Customisable digital asset generation via REST APIs, seamlessly embedding value transfer into WhatsApp, native apps, and web portals.</div>
+                </div>
+                <div class="demo-card">
+                  <img src="img/product-merchant.png" alt="Spenda Merchant QR" class="product-img" />
+                  <div class="demo-label">Merchant QR</div>
+                  <div class="demo-desc">Instantaneous merchant onboarding with zero hardware latency. Facilitates self-checkout and autonomous tipping micro-transactions.</div>
+                  <img src="img/merchant-qr-code.png" alt="Spenda Merchant QR Code" class="product-img" style="margin-top:10px;max-width:140px;" />
+                </div>
+                <div class="demo-card">
+                  <div class="ecom-flow">
+                    <div class="ecom-step">
+                      <div class="ecom-icon">🛒</div>
+                      <div class="ecom-step-label">Cart</div>
+                    </div>
+                    <div class="ecom-arrow">→</div>
+                    <div class="ecom-step">
+                      <div class="ecom-icon ecom-icon-active">💳</div>
+                      <div class="ecom-step-label">Pay with Spenda</div>
+                    </div>
+                    <div class="ecom-arrow">→</div>
+                    <div class="ecom-step">
+                      <div class="ecom-icon">✅</div>
+                      <div class="ecom-step-label">Confirmed</div>
+                    </div>
+                  </div>
+                  <div class="ecom-checkout-mock">
+                    <div class="ecom-checkout-header">CHECKOUT</div>
+                    <div class="ecom-checkout-row"><span>Subtotal</span><span>R850.00</span></div>
+                    <div class="ecom-checkout-row"><span>Delivery</span><span>R0.00</span></div>
+                    <div class="ecom-checkout-row ecom-total"><span>Total</span><span>R850.00</span></div>
+                    <div class="ecom-pay-options">
+                      <div class="ecom-pay-option ecom-pay-selected">Spenda Voucher</div>
+                      <div class="ecom-pay-option">BNPL</div>
+                      <div class="ecom-pay-option">Card</div>
+                    </div>
+                    <div class="ecom-pay-btn">PAY WITH SPENDA</div>
+                  </div>
+                  <div class="demo-label">E-commerce Gateway</div>
+                  <div class="demo-desc">Online checkout with BNPL for medical, fuel, and essentials.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">Coming Soon — E-commerce &amp; BNPL (Risk-Managed)</div>
+            <div class="data-item-value">Deploying proprietary checkout gateways integrated with <span class="highlight">Buy-Now-Pay-Later (BNPL)</span> specifically underwritten for the unbanked. <span class="pipeline-badge">Pipeline</span>
+              <ul style="margin-top:12px;padding-left:20px;list-style:disc;">
+                <li style="margin-bottom:8px;"><span class="highlight">Behavioural Credit Scoring:</span> We do not offer day-one credit. We underwrite based on alternative network data: frequency of airtime top-ups, P2P receipt consistency, and utility payment history.</li>
+                <li style="margin-bottom:8px;"><span class="highlight">Micro-Limit Laddering:</span> Users enter at micro-tiers (e.g., R150). Algorithms graduate users to higher tiers only after consecutive successful repayments, structurally limiting default exposure.</li>
+                <li><span class="highlight">Closed-Loop ‘Essential’ Spend:</span> Spenda BNPL is not cash. It is a tokenised voucher hard-coded for specific POS terminal categories (food, fuel, medical). By eliminating cash withdrawals, we drastically reduce flight risk.</li>
+              </ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S5: Traction -->
+    <div class="section" id="section-4">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">High Scores — Traction</h2>
+      </div>
+      <div class="locked-card" id="card-4">
+        <div class="locked-body" id="locked-4">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Dispatch a direct-aid grocery voucher to a verified recipient.</p>
+          <button class="action-btn" onclick="unlockSection(4)">Issue NGO Voucher <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-4">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> COMMUNICATING WITH 'SEAT AT THE TABLE' PROTOCOLS...<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> VOUCHER ISSUED AT POS ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-4">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">Proven Liquidity Engine (No Fluff Metrics)</div>
+            <div class="data-item-value">We have successfully processed <span class="highlight">R926,473 in Net Settled Volume</span> (100% successful, cleared funds), proving our architecture handles complex, multi-rail settlements without failure.
+              <ul style="margin-top:12px;padding-left:20px;list-style:disc;">
+                <li style="margin-bottom:8px;"><span class="highlight">R703,556</span> generated through high-velocity, self-serve consumer app sales (Airtime, Groceries, Utilities).</li>
+                <li style="margin-bottom:8px;"><span class="highlight">R194,076</span> generated via legacy web/voucher sales during our early proof-of-concept.</li>
+                <li><span class="highlight">R28,840</span> processed in our B2B pre-market MVP, proving the corporate disbursement use-case works flawlessly and is ready to scale.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">App Traction &amp; Merchant Network</div>
+            <div class="data-item-value">Demonstrated high-retention user acquisition with <span class="highlight">20,000+</span> localised deployments and zero-friction onboarding. Integrated with <span class="highlight">800,000+ retail nodes</span>, establishing South Africa’s most expansive decentralised QR liquidity network.
+              <div class="merchant-logos-strip">
+                <div class="merchant-logos-track">
+                  <img src="img/partner-1.png" alt="Partner 1" /><img src="img/partner-2.png" alt="Partner 2" /><img src="img/partner-3.png" alt="Partner 3" /><img src="img/partner-4.png" alt="Partner 4" /><img src="img/partner-5.png" alt="Partner 5" /><img src="img/partner-6.png" alt="Partner 6" /><img src="img/partner-7.png" alt="Partner 7" /><img src="img/partner-8.png" alt="Partner 8" />
+                  <img src="img/partner-1.png" alt="Partner 1" /><img src="img/partner-2.png" alt="Partner 2" /><img src="img/partner-3.png" alt="Partner 3" /><img src="img/partner-4.png" alt="Partner 4" /><img src="img/partner-5.png" alt="Partner 5" /><img src="img/partner-6.png" alt="Partner 6" /><img src="img/partner-7.png" alt="Partner 7" /><img src="img/partner-8.png" alt="Partner 8" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">Awards &amp; Recognition</div>
+            <div class="data-item-value">Validated by tier-one financial players—winner of the <span class="highlight">Standard Chartered</span> and <span class="highlight">Mail &amp; Guardian Top Financial Services</span> Awards.</div>
+          </div>
+          <div class="data-item" data-reveal="3">
+            <div class="data-item-label">Social Impact</div>
+            <div class="data-item-value">Aligned with <span class="highlight">4 UN SDGs</span>. Hosted financial literacy courses with <span class="highlight">800+ participants</span> and <span class="highlight">300+ completions</span>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S6: Revenue + Financials -->
+    <div class="section" id="section-5">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 class="section-title">Revenue Engine — Model &amp; Financials</h2>
+      </div>
+      <div class="locked-card" id="card-5">
+        <div class="locked-body" id="locked-5">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Run a profitability simulation on the Spenda transaction engine.</p>
+          <button class="action-btn" onclick="unlockSection(5)">Run Simulation <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-5">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> LOADING 5-YEAR FINANCIAL MODEL...<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> PROFITABILITY SIMULATION COMPLETE ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-5">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">Revenue Streams</div>
+            <div class="data-item-value">A diversified, high-margin revenue engine driven by transaction processing fees, predictable B2B SaaS/API licensing, and high-yield voucher commissions.
+              <div class="allocation-bar-container">
+                <div class="allocation-row"><span class="allocation-label">Transaction Fees</span><div class="allocation-track"><div class="allocation-fill" data-width="40" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-gold));"></div></div><span class="allocation-pct">Primary</span></div>
+                <div class="allocation-row"><span class="allocation-label">B2B SaaS &amp; APIs</span><div class="allocation-track"><div class="allocation-fill" data-width="30" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">Recurring</span></div>
+                <div class="allocation-row"><span class="allocation-label">White-Label Vouchers</span><div class="allocation-track"><div class="allocation-fill" data-width="20" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple-glow));"></div></div><span class="allocation-pct">Partner</span></div>
+                <div class="allocation-row"><span class="allocation-label">Merchant Services</span><div class="allocation-track"><div class="allocation-fill" data-width="10" style="background:linear-gradient(90deg,var(--spenda-gold),var(--spenda-purple-light));"></div></div><span class="allocation-pct">Network</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">The Financial Reality: Bottom-Up Revenue Model</div>
+            <div class="data-item-value">Our initial capital injection is engineered for highly efficient, measurable traction. Here is the exact math of how our capital deployment generates our immediate runway:
+              <ul style="margin-top:12px;padding-left:20px;list-style:disc;">
+                <li style="margin-bottom:8px;"><span class="highlight">Marketing Allocation:</span> R1,000,000 (10% of raise).</li>
+                <li style="margin-bottom:8px;"><span class="highlight">Target Acquisition:</span> At a blended B2C CAC of R50, this capital secures <span class="highlight">20,000 active, transacting users</span>.</li>
+                <li style="margin-bottom:8px;"><span class="highlight">Monthly GMV:</span> Assuming a conservative monthly wallet velocity of R1,500 per user, this generates <span class="highlight">R30,000,000</span> in Monthly Transaction Volume.</li>
+                <li style="margin-bottom:8px;"><span class="highlight">Base Revenue:</span> Applying our 2% transaction fee yields <span class="highlight">R600,000/month</span> in high-margin baseline revenue.</li>
+                <li><span class="highlight">Year 1 Target:</span> Compounding this user base with our B2B SaaS licensing projects a grounded <span class="highlight">R18M – R25M revenue runway in Year 1</span>, laying the foundation for hyper-scale.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">Unit Economics: The Customer Acquisition Engine</div>
+            <div class="data-item-value">We bypass the high friction and exorbitant costs of bank-led KYC and app-store marketing.
+              <ul style="margin-top:12px;padding-left:20px;list-style:disc;">
+                <li style="margin-bottom:8px;"><span class="highlight">B2C Acquisition:</span> Target CAC = R40 – R60 via telecom-linked USSD/WhatsApp and viral peer-to-peer referral incentives. <em>Payback period: &lt; 2 months.</em></li>
+                <li><span class="highlight">B2B Acquisition (Merchants &amp; NGOs):</span> Target CAC = R3,000 – R5,000 via direct enterprise sales. <em>Payback period: First 48 hours of an active disbursement campaign.</em></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- S7: The Ask -->
+    <div class="section" id="section-6">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2 class="section-title">Final Boss — The Ask</h2>
+      </div>
+      <div class="locked-card" id="card-6">
+        <div class="locked-body" id="locked-6">
+          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <p class="lock-message">ACTION REQUIRED: Authorise Cross-Border B2B Smart Contract.</p>
+          <button class="action-btn" onclick="unlockSection(6)">Authorise Contract <span class="arrow">→</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-6">
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> BIOMETRICS CONFIRMED. FUNDS CLEARED.<span class="cursor-blink"></span></div>
+          <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> SMART CONTRACT AUTHORISED ✓</div>
+        </div>
+        <div class="unlocked-content" id="unlocked-6">
+          <div class="unlocked-badge"><span class="check">✓</span> PROTOCOL COMPLETE — DATA DECRYPTED</div>
+          <div class="data-item" data-reveal="0">
+            <div class="data-item-label">The Team</div>
+            <div class="data-item-value">
+              <div class="team-grid">
+                <div class="team-card">
+                  <div class="team-avatar">MH</div>
+                  <div class="team-name">Merishka Harilall</div>
+                  <div class="team-role">CEO &amp; Co-Founder</div>
+                  <div class="team-bio">FinTech strategy, product vision, and investor relations.</div>
+                </div>
+                <div class="team-card">
+                  <div class="team-avatar">SH</div>
+                  <div class="team-name">Sashen Harilall</div>
+                  <div class="team-role">COO &amp; Co-Founder</div>
+                  <div class="team-bio">Operations, partnerships, and go-to-market execution.</div>
+                </div>
+                <div class="team-card">
+                  <div class="team-avatar">SB</div>
+                  <div class="team-name">Siboniso Bophela</div>
+                  <div class="team-role">CPO &amp; Co-Founder</div>
+                  <div class="team-bio">Product strategy, platform architecture, and engineering.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">The Ask</div>
+            <div class="data-item-value" style="font-size:20px;font-weight:700;">Seeking a <span class="highlight">R10 Million</span> strategic capital injection at a <span class="highlight">R200M post-money valuation</span> (<span class="highlight">5% equity</span>).</div>
+          </div>
+          <div class="data-item" data-reveal="2">
+            <div class="data-item-label">Fund Allocation</div>
+            <div class="data-item-value">
+              <div class="allocation-bar-container">
+                <div class="allocation-row"><span class="allocation-label">Business Assets</span><div class="allocation-track"><div class="allocation-fill" data-width="40" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-gold));"></div></div><span class="allocation-pct">40%</span></div>
+                <div class="allocation-row"><span class="allocation-label">Strategic Partnerships</span><div class="allocation-track"><div class="allocation-fill" data-width="25" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">25%</span></div>
+                <div class="allocation-row"><span class="allocation-label">Staff &amp; Services</span><div class="allocation-track"><div class="allocation-fill" data-width="15" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple-glow));"></div></div><span class="allocation-pct">15%</span></div>
+                <div class="allocation-row"><span class="allocation-label">Marketing</span><div class="allocation-track"><div class="allocation-fill" data-width="10" style="background:linear-gradient(90deg,var(--spenda-gold),var(--spenda-purple-light));"></div></div><span class="allocation-pct">10%</span></div>
+                <div class="allocation-row"><span class="allocation-label">Research &amp; Development</span><div class="allocation-track"><div class="allocation-fill" data-width="10" style="background:linear-gradient(90deg,var(--spenda-purple-deep),var(--spenda-gold));"></div></div><span class="allocation-pct">10%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="3">
+            <div class="data-item-label">What R10M Unlocks (The 3DS Problem)</div>
+            <div class="data-item-value">Our raw transaction logs reveal that while consumer demand is exceptionally high, the legacy banking system is killing conversion. We have identified <span class="highlight">R267,304 in unique lost transaction volume</span> caused directly by legacy BankServ/ACS 3DS timeouts and rejections.
+              <div class="milestone-row" style="margin-top:14px;"><div class="milestone-marker">1</div><div class="milestone-text"><span class="highlight">Network Tokenisation:</span> Fund the integration of a virtual card with Mastercard to build 3DS Exemptions. This legally bypasses bank-imposed friction, instantly unlocking a ~30% conversion uplift on our organic traffic with zero additional marketing spend.</div></div>
+              <div class="milestone-row"><div class="milestone-marker">2</div><div class="milestone-text"><span class="highlight">Ecosystem Acceleration:</span> Aggressively scale our decentralised B2B merchant nodes and finalise enterprise API integrations.</div></div>
+              <div class="milestone-row"><div class="milestone-marker">3</div><div class="milestone-text"><span class="highlight">Product Stack Finalisation:</span> Deploy the data-driven BNPL underwriting models and closed-loop gateways.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Unlocked -->
+    <div class="all-unlocked" id="all-unlocked">
+      <h2>ALL PROTOCOLS EXECUTED</h2>
+      <p>You've unlocked every layer of the Spenda ecosystem and experienced our products firsthand.</p>
+      <div class="final-tally" id="final-tally">Total Vouchers Earned: R885</div>
+      <p>Spenda is ready for its next player. Are you in?</p>
+      <button class="cta-btn" id="meeting-cta" onclick="window.location.href='mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=Investor%20Meeting%20Request%20%E2%80%94%20Spenda%20Holdings'">
+        Request a Meeting →
+      </button>
+    </div>
+
+    <!-- Space Invaders Bonus Game -->
+    <div class="game-section" id="game-section">
+      <div class="game-header">
+        <h3>BONUS ROUND: SPACE INVADERS</h3>
+        <p>Earn up to <strong style="color:var(--spenda-gold)">3% equity discount</strong> before negotiations. Clear each level to chip away at your discount. Think you can conquer all 7?</p>
+      </div>
+      <div class="game-hud">
+        <span class="hud-lives" id="hud-lives">LIVES: 3</span>
+        <span class="hud-score" id="hud-score">SCORE: 0</span>
+        <span class="hud-level" id="hud-level">LEVEL 1 / 7</span>
+        <span class="hud-discount" id="hud-discount">DISCOUNT: 0%</span>
+      </div>
+      <div class="game-arena">
+        <canvas id="game-canvas" width="600" height="500"></canvas>
+        <div class="game-overlay" id="game-overlay">
+          <h4 id="overlay-title">READY TO PLAY?</h4>
+          <p id="overlay-text">Destroy the alien fleet to earn your equity discount. Use arrow keys to move, spacebar to fire.</p>
+          <button class="game-btn" id="overlay-btn" onclick="startGame()">Launch Game</button>
+        </div>
+      </div>
+      <div class="touch-controls" id="touch-controls">
+        <button class="touch-btn" id="touch-left" aria-label="Move left">&larr;</button>
+        <button class="touch-btn touch-btn-fire" id="touch-fire" aria-label="Fire">FIRE</button>
+        <button class="touch-btn" id="touch-right" aria-label="Move right">&rarr;</button>
+      </div>
+      <div class="game-result" id="game-result">
+        <div class="discount-earned" id="result-discount">0% DISCOUNT</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--spenda-purple-light);letter-spacing:1px;margin-bottom:8px;" id="result-score">SCORE: 0</div>
+        <div class="discount-code" id="result-code">SPENDA-INVADER-0</div>
+        <p id="result-text">Present this code at your investor meeting.</p>
+        <button class="cta-btn" id="result-cta" onclick="window.location.href='mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=Investor%20Meeting%20Request%20%E2%80%94%20Spenda%20Holdings'">
+          Request a Meeting →
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-brand">Spenda Holdings (Pty) Ltd</div>
+      <div class="footer-links">
+        <a href="https://www.spenda-sa.com" target="_blank" rel="noopener"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> www.spenda-sa.com</a>
+        <a href="https://www.linkedin.com/company/spenda-holdings" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg> LinkedIn</a>
+        <a href="https://www.instagram.com/spenda.sa/" target="_blank" rel="noopener"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
+        <a href="https://www.tiktok.com/@spenda_sa" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.51a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.43V13a8.16 8.16 0 005.58 2.18V11.7a4.81 4.81 0 01-2.82-.89V6.69h2.82z"/></svg> TikTok</a>
+      </div>
+      <div class="footer-legal">Confidential &nbsp;·&nbsp; 2026</div>
+    </footer>
+  </div>
+
+  <script>
+    const TOTAL = 7;
+    const state = Array(TOTAL).fill(false);
+    let tallyTotal = 0;
+
+    const VOUCHERS = [
+      { emoji: '🛒', type: 'Grocery Voucher', amount: 'R25', desc: 'Redeemable at major grocery retailers', cls: 'grocery', value: 25 },
+      { emoji: '📱', type: 'Airtime Voucher', amount: 'R10', desc: 'Instant mobile airtime top-up', cls: 'airtime', value: 10 },
+      { emoji: '⛽', type: 'Fuel Voucher', amount: 'R50', desc: 'Redeemable at major fuel stations', cls: 'fuel', value: 50 },
+      { emoji: '🛍️', type: 'Shopping Voucher', amount: 'R100', desc: 'Valid at 800,000+ retail locations', cls: 'shopping', value: 100 },
+      { emoji: '💼', type: 'Business Disbursement', amount: 'R200', desc: 'B2B voucher — employee incentive', cls: 'business', value: 200 },
+      { emoji: '📊', type: 'Investor Voucher', amount: 'R500', desc: 'Premium portfolio access token', cls: 'investor', value: 500 },
+      { emoji: '🏆', type: 'Founding Investor Pass', amount: 'VIP', desc: 'All protocols executed — you\'re in', cls: 'founder', value: 0 }
+    ];
+
+    function showVoucher(index) {
+      const v = VOUCHERS[index];
+      const overlay = document.getElementById('voucher-overlay');
+      document.getElementById('voucher-emoji').textContent = v.emoji;
+      document.getElementById('voucher-type-label').textContent = v.type;
+      document.getElementById('voucher-amount').textContent = v.amount;
+      document.getElementById('voucher-desc').textContent = v.desc;
+      const top = document.getElementById('voucher-top');
+      top.className = 'voucher-card-top ' + v.cls;
+      overlay.classList.add('active');
+      tallyTotal += v.value;
+      document.getElementById('voucher-tally').textContent = 'VOUCHERS EARNED: R' + tallyTotal;
+      clearTimeout(window._voucherTimer);
+      window._voucherTimer = setTimeout(dismissVoucher, 4500);
+    }
+
+    function dismissVoucher() {
+      document.getElementById('voucher-overlay').classList.remove('active');
+      clearTimeout(window._voucherTimer);
+    }
+
+    function typewriterLine(el, callback) {
+      const fullText = el.textContent;
+      const hasPrompt = el.querySelector('.prompt');
+      const rawText = fullText.replace('> ', '').replace('✓', '').trim();
+      el.innerHTML = '';
+      if (hasPrompt) { const p = document.createElement('span'); p.className = 'prompt'; p.textContent = '> '; el.appendChild(p); }
+      const textNode = document.createElement('span');
+      el.appendChild(textNode);
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor-blink';
+      el.appendChild(cursor);
+      el.classList.add('visible');
+      let i = 0;
+      function type() {
+        if (i < rawText.length) { textNode.textContent += rawText.charAt(i); i++; setTimeout(type, 22); }
+        else { cursor.remove(); if (callback) setTimeout(callback, 250); }
+      }
+      type();
+    }
+
+    function updateProgress() {
+      const count = state.filter(Boolean).length;
+      document.getElementById('progress-text').textContent = count + ' / ' + TOTAL + ' PROTOCOLS';
+      document.querySelectorAll('.progress-segment').forEach((seg, i) => {
+        if (state[i]) seg.classList.add('unlocked');
+      });
+    }
+
+    function revealDataItems(idx) {
+      const container = document.getElementById('unlocked-' + idx);
+      const items = container.querySelectorAll('.data-item');
+      items.forEach((item, i) => setTimeout(() => item.classList.add('visible'), i * 180));
+      if (idx === 5 || idx === 6) {
+        setTimeout(() => {
+          container.querySelectorAll('.allocation-fill').forEach(fill => {
+            fill.style.width = fill.dataset.width + '%';
+          });
+        }, items.length * 180 + 200);
+      }
+    }
+
+    function unlockSection(index) {
+      if (state[index]) return;
+      state[index] = true;
+      const locked = document.getElementById('locked-' + index);
+      const terminal = document.getElementById('terminal-' + index);
+      const unlocked = document.getElementById('unlocked-' + index);
+      const card = document.getElementById('card-' + index);
+      const lines = terminal.querySelectorAll('.terminal-line');
+      locked.style.display = 'none';
+      terminal.classList.add('active');
+      typewriterLine(lines[0], () => {
+        typewriterLine(lines[1], () => {
+          setTimeout(() => {
+            terminal.classList.remove('active');
+            terminal.style.display = 'none';
+            card.classList.add('revealed');
+            unlocked.classList.add('active');
+            revealDataItems(index);
+            updateProgress();
+            setTimeout(() => showVoucher(index), 400);
+            if (state.every(Boolean)) {
+              setTimeout(() => {
+                document.getElementById('all-unlocked').classList.add('active');
+                document.getElementById('game-section').classList.add('visible');
+                document.getElementById('game-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 1200);
+            }
+          }, 500);
+        });
+      });
+    }
+
+    function shareDeck() {
+      const shareData = { title: 'Spenda — The Multiplayer FinTech Ecosystem', text: 'Execute payment protocols to unlock Spenda\'s investor pitch.', url: window.location.href };
+      if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) { navigator.share(shareData).catch(() => {}); }
+      else {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const t = document.getElementById('share-toast'); t.classList.add('visible');
+          setTimeout(() => t.classList.remove('visible'), 2000);
+        }).catch(() => prompt('Copy this link:', window.location.href));
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SPACE INVADERS — EQUITY DISCOUNT GAME
+       ═══════════════════════════════════════════════════ */
+
+    const LEVELS = [
+      { rows: 3, cols: 6,  speed: 0.4,  lives: 3, alienFireRate: 0,    maxBullets: 0, dropStep: 12, bulletSpeed: 2.5, diveBombers: false, zigzag: false, diveChance: 0,     speedBoost: 1.5 },
+      { rows: 3, cols: 7,  speed: 0.55, lives: 3, alienFireRate: 3000, maxBullets: 1, dropStep: 14, bulletSpeed: 2.8, diveBombers: false, zigzag: false, diveChance: 0,     speedBoost: 1.8 },
+      { rows: 5, cols: 8,  speed: 0.85, lives: 2, alienFireRate: 1400, maxBullets: 2, dropStep: 18, bulletSpeed: 3.8, diveBombers: true,  zigzag: false, diveChance: 0.004, speedBoost: 2.5 },
+      { rows: 5, cols: 9,  speed: 1.1,  lives: 2, alienFireRate: 1000, maxBullets: 3, dropStep: 20, bulletSpeed: 4.2, diveBombers: true,  zigzag: true,  diveChance: 0.006, speedBoost: 3.0 },
+      { rows: 6, cols: 9,  speed: 1.35, lives: 2, alienFireRate: 750,  maxBullets: 3, dropStep: 22, bulletSpeed: 4.8, diveBombers: true,  zigzag: true,  diveChance: 0.008, speedBoost: 3.5 },
+      { rows: 6, cols: 10, speed: 1.6,  lives: 1, alienFireRate: 550,  maxBullets: 4, dropStep: 24, bulletSpeed: 5.2, diveBombers: true,  zigzag: true,  diveChance: 0.012, speedBoost: 4.0 },
+      { rows: 7, cols: 11, speed: 1.9,  lives: 1, alienFireRate: 400,  maxBullets: 5, dropStep: 26, bulletSpeed: 5.8, diveBombers: true,  zigzag: true,  diveChance: 0.016, speedBoost: 4.5 }
+    ];
+
+    const LEVEL_REWARDS = [0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.5];
+    const _SALT = 'SP3NDA-2026-EQUITY';
+
+    function _genVerifyCode(discount, score, levelsCleared) {
+      const raw = _SALT + ':' + discount.toFixed(2) + ':' + score + ':' + levelsCleared;
+      let h = 0;
+      for (let i = 0; i < raw.length; i++) {
+        h = ((h << 5) - h + raw.charCodeAt(i)) | 0;
+      }
+      return Math.abs(h).toString(36).toUpperCase().slice(0, 6);
+    }
+
+    let game = null;
+
+    class SpaceInvaders {
+      constructor(canvas) {
+        this.cvs = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.W = canvas.width;
+        this.H = canvas.height;
+        this.level = 0;
+        this._discount = 0;
+        this._levelsCleared = 0;
+        this._levelFlags = Array(7).fill(false);
+        this.score = 0;
+        this.running = false;
+        this.gameOver = false;
+        this.lives = 3;
+        this.keys = {};
+        this.player = { x: this.W / 2 - 20, y: this.H - 40, w: 40, h: 16, speed: 5 };
+        this.playerBullets = [];
+        this.alienBullets = [];
+        this.aliens = [];
+        this.alienDir = 1;
+        this.alienSpeed = 0;
+        this.alienDropStep = 12;
+        this.alienFireRate = 0;
+        this.alienMaxBullets = 0;
+        this.alienBulletSpeed = 3;
+        this.lastAlienShot = 0;
+        this.diveBombers = false;
+        this.zigzag = false;
+        this.zigzagTimer = 0;
+        this.lastFireTime = 0;
+        this.fireCooldown = 300;
+        this.particles = [];
+        this.touchState = { left: false, right: false, fire: false };
+        this.rafId = null;
+        this.levelTransition = false;
+        this._bindInput();
+      }
+
+      _bindInput() {
+        document.addEventListener('keydown', e => {
+          if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','a','d','A','D',' '].includes(e.key)) e.preventDefault();
+          this.keys[e.key] = true;
+        });
+        document.addEventListener('keyup', e => this.keys[e.key] = false);
+        const bindTouch = (id, prop) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          const on = () => { this.touchState[prop] = true; };
+          const off = () => { this.touchState[prop] = false; };
+          el.addEventListener('touchstart', e => { e.preventDefault(); on(); }, { passive: false });
+          el.addEventListener('touchend', e => { e.preventDefault(); off(); }, { passive: false });
+          el.addEventListener('touchcancel', off);
+          el.addEventListener('mousedown', on);
+          el.addEventListener('mouseup', off);
+          el.addEventListener('mouseleave', off);
+        };
+        bindTouch('touch-left', 'left');
+        bindTouch('touch-right', 'right');
+        bindTouch('touch-fire', 'fire');
+      }
+
+      initLevel(lvl) {
+        const cfg = LEVELS[lvl];
+        this.level = lvl;
+        this.lives = cfg.lives;
+        this.alienSpeed = cfg.speed;
+        this.alienDropStep = cfg.dropStep;
+        this.alienFireRate = cfg.alienFireRate;
+        this.alienMaxBullets = cfg.maxBullets;
+        this.alienBulletSpeed = cfg.bulletSpeed;
+        this.diveBombers = cfg.diveBombers;
+        this.zigzag = cfg.zigzag;
+        this.zigzagTimer = 0;
+        this.diveChance = cfg.diveChance || 0;
+        this.speedBoost = cfg.speedBoost || 2;
+        this.alienDir = 1;
+        this.playerBullets = [];
+        this.alienBullets = [];
+        this.aliens = [];
+        this.particles = [];
+        this.player.x = this.W / 2 - 20;
+        const aw = 28, ah = 20, gapX = 8, gapY = 8;
+        const totalW = cfg.cols * (aw + gapX) - gapX;
+        const startX = (this.W - totalW) / 2;
+        for (let r = 0; r < cfg.rows; r++) {
+          for (let c = 0; c < cfg.cols; c++) {
+            this.aliens.push({
+              x: startX + c * (aw + gapX),
+              y: 40 + r * (ah + gapY),
+              w: aw, h: ah, alive: true,
+              type: r < 1 ? 2 : r < 3 ? 1 : 0,
+              diving: false, diveSpeed: 0, diveX: 0
+            });
+          }
+        }
+        this._updateHUD();
+      }
+
+      _getDiscount() {
+        let valid = 0;
+        for (let i = 0; i < 7; i++) {
+          if (this._levelFlags[i]) valid += LEVEL_REWARDS[i];
+        }
+        return Math.min(3, Math.round(valid * 100) / 100);
+      }
+
+      _fmtDisc(d) { return d % 1 ? d.toFixed(2) : String(d); }
+
+      _updateHUD() {
+        const d = this._getDiscount();
+        const hearts = Array(this.lives).fill('\u2764').join(' ');
+        document.getElementById('hud-lives').textContent = 'LIVES: ' + hearts;
+        document.getElementById('hud-score').textContent = 'SCORE: ' + this.score;
+        document.getElementById('hud-level').textContent = 'LEVEL ' + (this.level + 1) + ' / 7';
+        document.getElementById('hud-discount').textContent = 'DISCOUNT: ' + this._fmtDisc(d) + '%';
+      }
+
+      _spawnParticles(x, y, color, count) {
+        for (let i = 0; i < count; i++) {
+          this.particles.push({
+            x, y,
+            vx: (Math.random() - 0.5) * 4,
+            vy: (Math.random() - 0.5) * 4,
+            life: 20 + Math.random() * 15,
+            color
+          });
+        }
+      }
+
+      _fireAlien(now) {
+        if (!this.alienFireRate || this.alienBullets.length >= this.alienMaxBullets) return;
+        if (now - this.lastAlienShot < this.alienFireRate) return;
+        const alive = this.aliens.filter(a => a.alive && !a.diving);
+        if (!alive.length) return;
+        const shooter = alive[Math.floor(Math.random() * alive.length)];
+        this.alienBullets.push({ x: shooter.x + shooter.w / 2, y: shooter.y + shooter.h, vy: this.alienBulletSpeed });
+        this.lastAlienShot = now;
+      }
+
+      _tryDiveBomber() {
+        if (!this.diveBombers) return;
+        if (Math.random() > this.diveChance) return;
+        const alive = this.aliens.filter(a => a.alive && !a.diving);
+        if (!alive.length) return;
+        const diver = alive[Math.floor(Math.random() * alive.length)];
+        diver.diving = true;
+        diver.diveSpeed = 2 + this.level * 0.3;
+        diver.diveX = (Math.random() - 0.5) * 2;
+      }
+
+      update(now) {
+        if (this.levelTransition || this.gameOver) return;
+        const p = this.player;
+        const moveLeft = this.keys['ArrowLeft'] || this.keys['a'] || this.keys['A'] || this.touchState.left;
+        const moveRight = this.keys['ArrowRight'] || this.keys['d'] || this.keys['D'] || this.touchState.right;
+        const fire = this.keys[' '] || this.touchState.fire;
+        if (moveLeft) p.x = Math.max(0, p.x - p.speed);
+        if (moveRight) p.x = Math.min(this.W - p.w, p.x + p.speed);
+        if (fire && now - this.lastFireTime > this.fireCooldown) {
+          this.playerBullets.push({ x: p.x + p.w / 2 - 2, y: p.y - 6, w: 4, h: 10 });
+          this.lastFireTime = now;
+        }
+
+        this.playerBullets.forEach(b => b.y -= 7);
+        this.playerBullets = this.playerBullets.filter(b => b.y > -10);
+
+        this.alienBullets.forEach(b => b.y += b.vy);
+        this.alienBullets = this.alienBullets.filter(b => b.y < this.H + 10);
+
+        const alive = this.aliens.filter(a => a.alive);
+        const aliveNonDiving = alive.filter(a => !a.diving);
+        const speedMultiplier = 1 + (1 - aliveNonDiving.length / Math.max(1, this.aliens.length)) * this.speedBoost;
+        const moveSpeed = this.alienSpeed * speedMultiplier;
+
+        if (this.zigzag) {
+          this.zigzagTimer++;
+          const wobble = Math.sin(this.zigzagTimer * 0.05) * 0.8;
+          aliveNonDiving.forEach(a => { a.x += wobble; });
+        }
+
+        let edgeHit = false;
+        aliveNonDiving.forEach(a => {
+          a.x += moveSpeed * this.alienDir;
+          if (a.x + a.w >= this.W - 2 || a.x <= 2) edgeHit = true;
+        });
+        if (edgeHit) {
+          this.alienDir *= -1;
+          aliveNonDiving.forEach(a => { a.y += this.alienDropStep; });
+        }
+
+        alive.filter(a => a.diving).forEach(a => {
+          a.y += a.diveSpeed;
+          a.x += a.diveX;
+          if (a.y > this.H + 20) a.alive = false;
+        });
+
+        this._fireAlien(now);
+        this._tryDiveBomber();
+
+        for (let i = this.playerBullets.length - 1; i >= 0; i--) {
+          const b = this.playerBullets[i];
+          for (let j = 0; j < this.aliens.length; j++) {
+            const a = this.aliens[j];
+            if (!a.alive) continue;
+            if (b.x < a.x + a.w && b.x + b.w > a.x && b.y < a.y + a.h && b.y + b.h > a.y) {
+              a.alive = false;
+              this.playerBullets.splice(i, 1);
+              const pts = [10, 20, 40];
+              this.score += (pts[a.type] || 10) * (this.level + 1);
+              this._updateHUD();
+              const colors = ['#9B4DE0', '#ffb407', '#D6B8F2', '#D6B8F2'];
+              this._spawnParticles(a.x + a.w / 2, a.y + a.h / 2, colors[Math.floor(Math.random() * colors.length)], 8);
+              break;
+            }
+          }
+        }
+
+        for (let i = this.alienBullets.length - 1; i >= 0; i--) {
+          const b = this.alienBullets[i];
+          if (b.x > p.x && b.x < p.x + p.w && b.y > p.y && b.y < p.y + p.h) {
+            this.alienBullets.splice(i, 1);
+            this._playerHit();
+            continue;
+          }
+        }
+
+        alive.forEach(a => {
+          if (a.x < p.x + p.w && a.x + a.w > p.x && a.y < p.y + p.h && a.y + a.h > p.y) {
+            a.alive = false;
+            this._playerHit();
+          }
+          if (a.y + a.h >= this.H - 10 && !a.diving) {
+            this._endGame();
+          }
+        });
+
+        this.particles.forEach(pt => {
+          pt.x += pt.vx; pt.y += pt.vy; pt.life--;
+          pt.vy += 0.1;
+        });
+        this.particles = this.particles.filter(pt => pt.life > 0);
+
+        if (this.aliens.filter(a => a.alive).length === 0 && !this.gameOver) {
+          this._levelClear();
+        }
+      }
+
+      _playerHit() {
+        this.lives--;
+        this._spawnParticles(this.player.x + this.player.w / 2, this.player.y, '#ee4444', 12);
+        this._updateHUD();
+        if (this.lives <= 0) {
+          this._endGame();
+        } else {
+          this.player.x = this.W / 2 - 20;
+          this.alienBullets = [];
+        }
+      }
+
+      _levelClear() {
+        this.levelTransition = true;
+        this._levelFlags[this.level] = true;
+        this._levelsCleared++;
+        this._updateHUD();
+        const d = this._getDiscount();
+        if (this.level >= 6) {
+          setTimeout(() => this._endGame(true), 800);
+          return;
+        }
+        const overlay = document.getElementById('game-overlay');
+        const title = document.getElementById('overlay-title');
+        const text = document.getElementById('overlay-text');
+        const btn = document.getElementById('overlay-btn');
+        title.textContent = 'LEVEL ' + (this.level + 1) + ' CLEARED!';
+        text.textContent = 'Score: ' + this.score.toLocaleString() + ' — ' + this._fmtDisc(d) + '% discount earned. Ready for Level ' + (this.level + 2) + '?';
+        btn.textContent = 'Next Level';
+        btn.onclick = () => {
+          overlay.classList.add('hidden');
+          this.initLevel(this.level + 1);
+          this.levelTransition = false;
+        };
+        overlay.classList.remove('hidden');
+      }
+
+      _endGame(won) {
+        this.gameOver = true;
+        this.running = false;
+        if (this.rafId) cancelAnimationFrame(this.rafId);
+        const d = this._getDiscount();
+        const result = document.getElementById('game-result');
+        const discEl = document.getElementById('result-discount');
+        const codeEl = document.getElementById('result-code');
+        const textEl = document.getElementById('result-text');
+        const ctaEl = document.getElementById('result-cta');
+        document.getElementById('result-score').textContent = 'SCORE: ' + this.score.toLocaleString();
+        const dFmt = this._fmtDisc(d);
+        if (d > 0) {
+          const hash = _genVerifyCode(d, this.score, this._levelsCleared);
+          const verifiedCode = 'SPENDA-' + dFmt + 'PCT-' + hash;
+          discEl.textContent = dFmt + '% EQUITY DISCOUNT';
+          codeEl.textContent = verifiedCode;
+          if (won) {
+            textEl.textContent = 'Incredible. You conquered all 7 levels and earned the maximum 3% discount. Present this verified code at your meeting.';
+          } else {
+            textEl.textContent = 'You earned ' + dFmt + '% discount. Present this verified code at your investor meeting.';
+          }
+          const subject = encodeURIComponent('Investor Meeting Request — Spenda Holdings — ' + dFmt + '% Discount [' + verifiedCode + ']');
+          ctaEl.onclick = () => {
+            window.location.href = 'mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=' + subject;
+          };
+        } else {
+          discEl.textContent = 'NO DISCOUNT';
+          codeEl.textContent = 'TRY AGAIN';
+          textEl.textContent = 'No levels cleared. Request a meeting to discuss standard terms — or reload to try again.';
+        }
+        document.getElementById('game-overlay').classList.add('hidden');
+        result.classList.add('visible');
+      }
+
+      draw() {
+        const ctx = this.ctx;
+        ctx.clearRect(0, 0, this.W, this.H);
+
+        ctx.fillStyle = '#9B4DE0';
+        ctx.fillRect(this.player.x, this.player.y, this.player.w, this.player.h);
+        ctx.fillStyle = '#D6B8F2';
+        ctx.fillRect(this.player.x + this.player.w / 2 - 3, this.player.y - 6, 6, 8);
+        ctx.fillStyle = '#ffb407';
+        ctx.fillRect(this.player.x + 4, this.player.y + 2, 4, 3);
+        ctx.fillRect(this.player.x + this.player.w - 8, this.player.y + 2, 4, 3);
+
+        this.aliens.forEach(a => {
+          if (!a.alive) return;
+          const colors = ['#4ade80', '#ffb407', '#ee4444'];
+          ctx.fillStyle = a.diving ? '#ff6b6b' : colors[a.type] || '#4ade80';
+          ctx.fillRect(a.x, a.y, a.w, a.h);
+          ctx.fillStyle = 'rgba(0,0,0,0.3)';
+          ctx.fillRect(a.x + 4, a.y + 4, 5, 5);
+          ctx.fillRect(a.x + a.w - 9, a.y + 4, 5, 5);
+          ctx.fillStyle = a.diving ? '#ff3333' : colors[a.type];
+          ctx.fillRect(a.x + 2, a.y + a.h - 4, 4, 4);
+          ctx.fillRect(a.x + a.w - 6, a.y + a.h - 4, 4, 4);
+        });
+
+        ctx.fillStyle = '#D6B8F2';
+        this.playerBullets.forEach(b => ctx.fillRect(b.x, b.y, b.w, b.h));
+
+        ctx.fillStyle = '#ee4444';
+        this.alienBullets.forEach(b => {
+          ctx.fillRect(b.x - 2, b.y, 4, 10);
+        });
+
+        this.particles.forEach(pt => {
+          ctx.globalAlpha = Math.max(0, pt.life / 35);
+          ctx.fillStyle = pt.color;
+          ctx.fillRect(pt.x - 2, pt.y - 2, 4, 4);
+        });
+        ctx.globalAlpha = 1;
+      }
+
+      loop(now) {
+        if (!this.running) return;
+        this.update(now);
+        this.draw();
+        this.rafId = requestAnimationFrame(t => this.loop(t));
+      }
+
+      start() {
+        this.running = true;
+        this.gameOver = false;
+        this._discount = 0;
+        this._levelsCleared = 0;
+        this._levelFlags = Array(7).fill(false);
+        this.score = 0;
+        this.initLevel(0);
+        document.getElementById('game-overlay').classList.add('hidden');
+        document.getElementById('game-result').classList.remove('visible');
+        this.loop(performance.now());
+      }
+    }
+
+    function startGame() {
+      const canvas = document.getElementById('game-canvas');
+      if (!game) {
+        game = new SpaceInvaders(canvas);
+      }
+      game.start();
+    }
+  </script>
+</body>
+</html>
