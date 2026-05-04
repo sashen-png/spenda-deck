@@ -617,6 +617,49 @@
       .logo-header-img { height: 36px; }
       .action-btn { width: 100%; justify-content: center; }
     }
+    .pw-gate {
+      position: fixed; inset: 0; z-index: 99999;
+      background: var(--bg-primary);
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    .pw-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .pw-gate-inner {
+      text-align: center; max-width: 380px; padding: 0 24px;
+    }
+    .pw-gate-logo { height: 48px; margin-bottom: 32px; }
+    .pw-gate-title {
+      font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px;
+      color: var(--text-primary); margin-bottom: 8px;
+    }
+    .pw-gate-sub {
+      font-size: 14px; color: var(--text-secondary); margin-bottom: 28px; line-height: 1.5;
+    }
+    .pw-input-row { display: flex; gap: 10px; margin-bottom: 12px; }
+    .pw-input {
+      flex: 1; padding: 12px 16px; border-radius: 10px;
+      border: 1px solid var(--border-color); background: rgba(255,255,255,0.04);
+      color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 15px;
+      outline: none; transition: border-color 0.2s;
+    }
+    .pw-input:focus { border-color: var(--spenda-purple); }
+    .pw-input.error { border-color: #e04d4d; animation: pw-shake 0.4s; }
+    .pw-submit {
+      padding: 12px 24px; border-radius: 10px; border: none; cursor: pointer;
+      background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
+      color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .pw-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(155,77,224,0.35); }
+    .pw-error-msg {
+      font-size: 13px; color: #e04d4d; min-height: 20px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    }
+    @keyframes pw-shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
@@ -627,6 +670,20 @@
   </style>
 </head>
 <body>
+  <div class="pw-gate" id="pw-gate">
+    <div class="pw-gate-inner">
+      <img src="img/spenda-logo-horizontal-white.png" alt="Spenda" class="pw-gate-logo" />
+      <div class="pw-gate-title">Investor Access</div>
+      <div class="pw-gate-sub">This deck contains confidential data.<br/>Enter the access code to continue.</div>
+      <form id="pw-form" onsubmit="return checkPw(event)">
+        <div class="pw-input-row">
+          <input type="password" class="pw-input" id="pw-input" placeholder="Access code" autocomplete="off" autofocus />
+          <button type="submit" class="pw-submit">Enter</button>
+        </div>
+        <div class="pw-error-msg" id="pw-error"></div>
+      </form>
+    </div>
+  </div>
   <div class="grid-bg"></div>
 
   <!-- Voucher Reward Overlay -->
@@ -1102,6 +1159,23 @@
   </div>
 
   <script>
+    function checkPw(e) {
+      e.preventDefault();
+      const inp = document.getElementById('pw-input');
+      if (inp.value === 'Spenda25') {
+        document.getElementById('pw-gate').classList.add('hidden');
+        sessionStorage.setItem('spenda_auth', '1');
+      } else {
+        inp.classList.add('error');
+        document.getElementById('pw-error').textContent = 'ACCESS DENIED — invalid code';
+        setTimeout(() => inp.classList.remove('error'), 500);
+      }
+      return false;
+    }
+    if (sessionStorage.getItem('spenda_auth') === '1') {
+      document.getElementById('pw-gate').classList.add('hidden');
+    }
+
     const TOTAL = 7;
     const state = Array(TOTAL).fill(false);
     let tallyTotal = 0;
