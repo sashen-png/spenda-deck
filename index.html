@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Spenda — The Multiplayer FinTech Ecosystem</title>
+  <title>Spenda — Money that moves for everyone</title>
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Spenda — The Multiplayer FinTech Ecosystem" />
-  <meta property="og:description" content="Execute payment protocols to unlock Spenda's investor pitch. Inclusive, seamless, and secure voucher payments across 800,000+ merchants." />
-  <meta property="og:site_name" content="Spenda Holdings" />
+  <meta property="og:title" content="Spenda — Money that moves for everyone" />
+  <meta property="og:description" content="Unlock Spenda's investor briefing. Vouchers, payments, possibilities — inclusive financial infrastructure across 800,000+ merchants." />
+  <meta property="og:site_name" content="Spenda" />
   <meta property="og:url" content="https://www.spenda-sa.com/deck" />
   <meta property="og:image" content="https://www.spenda-sa.com/og-deck.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Spenda — The Multiplayer FinTech Ecosystem" />
-  <meta name="twitter:description" content="Execute payment protocols to unlock Spenda's investor pitch." />
+  <meta name="twitter:title" content="Spenda — Money that moves for everyone" />
+  <meta name="twitter:description" content="Unlock Spenda's investor briefing. Vouchers, payments, possibilities." />
   <meta name="twitter:image" content="https://www.spenda-sa.com/og-deck.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#0E0B14" />
   <meta name="description" content="Spenda's interactive investor pitch deck. Execute payment protocols to unlock market data, revenue models, traction, and funding allocation." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239B4DE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -31,8 +31,8 @@
       --spenda-purple-dim: #7B3BB8;
       --spenda-purple-deep: #3D1F66;
       --spenda-purple-glow: #D6B8F2;
-      --spenda-gold: #ffb407;
-      --spenda-gold-dim: #cc9005;
+      --spenda-green: #4CAF50;
+      --spenda-green-dim: #3D9140;
       --bg-primary: #0E0B14;
       --bg-secondary: #1A1525;
       --bg-card: #1E1828;
@@ -45,11 +45,12 @@
       --border-hover: rgba(155, 77, 224, 0.45);
       --danger: #ee4444;
       --glow-purple: 0 0 20px rgba(155, 77, 224, 0.3), 0 0 60px rgba(155, 77, 224, 0.1);
-      --glow-gold: 0 0 20px rgba(255, 180, 7, 0.3), 0 0 60px rgba(255, 180, 7, 0.1);
+      --glow-green: 0 0 20px rgba(76, 175, 80, 0.3), 0 0 60px rgba(76, 175, 80, 0.1);
+      --shadow-brand: 0 24px 48px rgba(155, 77, 224, 0.15);
     }
     html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg-primary);
       color: var(--text-primary);
       min-height: 100vh;
@@ -87,15 +88,15 @@
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.25);
       border-radius: 100px; padding: 6px 16px;
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px;
+      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
       text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 24px;
     }
-    .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spenda-gold); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 6px var(--spenda-gold); }
+    .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spenda-green); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 6px var(--spenda-green); }
     @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .title {
-      font-family: 'Fraunces', serif; font-size: clamp(26px, 5vw, 44px); font-weight: 600;
+      font-family: 'Poppins', sans-serif; font-size: clamp(28px, 5vw, 40px); font-weight: 900;
       letter-spacing: -0.5px; margin-bottom: 20px;
-      background: linear-gradient(135deg, var(--text-primary) 0%, var(--spenda-purple-light) 50%, var(--spenda-purple-glow) 100%);
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--spenda-purple-light) 50%, var(--spenda-purple) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.15;
     }
     .subtitle {
@@ -106,7 +107,7 @@
       line-height: 1.75;
       padding: 0 4px;
     }
-    .subtitle strong { color: var(--spenda-gold); font-weight: 600; }
+    .subtitle strong { color: var(--spenda-green); font-weight: 600; }
 
     /* Progress + Tally */
     .progress-area { margin: 32px 0 48px; }
@@ -114,9 +115,9 @@
     .progress-segment { flex: 1; height: 3px; border-radius: 3px; background: var(--border-color); transition: background 0.6s ease, box-shadow 0.6s ease; }
     .progress-segment.unlocked { background: var(--spenda-purple); box-shadow: 0 0 10px rgba(155, 77, 224, 0.5); }
     .progress-labels { display: flex; justify-content: space-between; align-items: center; }
-    .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 1px; white-space: nowrap; }
+    .progress-label { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; white-space: nowrap; }
     .voucher-tally {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--spenda-gold);
+      font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--spenda-green);
       letter-spacing: 0.5px; transition: color 0.3s ease;
     }
 
@@ -130,13 +131,13 @@
       margin-bottom: 16px;
     }
     .section-number {
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-purple-light);
+      font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; color: var(--spenda-purple-light);
       background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.2);
-      padding: 4px 10px; border-radius: 6px; letter-spacing: 1px;
+      padding: 4px 10px; border-radius: 12px; letter-spacing: 0.05em;
     }
     .section-title {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(15px, 3.5vw, 17px);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(16px, 3.5vw, 24px);
       font-weight: 600;
       color: var(--text-primary);
       letter-spacing: -0.2px;
@@ -146,8 +147,9 @@
 
     /* Locked Card */
     .locked-card {
-      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
       overflow: hidden; transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-brand);
     }
     .locked-card:hover { border-color: var(--border-hover); }
     .locked-body { padding: 28px; }
@@ -162,8 +164,8 @@
     .action-btn {
       display: inline-flex; align-items: center; gap: 8px;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
-      color: #fff; border: none; border-radius: 10px; padding: 14px 28px;
-      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
+      color: #fff; border: none; border-radius: 12px; padding: 14px 28px;
+      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
       cursor: pointer; letter-spacing: 0.5px; transition: transform 0.15s ease, box-shadow 0.3s ease;
       box-shadow: var(--glow-purple); min-height: 48px; -webkit-tap-highlight-color: transparent;
     }
@@ -182,7 +184,7 @@
     .terminal-line { opacity: 0; transform: translateX(-5px); }
     .terminal-line.visible { opacity: 1; transform: translateX(0); transition: opacity 0.3s ease, transform 0.3s ease; }
     .terminal-line .prompt { color: var(--spenda-purple-light); margin-right: 4px; }
-    .terminal-line.success { color: var(--spenda-gold); }
+    .terminal-line.success { color: var(--spenda-green); }
     .cursor-blink {
       display: inline-block; width: 8px; height: 15px; background: var(--spenda-purple-light);
       margin-left: 4px; vertical-align: text-bottom; animation: blink 1s step-end infinite;
@@ -196,7 +198,7 @@
     .unlocked-card.revealed { border-color: rgba(155, 77, 224, 0.35); box-shadow: var(--glow-purple); }
     .unlocked-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
       text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 20px;
     }
     .unlocked-badge .check {
@@ -214,11 +216,11 @@
     .data-item.visible { animation: itemReveal 0.5s ease forwards; }
     @keyframes itemReveal { to { opacity: 1; transform: translateY(0); } }
     .data-item-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
       text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px;
     }
-    .data-item-value { font-size: 15px; color: var(--text-primary); line-height: 1.7; }
-    .data-item-value .highlight { color: var(--spenda-gold); font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; }
+    .data-item-value { font-size: 14px; color: var(--text-primary); line-height: 1.7; }
+    .data-item-value .highlight { color: var(--spenda-green); font-family: 'Poppins', sans-serif; font-weight: 700; }
 
     /* Steps Row */
     .steps-row {
@@ -253,7 +255,7 @@
       width: 100%; max-width: 220px; border-radius: 12px;
       border: 1px solid var(--border-color); object-fit: contain;
     }
-    .demo-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--spenda-purple-light); text-transform: uppercase; text-align: center; }
+    .demo-label { font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em; color: var(--spenda-purple-light); text-transform: uppercase; text-align: center; }
     .demo-desc { font-size: 12px; color: var(--text-secondary); text-align: center; line-height: 1.5; }
     .hero-img-row { display: flex; justify-content: center; margin: 16px 0 8px; }
     .hero-img { width: 100%; max-width: 280px; border-radius: 16px; }
@@ -288,8 +290,8 @@
     }
     .pipeline-badge {
       display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9px;
-      letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-gold);
-      background: rgba(255, 180, 7, 0.1); border: 1px solid rgba(255, 180, 7, 0.2);
+      letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-green);
+      background: rgba(76, 175, 80, 0.1); border: 1px solid rgba(76, 175, 80, 0.2);
       padding: 2px 8px; border-radius: 4px; margin-top: 4px;
     }
 
@@ -324,7 +326,7 @@
       grid-area: pct;
       font-family: 'JetBrains Mono', monospace;
       font-size: clamp(10px, 2.8vw, 12px);
-      color: var(--spenda-gold);
+      color: var(--spenda-green);
       text-align: right;
       white-space: nowrap;
     }
@@ -342,13 +344,13 @@
       border-bottom: 1px solid rgba(37, 40, 48, 0.5); font-family: 'JetBrains Mono', monospace;
       font-size: 12px; white-space: nowrap;
     }
-    .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 13px; }
+    .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 13px; }
     .fin-table tbody tr:last-child td { border-bottom: none; }
-    .fin-table .row-highlight td { color: var(--spenda-gold); font-weight: 600; }
+    .fin-table .row-highlight td { color: var(--spenda-green); font-weight: 600; }
     .fin-table .row-bold td { font-weight: 600; }
     .fin-table .row-separator td { border-top: 1px solid var(--border-color); }
     .fin-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -4px; padding: 0 4px; }
-    .fin-table .cell-stat { color: var(--spenda-gold); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .fin-table .cell-stat { color: var(--spenda-green); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
     .fin-table .row-accent td { background: rgba(155, 77, 224, 0.08); }
     .fin-table .row-accent td:first-child { color: var(--text-primary); font-weight: 600; }
     .cell-status {
@@ -356,7 +358,7 @@
       letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
     }
     .cell-status.live { color: var(--spenda-purple-light); background: rgba(155, 77, 224, 0.15); border: 1px solid rgba(155, 77, 224, 0.3); }
-    .cell-status.roadmap { color: var(--spenda-gold); background: rgba(255, 180, 7, 0.1); border: 1px solid rgba(255, 180, 7, 0.25); }
+    .cell-status.roadmap { color: var(--spenda-green); background: rgba(76, 175, 80, 0.1); border: 1px solid rgba(76, 175, 80, 0.25); }
     .table-note { margin-top: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
     /* Year Cards */
@@ -372,7 +374,7 @@
     }
     .year-card:hover { border-color: var(--border-hover); }
     .year-card-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
-    .year-card-value { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: var(--spenda-gold); }
+    .year-card-value { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: var(--spenda-green); }
     .year-card-sub { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
 
     /* Team Grid */
@@ -391,9 +393,9 @@
       width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 12px;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
     }
-    .team-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
+    .team-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
     .team-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px; }
     .team-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
@@ -406,7 +408,7 @@
       font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: var(--spenda-purple-light);
     }
     .milestone-text { font-size: 14px; color: var(--text-primary); line-height: 1.6; padding-top: 3px; }
-    .milestone-text .highlight { color: var(--spenda-gold); font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; }
+    .milestone-text .highlight { color: var(--spenda-green); font-family: 'Poppins', sans-serif; font-weight: 700; }
 
     /* Voucher Reward Overlay */
     .voucher-overlay {
@@ -446,10 +448,10 @@
     .voucher-card-top.shopping { background: linear-gradient(135deg, var(--spenda-purple-deep), #3a0f4d); }
     .voucher-card-top.business { background: linear-gradient(135deg, #1a4a6b, #0d2d40); }
     .voucher-card-top.investor { background: linear-gradient(135deg, #6b5a1a, #4d420d); }
-    .voucher-card-top.founder { background: linear-gradient(135deg, var(--spenda-gold-dim), #8a6a02); }
+    .voucher-card-top.founder { background: linear-gradient(135deg, var(--spenda-green-dim), #2E7D32); }
     .voucher-emoji { font-size: 40px; margin-bottom: 8px; }
     .voucher-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
-    .voucher-amount { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+    .voucher-amount { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 600; color: #fff; margin-bottom: 4px; }
     .voucher-desc { font-size: 12px; color: rgba(255,255,255,0.6); }
     .voucher-card-bottom {
       background: var(--bg-card); padding: 16px 24px; display: flex; flex-wrap: wrap;
@@ -461,9 +463,9 @@
       width: 24px; height: 24px; border-radius: 6px;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Inter', sans-serif; font-weight: 800; font-size: 12px; color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12px; color: #fff;
     }
-    .voucher-brand-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }
+    .voucher-brand-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }
     .voucher-redeem { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.5px; text-align: right; line-height: 1.4; }
     .voucher-tap { text-align: center; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); animation: pulseDot 2s ease-in-out infinite; }
 
@@ -492,35 +494,35 @@
     .all-unlocked { text-align: center; padding: 60px 0 40px; display: none; }
     .all-unlocked.active { display: block; animation: fadeUp 0.8s ease forwards; }
     .all-unlocked h2 {
-      font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; margin-bottom: 12px;
+      font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; margin-bottom: 12px;
       letter-spacing: -0.3px;
-      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-glow));
+      background: linear-gradient(135deg, var(--spenda-green), var(--spenda-purple-glow));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .all-unlocked p { color: var(--text-secondary); font-size: 15px; max-width: 520px; margin: 0 auto 12px; line-height: 1.7; }
     .final-tally {
       font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
-      color: var(--spenda-gold); margin-bottom: 28px;
+      color: var(--spenda-green); margin-bottom: 28px;
     }
     .cta-btn {
       display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-gold-dim));
+      background: linear-gradient(135deg, var(--spenda-green), var(--spenda-green-dim));
       color: var(--bg-primary); border: none; border-radius: 12px; padding: 16px 36px;
-      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
-      letter-spacing: 0.3px; box-shadow: var(--glow-gold);
+      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
+      letter-spacing: 0.3px; box-shadow: var(--glow-green);
       transition: transform 0.15s ease, box-shadow 0.3s ease; min-height: 52px;
     }
-    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255, 180, 7, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3); }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(76, 175, 80, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3); }
     .cta-btn:active { transform: translateY(0) scale(0.98); }
 
     /* Footer */
     .footer { text-align: center; padding: 32px 0 48px; border-top: 1px solid var(--border-color); }
-    .footer-brand { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+    .footer-brand { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
     .footer-links { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
     .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; transition: color 0.2s ease; display: flex; align-items: center; gap: 4px; }
     .footer-links a:hover { color: var(--spenda-purple-light); }
     .footer-links svg { width: 16px; height: 16px; }
-    .footer-legal { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; }
+    .footer-legal { font-family: 'Poppins', sans-serif; font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em; }
 
     /* E-commerce Flow */
     .ecom-flow {
@@ -598,14 +600,14 @@
       color: var(--text-muted); text-transform: uppercase;
       background: rgba(155, 77, 224, 0.08); border-bottom: 1px solid var(--border-color);
     }
-    .batch-code-header span { color: var(--spenda-gold); font-weight: 600; }
+    .batch-code-header span { color: var(--spenda-green); font-weight: 600; }
     .batch-code-pre {
       margin: 0; padding: 10px; font-size: 8px; line-height: 1.55;
       color: var(--text-secondary); white-space: pre-wrap; word-break: break-all;
     }
     .batch-code-pre .c-k { color: var(--spenda-purple-light); }
     .batch-code-pre .c-s { color: #6ee7b7; }
-    .batch-code-pre .c-n { color: var(--spenda-gold); }
+    .batch-code-pre .c-n { color: var(--spenda-green); }
     .batch-code-pre .c-c { color: var(--text-muted); }
     .batch-code-footer {
       padding: 6px 10px; font-size: 7px; letter-spacing: 0.3px;
@@ -627,7 +629,7 @@
     .game-header h3 {
       font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
       letter-spacing: 2px; text-transform: uppercase;
-      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-light));
+      background: linear-gradient(135deg, var(--spenda-green), var(--spenda-purple-light));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .game-header p {
@@ -659,7 +661,7 @@
     .hud-lives { color: var(--danger); }
     .hud-score { color: var(--spenda-purple-glow); font-weight: 600; }
     .hud-level { color: var(--spenda-purple-light); }
-    .hud-discount { color: var(--spenda-gold); font-weight: 700; }
+    .hud-discount { color: var(--spenda-green); font-weight: 700; }
     .game-overlay {
       position: absolute; inset: 12px; border-radius: 8px;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -670,7 +672,7 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: clamp(14px, 4vw, 18px);
       font-weight: 700;
-      color: var(--spenda-gold);
+      color: var(--spenda-green);
       letter-spacing: clamp(1px, 0.4vw, 2px);
       margin-bottom: 8px;
       text-align: center;
@@ -700,14 +702,14 @@
     .game-result.visible { display: block; animation: fadeUp 0.6s ease forwards; }
     .game-result .discount-earned {
       font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 800;
-      background: linear-gradient(135deg, var(--spenda-gold), var(--spenda-purple-light));
+      background: linear-gradient(135deg, var(--spenda-green), var(--spenda-purple-light));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       margin-bottom: 8px;
     }
     .game-result .discount-code {
       font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 2px;
-      color: var(--spenda-gold); background: rgba(255, 180, 7, 0.08);
-      border: 1px solid rgba(255, 180, 7, 0.2); border-radius: 8px;
+      color: var(--spenda-green); background: rgba(76, 175, 80, 0.08);
+      border: 1px solid rgba(76, 175, 80, 0.2); border-radius: 8px;
       padding: 10px 20px; display: inline-block; margin: 12px 0 20px;
     }
     .game-result p { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
@@ -819,7 +821,7 @@
       object-fit: contain;
     }
     .pw-gate-title {
-      font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 22px;
       color: var(--text-primary); margin-bottom: 8px;
     }
     .pw-gate-sub {
@@ -832,7 +834,7 @@
       margin-bottom: 12px;
     }
     .pw-input {
-      flex: 1; padding: 12px 16px; border-radius: 10px;
+      flex: 1; padding: 12px 16px; border-radius: 12px;
       border: 1px solid var(--border-color); background: rgba(255,255,255,0.04);
       color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 15px;
       outline: none; transition: border-color 0.2s;
@@ -840,9 +842,9 @@
     .pw-input:focus { border-color: var(--spenda-purple); }
     .pw-input.error { border-color: #e04d4d; animation: pw-shake 0.4s; }
     .pw-submit {
-      padding: 12px 24px; border-radius: 10px; border: none; cursor: pointer;
+      padding: 12px 24px; border-radius: 12px; border: none; cursor: pointer;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
-      color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px;
+      color: #fff; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .pw-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(155,77,224,0.35); }
@@ -920,9 +922,9 @@
       <div class="logo-area">
         <img src="img/spenda-logo-horizontal-white.png" alt="Spenda Holdings" class="logo-header-img" />
       </div>
-      <div class="badge"><span class="dot"></span> INVESTOR BRIEFING</div>
-      <h1 class="title">THE MULTIPLAYER<br />PITCH DECK</h1>
-      <p class="subtitle">Welcome, <strong>Investor</strong>. Unlock each section to explore Spenda’s investor briefing.</p>
+      <div class="badge"><span class="dot"></span> #SpendaYourWay</div>
+      <h1 class="title">MONEY THAT MOVES<br />FOR EVERYONE</h1>
+      <p class="subtitle">Welcome, <strong>Investor</strong>. Unlock each section to explore Spenda's investor briefing — vouchers, payments, possibilities.</p>
     </header>
 
     <div class="progress-area">
@@ -1018,11 +1020,11 @@
             <div class="data-item-label">How We Make Money</div>
             <div class="data-item-value">
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Stream</th><th>Model</th><th>Role</th></tr></thead><tbody>
-                <tr><td>Transaction fees</td><td>~2% on voucher/QR volume</td><td style="color:var(--spenda-gold);font-weight:600;">Primary</td></tr>
+                <tr><td>Transaction fees</td><td>~2% on voucher/QR volume</td><td style="color:var(--spenda-green);font-weight:600;">Primary</td></tr>
                 <tr><td>B2B SaaS / API</td><td>Per-seat or per-batch fee</td><td>Recurring</td></tr>
                 <tr><td>White-label vouchers</td><td>Partner licensing</td><td>Network effect</td></tr>
                 <tr><td>Merchant services</td><td>Onboarding, analytics</td><td>Upside</td></tr>
-                <tr class="row-bold row-separator row-accent"><td>At scale</td><td>R168M/mo × 2%</td><td style="color:var(--spenda-gold);font-weight:600;">~R3.4M/mo gross</td></tr>
+                <tr class="row-bold row-separator row-accent"><td>At scale</td><td>R168M/mo × 2%</td><td style="color:var(--spenda-green);font-weight:600;">~R3.4M/mo gross</td></tr>
               </tbody></table></div>
               <p class="table-note">Projected at full acquisition target.</p>
             </div>
@@ -1053,9 +1055,9 @@
             <div class="data-item-label">Market Size</div>
             <div class="data-item-value">
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Tier</th><th>Size</th><th>What It Means</th></tr></thead><tbody>
-                <tr><td style="font-weight:600;">TAM</td><td style="color:var(--spenda-gold);font-weight:600;">R20.1B</td><td>SA loyalty/rewards economy, 14% CAGR to 2030</td></tr>
-                <tr><td style="font-weight:600;">SAM</td><td style="color:var(--spenda-gold);font-weight:600;">R150B + 11M</td><td>Dual-sided: consumer cash spend + enterprise disbursement</td></tr>
-                <tr><td style="font-weight:600;">SOM</td><td style="color:var(--spenda-gold);font-weight:600;">R168M/mo</td><td>16-month acquisition goal (75 enterprise + 10K B2C)</td></tr>
+                <tr><td style="font-weight:600;">TAM</td><td style="color:var(--spenda-green);font-weight:600;">R20.1B</td><td>SA loyalty/rewards economy, 14% CAGR to 2030</td></tr>
+                <tr><td style="font-weight:600;">SAM</td><td style="color:var(--spenda-green);font-weight:600;">R150B + 11M</td><td>Dual-sided: consumer cash spend + enterprise disbursement</td></tr>
+                <tr><td style="font-weight:600;">SOM</td><td style="color:var(--spenda-green);font-weight:600;">R168M/mo</td><td>16-month acquisition goal (75 enterprise + 10K B2C)</td></tr>
               </tbody></table></div>
               <p style="margin-top:14px;font-size:14px;color:var(--text-secondary);">The <span class="highlight">R20.1B rewards market</span> is our wedge; the <span class="highlight">R150B cash economy</span> is our expansion path.</p>
             </div>
@@ -1072,7 +1074,7 @@
               <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:14px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;color:var(--text-secondary);">
                 <div style="color:var(--spenda-purple-light);">POST /v2/disbursements/batch</div>
                 <div>{ "type": "grocery", "amount": 250, "recipients": 847, "notify": "whatsapp" }</div>
-                <div style="color:var(--spenda-gold);margin-top:8px;">200 OK — 847 vouchers queued</div>
+                <div style="color:var(--spenda-green);margin-top:8px;">200 OK — 847 vouchers queued</div>
               </div>
             </div>
           </div>
@@ -1110,10 +1112,10 @@
                 <tr><td>Social impact</td><td>4 UN SDGs, 800+ literacy participants</td></tr>
               </tbody></table></div>
               <div class="fin-table-scroll" style="margin-top:12px;"><table class="fin-table"><thead><tr><th>Channel</th><th>Volume</th></tr></thead><tbody>
-                <tr><td>Consumer App</td><td style="color:var(--spenda-gold);font-weight:600;">R703,556</td></tr>
-                <tr><td>Legacy Web / Voucher POC</td><td style="color:var(--spenda-gold);font-weight:600;">R194,076</td></tr>
-                <tr><td>B2B Pre-Market MVP</td><td style="color:var(--spenda-gold);font-weight:600;">R28,840</td></tr>
-                <tr class="row-bold row-separator"><td>Total</td><td style="color:var(--spenda-gold);font-weight:600;">R926,473</td></tr>
+                <tr><td>Consumer App</td><td style="color:var(--spenda-green);font-weight:600;">R703,556</td></tr>
+                <tr><td>Legacy Web / Voucher POC</td><td style="color:var(--spenda-green);font-weight:600;">R194,076</td></tr>
+                <tr><td>B2B Pre-Market MVP</td><td style="color:var(--spenda-green);font-weight:600;">R28,840</td></tr>
+                <tr class="row-bold row-separator"><td>Total</td><td style="color:var(--spenda-green);font-weight:600;">R926,473</td></tr>
               </tbody></table></div>
               <div class="merchant-logos-strip" style="margin-top:16px;">
                 <div class="merchant-logos-track">
@@ -1129,11 +1131,11 @@
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Stage</th><th>Volume</th><th>Revenue / Runway</th></tr></thead><tbody>
                 <tr><td style="font-weight:600;">Today</td><td>R926K settled</td><td>Proven payment network</td></tr>
                 <tr><td style="font-weight:600;">With R11M</td><td>R2.5M acquisition</td><td>16 months runway</td></tr>
-                <tr class="row-accent"><td>At Scale</td><td style="color:var(--spenda-gold);font-weight:600;">R168M/mo</td><td style="color:var(--spenda-gold);font-weight:600;">~R3.4M/mo gross</td></tr>
+                <tr class="row-accent"><td>At Scale</td><td style="color:var(--spenda-green);font-weight:600;">R168M/mo</td><td style="color:var(--spenda-green);font-weight:600;">~R3.4M/mo gross</td></tr>
               </tbody></table></div>
               <div class="fin-table-scroll" style="margin-top:12px;"><table class="fin-table"><thead><tr><th>Source</th><th>Monthly Volume</th><th>Share</th></tr></thead><tbody>
-                <tr><td>Enterprise clients (75)</td><td style="color:var(--spenda-gold);font-weight:600;">R150M</td><td>89%</td></tr>
-                <tr><td>B2C users (10,000)</td><td style="color:var(--spenda-gold);font-weight:600;">R18M</td><td>11%</td></tr>
+                <tr><td>Enterprise clients (75)</td><td style="color:var(--spenda-green);font-weight:600;">R150M</td><td>89%</td></tr>
+                <tr><td>B2C users (10,000)</td><td style="color:var(--spenda-green);font-weight:600;">R18M</td><td>11%</td></tr>
               </tbody></table></div>
             </div>
           </div>
@@ -1141,10 +1143,10 @@
             <div class="data-item-label">Acquisition Targets (R2.5M Budget)</div>
             <div class="data-item-value">
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Segment</th><th>Target</th><th>CAC</th><th>Budget</th></tr></thead><tbody>
-                <tr><td>Enterprise Clients</td><td>75</td><td style="color:var(--spenda-gold);font-weight:600;">R10,000</td><td>R750,000</td></tr>
-                <tr><td>Merchants</td><td>7,500</td><td style="color:var(--spenda-gold);font-weight:600;">R100</td><td>R750,000</td></tr>
-                <tr><td>B2C Wallets</td><td>10,000</td><td style="color:var(--spenda-gold);font-weight:600;">R100</td><td>R1,000,000</td></tr>
-                <tr class="row-bold row-separator"><td>Total</td><td></td><td></td><td style="color:var(--spenda-gold);font-weight:600;">R2,500,000</td></tr>
+                <tr><td>Enterprise Clients</td><td>75</td><td style="color:var(--spenda-green);font-weight:600;">R10,000</td><td>R750,000</td></tr>
+                <tr><td>Merchants</td><td>7,500</td><td style="color:var(--spenda-green);font-weight:600;">R100</td><td>R750,000</td></tr>
+                <tr><td>B2C Wallets</td><td>10,000</td><td style="color:var(--spenda-green);font-weight:600;">R100</td><td>R1,000,000</td></tr>
+                <tr class="row-bold row-separator"><td>Total</td><td></td><td></td><td style="color:var(--spenda-green);font-weight:600;">R2,500,000</td></tr>
               </tbody></table></div>
             </div>
           </div>
@@ -1199,19 +1201,19 @@
             <div class="data-item-value">
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;">
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
-                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-gold));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">MH</div>
+                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">MH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Merishka Harilall</div>
                   <div style="font-size:12px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CEO &amp; Co-Founder</div>
                   <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">FinTech strategy, product vision, investor relations</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
-                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-gold));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SH</div>
+                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Sashen Harilall</div>
                   <div style="font-size:12px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">COO &amp; Co-Founder</div>
                   <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Operations, partnerships, go-to-market</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
-                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-gold));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SB</div>
+                  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SB</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Siboniso Bophela</div>
                   <div style="font-size:12px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CPO &amp; Co-Founder</div>
                   <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Product, platform architecture, engineering</div>
@@ -1249,7 +1251,7 @@
     <div class="game-section" id="game-section">
       <div class="game-header">
         <h3>BONUS ROUND: SPACE INVADERS</h3>
-        <p>Earn up to <strong style="color:var(--spenda-gold)">3% equity discount</strong> before negotiations. Clear each level to chip away at your discount. Think you can conquer all 5?</p>
+        <p>Earn up to <strong style="color:var(--spenda-green)">3% equity discount</strong> before negotiations. Clear each level to chip away at your discount. Think you can conquer all 5?</p>
       </div>
       <div class="game-hud">
         <span class="hud-lives" id="hud-lives">LIVES: 3</span>
@@ -1289,7 +1291,7 @@
         <a href="https://www.instagram.com/spenda.sa/" target="_blank" rel="noopener"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
         <a href="https://www.tiktok.com/@spenda_sa" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.51a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.43V13a8.16 8.16 0 005.58 2.18V11.7a4.81 4.81 0 01-2.82-.89V6.69h2.82z"/></svg> TikTok</a>
       </div>
-      <div class="footer-legal">Confidential &nbsp;·&nbsp; 2026</div>
+      <div class="footer-legal">Confidential &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; #SpendaYourWay</div>
     </footer>
   </div>
 
@@ -1700,7 +1702,7 @@
               const pts = [10, 20, 40];
               this.score += (pts[a.type] || 10) * (this.level + 1);
               this._updateHUD();
-              const colors = ['#9B4DE0', '#ffb407', '#D6B8F2', '#D6B8F2'];
+              const colors = ['#9B4DE0', '#4CAF50', '#D6B8F2', '#D6B8F2'];
               this._spawnParticles(a.x + a.w / 2, a.y + a.h / 2, colors[Math.floor(Math.random() * colors.length)], 8);
               break;
             }
@@ -1817,13 +1819,13 @@
         ctx.fillRect(this.player.x, this.player.y, this.player.w, this.player.h);
         ctx.fillStyle = '#D6B8F2';
         ctx.fillRect(this.player.x + this.player.w / 2 - 3, this.player.y - 6, 6, 8);
-        ctx.fillStyle = '#ffb407';
+        ctx.fillStyle = '#4CAF50';
         ctx.fillRect(this.player.x + 4, this.player.y + 2, 4, 3);
         ctx.fillRect(this.player.x + this.player.w - 8, this.player.y + 2, 4, 3);
 
         this.aliens.forEach(a => {
           if (!a.alive) return;
-          const colors = ['#4ade80', '#ffb407', '#ee4444'];
+          const colors = ['#4CAF50', '#9B4DE0', '#ee4444'];
           ctx.fillStyle = a.diving ? '#ff6b6b' : colors[a.type] || '#4ade80';
           ctx.fillRect(a.x, a.y, a.w, a.h);
           ctx.fillStyle = 'rgba(0,0,0,0.3)';
