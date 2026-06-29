@@ -348,6 +348,16 @@
     .fin-table .row-bold td { font-weight: 600; }
     .fin-table .row-separator td { border-top: 1px solid var(--border-color); }
     .fin-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -4px; padding: 0 4px; }
+    .fin-table .cell-stat { color: var(--spenda-gold); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .fin-table .row-accent td { background: rgba(155, 77, 224, 0.08); }
+    .fin-table .row-accent td:first-child { color: var(--text-primary); font-weight: 600; }
+    .cell-status {
+      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .cell-status.live { color: var(--spenda-purple-light); background: rgba(155, 77, 224, 0.15); border: 1px solid rgba(155, 77, 224, 0.3); }
+    .cell-status.roadmap { color: var(--spenda-gold); background: rgba(255, 180, 7, 0.1); border: 1px solid rgba(255, 180, 7, 0.25); }
+    .table-note { margin-top: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
     /* Year Cards */
     .year-cards {
@@ -954,11 +964,11 @@
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">The Problem in Numbers</div>
             <div class="data-item-value">
-              <div class="steps-row">
-                <div class="step-card"><div class="step-num">11M+</div><div class="step-text">Unbanked South Africans locked out of digital payments</div></div>
-                <div class="step-card"><div class="step-num">R150B</div><div class="step-text">Annual cash economy with zero merchant data</div></div>
-                <div class="step-card"><div class="step-num">R20.1B</div><div class="step-text">Loyalty value trapped in closed-loop silos</div></div>
-              </div>
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Metric</th><th>Scale</th><th>The Gap</th></tr></thead><tbody>
+                <tr><td>Unbanked population</td><td class="cell-stat">11M+</td><td>Locked out of digital payments</td></tr>
+                <tr><td>Cash economy</td><td class="cell-stat">R150B/yr</td><td>Zero merchant transaction data</td></tr>
+                <tr><td>Loyalty value</td><td class="cell-stat">R20.1B</td><td>Trapped in closed-loop silos</td></tr>
+              </tbody></table></div>
             </div>
           </div>
         </div>
@@ -984,28 +994,27 @@
         <div class="unlocked-content" id="unlocked-1">
           <div class="unlocked-badge"><span class="check">✓</span> UNLOCKED</div>
           <div class="data-item" data-reveal="0">
-            <div class="data-item-label">Two Engines, One Network</div>
-            <div class="data-item-value" style="font-size:17px;font-weight:600;">Spenda powers two independent engines — <span class="highlight">B2C Wallet</span> and <span class="highlight">B2B Bulk</span> — through a shared settlement layer and merchant QR network.</div>
-          </div>
-          <div class="data-item" data-reveal="1">
-            <div class="data-item-label">Engine 1 — B2C Wallet</div>
-            <div class="data-item-value">Phone-linked mobile app for <span class="highlight">bill payments</span>, <span class="highlight">utility vouchers</span>, and <span class="highlight">QR transactions</span>. No bank account required.</div>
-          </div>
-          <div class="data-item" data-reveal="2">
-            <div class="data-item-label">Engine 2 — B2B Bulk</div>
-            <div class="data-item-value">Enterprise SaaS for <span class="highlight">NGOs and corporates</span> to disburse aid, payroll, and incentives via digital vouchers at scale.</div>
-          </div>
-          <div class="data-item" data-reveal="3">
-            <div class="data-item-label">How It Works</div>
+            <div class="data-item-label">Spenda at a Glance</div>
             <div class="data-item-value">
-              <div class="steps-row">
-                <div class="step-card"><div class="step-num">01</div><div class="step-text">Load via bank transfer, card, or cash deposit</div></div>
-                <div class="step-card"><div class="step-num">02</div><div class="step-text">Send &amp; receive Spenda vouchers instantly</div></div>
-                <div class="step-card"><div class="step-num">03</div><div class="step-text">Pay at merchants nationwide via QR</div></div>
-              </div>
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Layer</th><th>Function</th><th>Users</th></tr></thead><tbody>
+                <tr><td>Settlement Layer</td><td>Bank-agnostic fiat + voucher settlement</td><td>Both engines</td></tr>
+                <tr><td>B2C Wallet</td><td>Bills, utility vouchers, QR pay</td><td>Consumers (phone-linked)</td></tr>
+                <tr><td>B2B Bulk</td><td>Aid, payroll, incentive disbursements</td><td>NGOs &amp; corporates</td></tr>
+                <tr><td>Merchant QR Network</td><td>Shared acceptance at 800,000+ locations</td><td>All transactions</td></tr>
+              </tbody></table></div>
             </div>
           </div>
-          <div class="data-item" data-reveal="4">
+          <div class="data-item" data-reveal="1">
+            <div class="data-item-label">How It Works</div>
+            <div class="data-item-value">
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Step</th><th>User Action</th><th>Outcome</th></tr></thead><tbody>
+                <tr><td class="cell-stat">1</td><td>Load via bank, card, or cash</td><td>Wallet funded</td></tr>
+                <tr><td class="cell-stat">2</td><td>Send &amp; receive vouchers</td><td>Instant P2P / B2B transfer</td></tr>
+                <tr><td class="cell-stat">3</td><td>Scan QR at merchant</td><td>Payment settled</td></tr>
+              </tbody></table></div>
+            </div>
+          </div>
+          <div class="data-item" data-reveal="2">
             <div class="data-item-label">How We Make Money</div>
             <div class="data-item-value">
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Stream</th><th>Model</th><th>Role</th></tr></thead><tbody>
@@ -1013,8 +1022,9 @@
                 <tr><td>B2B SaaS / API</td><td>Per-seat or per-batch fee</td><td>Recurring</td></tr>
                 <tr><td>White-label vouchers</td><td>Partner licensing</td><td>Network effect</td></tr>
                 <tr><td>Merchant services</td><td>Onboarding, analytics</td><td>Upside</td></tr>
+                <tr class="row-bold row-separator row-accent"><td>At scale</td><td>R168M/mo × 2%</td><td style="color:var(--spenda-gold);font-weight:600;">~R3.4M/mo gross</td></tr>
               </tbody></table></div>
-              <p style="margin-top:14px;font-size:15px;">At scale: <span class="highlight">R168M/mo volume × 2% fee = ~R3.4M/mo gross revenue</span> <span style="color:var(--text-muted);font-size:13px;">(projected at full acquisition target)</span></p>
+              <p class="table-note">Projected at full acquisition target.</p>
             </div>
           </div>
         </div>
@@ -1051,23 +1061,20 @@
             </div>
           </div>
           <div class="data-item" data-reveal="1">
-            <div class="data-item-label">Live Today</div>
+            <div class="data-item-label">Product Suite</div>
             <div class="data-item-value">
-              <ul style="padding-left:20px;list-style:disc;">
-                <li style="margin-bottom:8px;"><span class="highlight">Scan-to-Pay:</span> QR payments at 800,000+ merchants — no intermediary banks required.</li>
-                <li style="margin-bottom:8px;"><span class="highlight">Voucher Sales API:</span> Enterprise REST API for bulk NGO and corporate disbursements.</li>
-                <li><span class="highlight">Merchant QR:</span> Zero-hardware onboarding — self-checkout, tipping, and split payments via printed QR.</li>
-              </ul>
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Product</th><th>Status</th><th>What It Does</th></tr></thead><tbody>
+                <tr><td>Scan-to-Pay</td><td><span class="cell-status live">Live</span></td><td>QR payments at 800,000+ merchants</td></tr>
+                <tr><td>Voucher Sales API</td><td><span class="cell-status live">Live</span></td><td>Bulk NGO/corporate disbursements</td></tr>
+                <tr><td>Merchant QR</td><td><span class="cell-status live">Live</span></td><td>Zero-hardware onboarding, tipping, split pay</td></tr>
+                <tr><td>E-commerce &amp; BNPL</td><td><span class="cell-status roadmap">Roadmap</span></td><td>Behavioural credit on essential spend</td></tr>
+              </tbody></table></div>
               <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:14px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;color:var(--text-secondary);">
                 <div style="color:var(--spenda-purple-light);">POST /v2/disbursements/batch</div>
                 <div>{ "type": "grocery", "amount": 250, "recipients": 847, "notify": "whatsapp" }</div>
                 <div style="color:var(--spenda-gold);margin-top:8px;">200 OK — 847 vouchers queued</div>
               </div>
             </div>
-          </div>
-          <div class="data-item" data-reveal="2">
-            <div class="data-item-label">Roadmap</div>
-            <div class="data-item-value">Behavioural credit scoring and micro-limits on essential spend (groceries, fuel, medical) — <span class="highlight">risk-managed, post-Series A</span>.</div>
           </div>
         </div>
       </div>
@@ -1095,14 +1102,19 @@
           <div class="unlocked-badge"><span class="check">✓</span> UNLOCKED</div>
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">Traction to Date</div>
-            <div class="data-item-value"><span class="highlight">R926,473</span> net settled volume — 100% successful cleared funds.
+            <div class="data-item-value">
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Proof Point</th><th>Detail</th></tr></thead><tbody>
+                <tr><td>Net settled volume</td><td class="cell-stat">R926,473</td></tr>
+                <tr><td>App installs</td><td>20,000+</td></tr>
+                <tr><td>Awards</td><td>Standard Chartered FinTech, M&amp;G Top Financial Services</td></tr>
+                <tr><td>Social impact</td><td>4 UN SDGs, 800+ literacy participants</td></tr>
+              </tbody></table></div>
               <div class="fin-table-scroll" style="margin-top:12px;"><table class="fin-table"><thead><tr><th>Channel</th><th>Volume</th></tr></thead><tbody>
                 <tr><td>Consumer App</td><td style="color:var(--spenda-gold);font-weight:600;">R703,556</td></tr>
                 <tr><td>Legacy Web / Voucher POC</td><td style="color:var(--spenda-gold);font-weight:600;">R194,076</td></tr>
                 <tr><td>B2B Pre-Market MVP</td><td style="color:var(--spenda-gold);font-weight:600;">R28,840</td></tr>
                 <tr class="row-bold row-separator"><td>Total</td><td style="color:var(--spenda-gold);font-weight:600;">R926,473</td></tr>
               </tbody></table></div>
-              <p style="margin-top:12px;font-size:14px;"><span class="highlight">20,000+</span> app installs · <span class="highlight">Standard Chartered</span> FinTech Award · <span class="highlight">Mail &amp; Guardian</span> Top Financial Services · 4 UN SDGs · 800+ financial literacy participants</p>
               <div class="merchant-logos-strip" style="margin-top:16px;">
                 <div class="merchant-logos-track">
                   <img src="img/partner-1.png" alt="Partner" /><img src="img/partner-2.png" alt="Partner" /><img src="img/partner-3.png" alt="Partner" /><img src="img/partner-4.png" alt="Partner" /><img src="img/partner-5.png" alt="Partner" /><img src="img/partner-6.png" alt="Partner" /><img src="img/partner-7.png" alt="Partner" /><img src="img/partner-8.png" alt="Partner" />
@@ -1117,12 +1129,12 @@
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Stage</th><th>Volume</th><th>Revenue / Runway</th></tr></thead><tbody>
                 <tr><td style="font-weight:600;">Today</td><td>R926K settled</td><td>Proven payment network</td></tr>
                 <tr><td style="font-weight:600;">With R11M</td><td>R2.5M acquisition</td><td>16 months runway</td></tr>
-                <tr><td style="font-weight:600;">At Scale</td><td style="color:var(--spenda-gold);font-weight:600;">R168M/mo</td><td style="color:var(--spenda-gold);font-weight:600;">~R3.4M/mo gross</td></tr>
+                <tr class="row-accent"><td>At Scale</td><td style="color:var(--spenda-gold);font-weight:600;">R168M/mo</td><td style="color:var(--spenda-gold);font-weight:600;">~R3.4M/mo gross</td></tr>
               </tbody></table></div>
-              <div class="allocation-bar-container" style="margin-top:16px;">
-                <div class="allocation-row"><span class="allocation-label">Enterprise Clients (75)</span><div class="allocation-track"><div class="allocation-fill" data-width="89" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-gold));"></div></div><span class="allocation-pct">R150M/mo</span></div>
-                <div class="allocation-row"><span class="allocation-label">B2C Users (10,000)</span><div class="allocation-track"><div class="allocation-fill" data-width="11" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">R18M/mo</span></div>
-              </div>
+              <div class="fin-table-scroll" style="margin-top:12px;"><table class="fin-table"><thead><tr><th>Source</th><th>Monthly Volume</th><th>Share</th></tr></thead><tbody>
+                <tr><td>Enterprise clients (75)</td><td style="color:var(--spenda-gold);font-weight:600;">R150M</td><td>89%</td></tr>
+                <tr><td>B2C users (10,000)</td><td style="color:var(--spenda-gold);font-weight:600;">R18M</td><td>11%</td></tr>
+              </tbody></table></div>
             </div>
           </div>
           <div class="data-item" data-reveal="2">
@@ -1160,18 +1172,26 @@
           <div class="unlocked-badge"><span class="check">✓</span> UNLOCKED</div>
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">The Ask</div>
-            <div class="data-item-value" style="font-size:20px;font-weight:700;"><span class="highlight">R11,000,000</span> via SAFE — <span class="highlight">R100M Valuation Cap</span> with <span class="highlight">15% Discount Rate</span>.</div>
+            <div class="data-item-value">
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Term</th><th>Value</th></tr></thead><tbody>
+                <tr><td>Raise</td><td class="cell-stat">R11,000,000</td></tr>
+                <tr><td>Instrument</td><td>SAFE</td></tr>
+                <tr><td>Valuation cap</td><td class="cell-stat">R100M</td></tr>
+                <tr><td>Discount</td><td class="cell-stat">15%</td></tr>
+              </tbody></table></div>
+            </div>
           </div>
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">Use of Funds</div>
-            <div class="data-item-value">Monthly burn: <span class="highlight">R510,000</span> (R250k Ops, R200k Tech/IP, R60k Compliance). <span class="highlight">R11M = R2.5M acquisition + 16 months runway</span>.
-              <div class="allocation-bar-container" style="margin-top:16px;">
-                <div class="allocation-row"><span class="allocation-label">Customer Acquisition</span><div class="allocation-track"><div class="allocation-fill" data-width="23" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-gold));"></div></div><span class="allocation-pct">R2.5M</span></div>
-                <div class="allocation-row"><span class="allocation-label">Operations (16mo)</span><div class="allocation-track"><div class="allocation-fill" data-width="36" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">R4.0M</span></div>
-                <div class="allocation-row"><span class="allocation-label">Tech &amp; IP (16mo)</span><div class="allocation-track"><div class="allocation-fill" data-width="29" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple-glow));"></div></div><span class="allocation-pct">R3.2M</span></div>
-                <div class="allocation-row"><span class="allocation-label">Compliance (16mo)</span><div class="allocation-track"><div class="allocation-fill" data-width="9" style="background:linear-gradient(90deg,var(--spenda-gold),var(--spenda-purple-light));"></div></div><span class="allocation-pct">R960k</span></div>
-                <div class="allocation-row"><span class="allocation-label">Reserve</span><div class="allocation-track"><div class="allocation-fill" data-width="3" style="background:linear-gradient(90deg,var(--spenda-purple-deep),var(--spenda-gold));"></div></div><span class="allocation-pct">R340k</span></div>
-              </div>
+            <div class="data-item-value">
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Category</th><th>Amount</th><th>% of R11M</th></tr></thead><tbody>
+                <tr><td>Customer acquisition</td><td>R2.5M</td><td>23%</td></tr>
+                <tr><td>Operations (16 mo)</td><td>R4.0M</td><td>36%</td></tr>
+                <tr><td>Tech &amp; IP (16 mo)</td><td>R3.2M</td><td>29%</td></tr>
+                <tr><td>Compliance (16 mo)</td><td>R960k</td><td>9%</td></tr>
+                <tr><td>Reserve</td><td>R340k</td><td>3%</td></tr>
+                <tr class="row-bold row-separator row-accent"><td>Runway</td><td>R510k/mo burn</td><td>16+ months</td></tr>
+              </tbody></table></div>
             </div>
           </div>
           <div class="data-item" data-reveal="2">
@@ -1202,13 +1222,13 @@
           <div class="data-item" data-reveal="3">
             <div class="data-item-label">Deal Summary</div>
             <div class="data-item-value">
-              <ul style="padding-left:20px;list-style:disc;line-height:1.9;">
-                <li>Raising <span class="highlight">R11M via SAFE</span> (R100M cap, 15% discount)</li>
-                <li>Two-engine model: B2C wallet + B2B SaaS on shared QR network</li>
-                <li><span class="highlight">R2.5M</span> funds proven CAC formula (75 enterprise, 7,500 merchants, 10K B2C)</li>
-                <li><span class="highlight">R510k/mo</span> burn = 16+ months runway</li>
-                <li>Post-raise: dominate South Africa, then UAE + broader Africa</li>
-              </ul>
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th></th><th></th></tr></thead><tbody>
+                <tr><td>Raise</td><td>R11M SAFE, R100M cap, 15% discount</td></tr>
+                <tr><td>Model</td><td>B2C wallet + B2B SaaS on shared QR network</td></tr>
+                <tr><td>Acquisition</td><td>R2.5M → 75 enterprise, 7,500 merchants, 10K B2C</td></tr>
+                <tr><td>Runway</td><td>R510k/mo burn, 16+ months</td></tr>
+                <tr><td>Expansion</td><td>SA dominance, then UAE + Africa</td></tr>
+              </tbody></table></div>
             </div>
           </div>
         </div>
@@ -1356,13 +1376,6 @@
       const container = document.getElementById('unlocked-' + idx);
       const items = container.querySelectorAll('.data-item');
       items.forEach((item, i) => setTimeout(() => item.classList.add('visible'), i * 180));
-      if (idx === 3 || idx === 4) {
-        setTimeout(() => {
-          container.querySelectorAll('.allocation-fill').forEach(fill => {
-            fill.style.width = fill.dataset.width + '%';
-          });
-        }, items.length * 180 + 200);
-      }
     }
 
     function unlockSection(index) {
