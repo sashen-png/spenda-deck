@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Spenda Deck" />
-  <meta name="theme-color" content="#F5F2EC" />
+  <meta name="theme-color" content="#0E0B14" />
   <meta name="description" content="Spenda's interactive investor pitch deck. Execute payment protocols to unlock market data, revenue models, traction, and funding allocation." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239B4DE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,27 +33,26 @@
       --spenda-purple-glow: #D6B8F2;
       --spenda-green: #4CAF50;
       --spenda-green-dim: #3D9140;
-      --spenda-off-white: #F5F2EC;
       --spenda-ink: #0E0B14;
-      --bg-primary: #F5F2EC;
-      --bg-secondary: #EDE9E3;
-      --bg-card: #EDE9E3;
-      --bg-card-hover: #E5E0D8;
-      --bg-terminal: #E8E4DE;
-      --text-primary: #0E0B14;
-      --text-secondary: #3D1F66;
+      --bg-primary: #0E0B14;
+      --bg-secondary: #1A1525;
+      --bg-card: #1E1828;
+      --bg-card-hover: #241D30;
+      --bg-terminal: #0A0710;
+      --text-primary: #F5F2EC;
+      --text-secondary: #B0A8B8;
       --text-muted: #6B5F78;
-      --border-color: rgba(61, 31, 102, 0.12);
-      --border-hover: rgba(155, 77, 224, 0.35);
+      --border-color: #2E2640;
+      --border-hover: rgba(155, 77, 224, 0.45);
       --danger: #ee4444;
-      --glow-purple: 0 0 20px rgba(155, 77, 224, 0.2), 0 0 60px rgba(155, 77, 224, 0.08);
-      --glow-green: 0 0 20px rgba(76, 175, 80, 0.25), 0 0 60px rgba(76, 175, 80, 0.08);
-      --shadow-brand: 0 24px 48px rgba(61, 31, 102, 0.08);
+      --glow-purple: 0 0 20px rgba(155, 77, 224, 0.3), 0 0 60px rgba(155, 77, 224, 0.1);
+      --glow-green: 0 0 20px rgba(76, 175, 80, 0.3), 0 0 60px rgba(76, 175, 80, 0.1);
+      --shadow-brand: 0 24px 48px rgba(155, 77, 224, 0.15);
     }
     html {
       scroll-behavior: smooth;
       -webkit-tap-highlight-color: transparent;
-      background: var(--spenda-off-white);
+      background: var(--bg-primary);
     }
     body {
       font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -68,10 +67,9 @@
     }
     .grid-bg {
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background-color: var(--spenda-off-white);
       background-image:
-        linear-gradient(rgba(155, 77, 224, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(155, 77, 224, 0.06) 1px, transparent 1px);
+        linear-gradient(rgba(155, 77, 224, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155, 77, 224, 0.04) 1px, transparent 1px);
       background-size: 48px 48px;
     }
     .container {
@@ -88,23 +86,23 @@
     .header::before {
       content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
       width: 600px; height: 500px;
-      background: radial-gradient(circle, rgba(155, 77, 224, 0.1) 0%, rgba(214, 184, 242, 0.15) 40%, transparent 70%);
+      background: radial-gradient(circle, rgba(155, 77, 224, 0.12) 0%, rgba(214, 184, 242, 0.03) 40%, transparent 70%);
       pointer-events: none;
     }
-    .logo-area { display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--spenda-off-white); }
+    .logo-area { display: flex; align-items: center; justify-content: center; margin-bottom: 28px; }
     .badge {
       display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.25);
+      background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.25);
       border-radius: 100px; padding: 10px 22px;
       font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 28px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 28px;
     }
     .badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--spenda-green); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 8px var(--spenda-green); }
     @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .title {
       font-family: 'Poppins', sans-serif; font-size: clamp(32px, 6vw, 48px); font-weight: 900;
       letter-spacing: -0.5px; margin-bottom: 24px;
-      background: linear-gradient(135deg, var(--spenda-ink) 0%, var(--spenda-purple-deep) 45%, var(--spenda-purple) 100%);
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--spenda-purple-light) 50%, var(--spenda-purple) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.15;
     }
     .subtitle {
@@ -139,8 +137,8 @@
       margin-bottom: 16px;
     }
     .section-number {
-      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; color: var(--spenda-purple-deep);
-      background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.2);
+      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; color: var(--spenda-purple-light);
+      background: rgba(155, 77, 224, 0.12); border: 1px solid rgba(155, 77, 224, 0.2);
       padding: 6px 14px; border-radius: 14px; letter-spacing: 0.05em;
     }
     .section-title {
@@ -165,8 +163,9 @@
     .lock-icon {
       width: 32px; height: 32px; border-radius: 8px;
       background: rgba(255, 107, 107, 0.1); border: 1px solid rgba(255, 107, 107, 0.2);
-      display: flex; align-items: center; justify-content: center; font-size: 14px;
+      display: flex; align-items: center; justify-content: center; color: var(--danger);
     }
+    .lock-icon svg { width: 16px; height: 16px; display: block; }
     .lock-status { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--danger); }
     .lock-message { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
     .action-btn {
@@ -186,7 +185,7 @@
     .terminal-output {
       display: none; background: var(--bg-terminal); border-top: 1px solid var(--border-color);
       padding: 20px 28px; font-family: 'JetBrains Mono', monospace; font-size: 15px;
-      line-height: 2; color: var(--spenda-purple-deep); min-height: 60px;
+      line-height: 2; color: var(--spenda-purple-glow); min-height: 60px;
     }
     .terminal-output.active { display: block; }
     .terminal-line { opacity: 0; transform: translateX(-5px); }
@@ -207,7 +206,7 @@
     .unlocked-badge {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 20px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 20px;
     }
     .unlocked-badge .check {
       width: 22px; height: 22px; border-radius: 50%; background: rgba(155, 77, 224, 0.2);
@@ -225,7 +224,7 @@
     @keyframes itemReveal { to { opacity: 1; transform: translateY(0); } }
     .data-item-label {
       font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 8px;
+      text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px;
     }
     .data-item-value { font-size: 16px; color: var(--text-primary); line-height: 1.7; }
     .data-item-value .highlight { color: var(--spenda-green); font-family: 'Poppins', sans-serif; font-weight: 700; }
@@ -262,12 +261,12 @@
     .product-img {
       width: 100%; max-width: 220px; border-radius: 12px;
       border: 1px solid var(--border-color); object-fit: contain;
-      background: var(--spenda-off-white);
+      background: var(--bg-secondary);
     }
-    .demo-label { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--spenda-purple-deep); text-transform: uppercase; text-align: center; }
+    .demo-label { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--spenda-purple-light); text-transform: uppercase; text-align: center; }
     .demo-desc { font-size: 14px; color: var(--text-secondary); text-align: center; line-height: 1.5; }
     .hero-img-row { display: flex; justify-content: center; margin: 16px 0 8px; }
-    .hero-img { width: 100%; max-width: 280px; border-radius: 16px; background: var(--spenda-off-white); }
+    .hero-img { width: 100%; max-width: 280px; border-radius: 16px; background: var(--bg-secondary); }
     .merchant-logos-strip {
       width: 100%; max-width: 420px; margin-top: 16px; overflow: hidden;
       mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -288,7 +287,7 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .section-img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 12px; background: var(--spenda-off-white); }
+    .section-img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 12px; background: var(--bg-secondary); }
     .logo-area .logo-header-img {
       height: auto;
       max-height: 64px;
@@ -296,7 +295,7 @@
       max-width: min(100%, 360px);
       border-radius: 0;
       object-fit: contain;
-      background: var(--spenda-off-white);
+      background: transparent;
     }
     .pipeline-badge {
       display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9px;
@@ -378,7 +377,7 @@
     }
     .chart-funnel-label {
       font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
-      color: var(--spenda-purple-deep); letter-spacing: 0.5px;
+      color: var(--spenda-purple-light); letter-spacing: 0.5px;
     }
     .chart-funnel-track {
       height: 32px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden;
@@ -399,13 +398,13 @@
     .fin-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 8px; font-size: 15px; }
     .fin-table thead th {
       font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--spenda-purple-deep); text-align: right;
+      text-transform: uppercase; color: var(--spenda-purple-light); text-align: right;
       padding: 10px 12px; border-bottom: 1px solid var(--border-color); white-space: nowrap;
     }
     .fin-table thead th:first-child { text-align: left; }
     .fin-table tbody td {
       padding: 12px 12px; text-align: right; color: var(--text-primary);
-      border-bottom: 1px solid rgba(61, 31, 102, 0.1); font-family: 'JetBrains Mono', monospace;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06); font-family: 'JetBrains Mono', monospace;
       font-size: 14px; white-space: nowrap;
     }
     .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 15px; }
@@ -421,7 +420,7 @@
       display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px;
       letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
     }
-    .cell-status.live { color: var(--spenda-purple-deep); background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.25); }
+    .cell-status.live { color: var(--spenda-purple-light); background: rgba(155, 77, 224, 0.15); border: 1px solid rgba(155, 77, 224, 0.3); }
     .cell-status.roadmap { color: var(--spenda-green); background: rgba(76, 175, 80, 0.1); border: 1px solid rgba(76, 175, 80, 0.25); }
     .table-note { margin-top: 10px; font-size: 15px; color: var(--text-muted); line-height: 1.5; }
 
@@ -460,7 +459,7 @@
       font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
     }
     .team-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; color: var(--text-primary); margin-bottom: 4px; }
-    .team-role { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 8px; }
+    .team-role { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-light); margin-bottom: 8px; }
     .team-bio { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 
     /* Milestones */
@@ -513,7 +512,20 @@
     .voucher-card-top.business { background: linear-gradient(135deg, #1a4a6b, #0d2d40); }
     .voucher-card-top.investor { background: linear-gradient(135deg, #6b5a1a, #4d420d); }
     .voucher-card-top.founder { background: linear-gradient(135deg, var(--spenda-green-dim), #2E7D32); }
-    .voucher-emoji { font-size: 48px; margin-bottom: 10px; }
+    .voucher-partner-logo {
+      width: 72px; height: 72px; margin: 0 auto 12px;
+      background: #fff; border-radius: 12px; padding: 10px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .voucher-partner-logo.spenda {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: none;
+    }
+    .voucher-partner-logo img {
+      max-width: 100%; max-height: 100%; object-fit: contain;
+    }
     .voucher-type { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(245, 242, 236,0.7); margin-bottom: 8px; }
     .voucher-amount { font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 600; color: #fff; margin-bottom: 6px; }
     .voucher-desc { font-size: 14px; color: rgba(245, 242, 236,0.6); }
@@ -548,7 +560,7 @@
     .share-toast {
       position: fixed; bottom: 88px; right: 24px; background: var(--bg-card);
       border: 1px solid var(--border-color); border-radius: 10px; padding: 10px 16px;
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-purple-deep);
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--spenda-purple-light);
       z-index: 100; opacity: 0; transform: translateY(8px);
       transition: opacity 0.3s ease, transform 0.3s ease; pointer-events: none;
     }
@@ -571,7 +583,7 @@
     .cta-btn {
       display: inline-flex; align-items: center; gap: 8px;
       background: linear-gradient(135deg, var(--spenda-green), var(--spenda-green-dim));
-      color: var(--spenda-ink); border: none; border-radius: 12px; padding: 16px 36px;
+      color: var(--bg-primary); border: none; border-radius: 12px; padding: 16px 36px;
       font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
       letter-spacing: 0.3px; box-shadow: var(--glow-green);
       transition: transform 0.15s ease, box-shadow 0.3s ease; min-height: 52px;
@@ -584,7 +596,7 @@
     .footer-brand { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
     .footer-links { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
     .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s ease; display: flex; align-items: center; gap: 6px; }
-    .footer-links a:hover { color: var(--spenda-purple); }
+    .footer-links a:hover { color: var(--spenda-purple-light); }
     .footer-links svg { width: 18px; height: 18px; }
     .footer-legal { font-family: 'Poppins', sans-serif; font-size: 13px; color: var(--text-muted); letter-spacing: 0.05em; }
 
@@ -883,7 +895,7 @@
       max-width: min(100%, 360px);
       margin-bottom: 36px;
       object-fit: contain;
-      background: var(--spenda-off-white);
+      background: transparent;
     }
     .pw-gate-title {
       font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 26px;
@@ -900,7 +912,7 @@
     }
     .pw-input {
       flex: 1; padding: 12px 16px; border-radius: 12px;
-      border: 1px solid var(--border-color); background: var(--spenda-off-white);
+      border: 1px solid var(--border-color); background: var(--bg-secondary);
       color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 15px;
       outline: none; transition: border-color 0.2s;
     }
@@ -941,7 +953,7 @@
 <body>
   <div class="pw-gate" id="pw-gate">
     <div class="pw-gate-inner">
-      <img src="img/spenda-logo-horizontal-black.png" alt="Spenda" class="pw-gate-logo" />
+      <img src="img/spenda-logo-horizontal-white.png" alt="Spenda" class="pw-gate-logo" />
       <div class="pw-gate-title">Investor Access</div>
       <div class="pw-gate-sub">This deck contains confidential data.<br/>Enter the access code to continue.</div>
       <form id="pw-form" onsubmit="return checkPw(event)">
@@ -960,7 +972,9 @@
     <div>
       <div class="voucher-card" id="voucher-card">
         <div class="voucher-card-top" id="voucher-top">
-          <div class="voucher-emoji" id="voucher-emoji"></div>
+          <div class="voucher-partner-logo" id="voucher-partner-logo">
+            <img id="voucher-partner-img" src="" alt="" />
+          </div>
           <div class="voucher-type" id="voucher-type-label"></div>
           <div class="voucher-amount" id="voucher-amount"></div>
           <div class="voucher-desc" id="voucher-desc"></div>
@@ -968,9 +982,9 @@
         <div class="voucher-card-bottom">
           <div class="voucher-brand">
             <div class="voucher-brand-mark">S</div>
-            <div class="voucher-brand-name">Spenda Voucher</div>
+            <div class="voucher-brand-name" id="voucher-brand-name">Spenda Voucher</div>
           </div>
-          <div class="voucher-redeem">Redeemable at<br/>800,000+ locations</div>
+          <div class="voucher-redeem" id="voucher-redeem">Redeemable at<br/>800,000+ locations</div>
         </div>
       </div>
       <div class="voucher-tap">Tap anywhere to continue</div>
@@ -986,7 +1000,7 @@
   <div class="container">
     <header class="header">
       <div class="logo-area">
-        <img src="img/spenda-logo-horizontal-black.png" alt="Spenda Holdings" class="logo-header-img" />
+        <img src="img/spenda-logo-horizontal-white.png" alt="Spenda Holdings" class="logo-header-img" />
       </div>
       <div class="badge"><span class="dot"></span> #SpendaYourWay</div>
       <h1 class="title">MONEY THAT MOVES<br />FOR EVERYONE</h1>
@@ -1015,7 +1029,7 @@
       </div>
       <div class="locked-card" id="card-0">
         <div class="locked-body" id="locked-0">
-          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <div class="lock-icon-row"><div class="lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><span class="lock-status">Locked</span></div>
           <p class="lock-message">See the problem Spenda solves.</p>
           <button class="action-btn" onclick="unlockSection(0)">Simulate Cash Payment <span class="arrow">→</span></button>
         </div>
@@ -1055,7 +1069,7 @@
       </div>
       <div class="locked-card" id="card-1">
         <div class="locked-body" id="locked-1">
-          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <div class="lock-icon-row"><div class="lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><span class="lock-status">Locked</span></div>
           <p class="lock-message">Explore how Spenda works and earns revenue.</p>
           <button class="action-btn" onclick="unlockSection(1)">View Business Model <span class="arrow">→</span></button>
         </div>
@@ -1116,7 +1130,7 @@
       </div>
       <div class="locked-card" id="card-2">
         <div class="locked-body" id="locked-2">
-          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <div class="lock-icon-row"><div class="lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><span class="lock-status">Locked</span></div>
           <p class="lock-message">Size the market and see what’s live today.</p>
           <button class="action-btn" onclick="unlockSection(2)">Explore Market <span class="arrow">→</span></button>
         </div>
@@ -1157,7 +1171,7 @@
                 </div>
               </div>
               <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:14px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6;color:var(--text-secondary);">
-                <div style="color:var(--spenda-purple-deep);">POST /v2/disbursements/batch</div>
+                <div style="color:var(--spenda-purple-light);">POST /v2/disbursements/batch</div>
                 <div>{ "type": "grocery", "amount": 250, "recipients": 847, "notify": "whatsapp" }</div>
                 <div style="color:var(--spenda-green);margin-top:8px;">200 OK — 847 vouchers queued</div>
               </div>
@@ -1175,7 +1189,7 @@
       </div>
       <div class="locked-card" id="card-3">
         <div class="locked-body" id="locked-3">
-          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <div class="lock-icon-row"><div class="lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><span class="lock-status">Locked</span></div>
           <p class="lock-message">Review traction and the path to scale.</p>
           <button class="action-btn" onclick="unlockSection(3)">View Economics <span class="arrow">→</span></button>
         </div>
@@ -1257,7 +1271,7 @@
       </div>
       <div class="locked-card" id="card-4">
         <div class="locked-body" id="locked-4">
-          <div class="lock-icon-row"><div class="lock-icon">🔒</div><span class="lock-status">Locked</span></div>
+          <div class="lock-icon-row"><div class="lock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><span class="lock-status">Locked</span></div>
           <p class="lock-message">Review the investment terms and team.</p>
           <button class="action-btn" onclick="unlockSection(4)">View Terms <span class="arrow">→</span></button>
         </div>
@@ -1311,19 +1325,19 @@
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">MH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Merishka Harilall</div>
-                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CEO &amp; Co-Founder</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CEO &amp; Co-Founder</div>
                   <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">FinTech strategy, product vision, investor relations</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Sashen Harilall</div>
-                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">COO &amp; Co-Founder</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">COO &amp; Co-Founder</div>
                   <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">Operations, partnerships, go-to-market</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SB</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Siboniso Bophela</div>
-                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CPO &amp; Co-Founder</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-light);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CPO &amp; Co-Founder</div>
                   <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">Product, platform architecture, engineering</div>
                 </div>
               </div>
@@ -1384,7 +1398,7 @@
       </div>
       <div class="game-result" id="game-result">
         <div class="discount-earned" id="result-discount">0% DISCOUNT</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--spenda-purple-deep);letter-spacing:1px;margin-bottom:8px;" id="result-score">SCORE: 0</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--spenda-purple-light);letter-spacing:1px;margin-bottom:8px;" id="result-score">SCORE: 0</div>
         <div class="discount-code" id="result-code">SPENDA-INVADER-0</div>
         <p id="result-text">Present this code at your investor meeting.</p>
         <button class="cta-btn" id="result-cta" onclick="window.location.href='mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=Investor%20Meeting%20Request%20%E2%80%94%20Spenda%20Holdings'">
@@ -1428,20 +1442,26 @@
     let tallyTotal = 0;
 
     const VOUCHERS = [
-      { emoji: '🛒', type: 'Grocery Voucher', amount: 'R25', desc: 'Redeemable at major grocery retailers', cls: 'grocery', value: 25 },
-      { emoji: '⛽', type: 'Fuel Voucher', amount: 'R50', desc: 'Redeemable at major fuel stations', cls: 'fuel', value: 50 },
-      { emoji: '🛍️', type: 'Shopping Voucher', amount: 'R100', desc: 'Valid at 800,000+ retail locations', cls: 'shopping', value: 100 },
-      { emoji: '💼', type: 'Business Disbursement', amount: 'R200', desc: 'B2B voucher — employee incentive', cls: 'business', value: 200 },
-      { emoji: '🏆', type: 'Founding Investor Pass', amount: 'VIP', desc: 'Briefing complete — you\'re in', cls: 'founder', value: 0 }
+      { logo: 'img/partner-2.png', type: 'Checkers Grocery', amount: 'R25', desc: 'Redeemable at Checkers, Pick n Pay & Shoprite', cls: 'grocery', partner: 'Checkers', value: 25 },
+      { logo: 'img/partner-3.png', type: 'Engen Fuel', amount: 'R50', desc: 'Redeemable at Engen & Shell forecourts', cls: 'fuel', partner: 'Engen', value: 50 },
+      { logo: 'img/partner-1.png', type: 'Takealot Shopping', amount: 'R100', desc: 'Spend online at Takealot.com', cls: 'shopping', partner: 'Takealot', value: 100 },
+      { logo: 'img/partner-4.png', type: 'MTN Airtime & Data', amount: 'R200', desc: 'Load airtime on MTN & Vodacom', cls: 'airtime', partner: 'MTN', value: 200 },
+      { logo: 'img/spenda-logo-horizontal-white.png', type: 'Founding Investor Pass', amount: 'VIP', desc: 'Briefing complete — you\'re in', cls: 'founder', partner: 'Spenda', value: 0 }
     ];
 
     function showVoucher(index) {
       const v = VOUCHERS[index];
       const overlay = document.getElementById('voucher-overlay');
-      document.getElementById('voucher-emoji').textContent = v.emoji;
+      const logoWrap = document.getElementById('voucher-partner-logo');
+      const logoImg = document.getElementById('voucher-partner-img');
+      logoImg.src = v.logo;
+      logoImg.alt = v.partner;
+      logoWrap.classList.toggle('spenda', v.partner === 'Spenda');
       document.getElementById('voucher-type-label').textContent = v.type;
       document.getElementById('voucher-amount').textContent = v.amount;
       document.getElementById('voucher-desc').textContent = v.desc;
+      document.getElementById('voucher-brand-name').textContent = v.partner === 'Spenda' ? 'Spenda Voucher' : v.partner + ' · Spenda';
+      document.getElementById('voucher-redeem').innerHTML = v.partner === 'Spenda' ? 'Redeemable at<br/>800,000+ locations' : 'Powered by Spenda<br/>Redeem in-store';
       const top = document.getElementById('voucher-top');
       top.className = 'voucher-card-top ' + v.cls;
       overlay.classList.add('active');
