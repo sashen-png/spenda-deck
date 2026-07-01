@@ -373,11 +373,17 @@
     }
     .chart-funnel { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
     .chart-funnel-row {
-      display: grid; grid-template-columns: 80px 1fr 52px; gap: 10px; align-items: center;
+      display: grid; grid-template-columns: 96px 1fr 52px; gap: 10px; align-items: center;
     }
     .chart-funnel-label {
+      display: flex; flex-direction: column; gap: 2px; min-width: 0;
+    }
+    .chart-funnel-tier {
       font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
       color: var(--spenda-purple-light); letter-spacing: 0.5px;
+    }
+    .chart-funnel-desc {
+      font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--text-muted); line-height: 1.35;
     }
     .chart-funnel-track {
       height: 32px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden;
@@ -386,8 +392,6 @@
     .chart-funnel-fill {
       height: 100%; border-radius: 5px; width: 0;
       transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-      display: flex; align-items: center; padding-left: 10px;
-      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #fff;
     }
     .chart-funnel-pct {
       font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
@@ -1146,9 +1150,21 @@
               <div class="chart-panel">
                 <div class="chart-panel-title">Market funnel — from wedge to capture target</div>
                 <div class="chart-funnel">
-                  <div class="chart-funnel-row"><span class="chart-funnel-label">TAM</span><div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="100" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));">Rewards wedge</div></div><span class="chart-funnel-pct">100%</span></div>
-                  <div class="chart-funnel-row"><span class="chart-funnel-label">SAM</span><div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="72" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));">Cash + disbursement</div></div><span class="chart-funnel-pct">72%</span></div>
-                  <div class="chart-funnel-row"><span class="chart-funnel-label">SOM</span><div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="12" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);min-width:48px;">16-mo goal</div></div><span class="chart-funnel-pct">1.2%</span></div>
+                  <div class="chart-funnel-row">
+                    <div class="chart-funnel-label"><span class="chart-funnel-tier">TAM</span><span class="chart-funnel-desc">Rewards wedge</span></div>
+                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="100" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div>
+                    <span class="chart-funnel-pct">100%</span>
+                  </div>
+                  <div class="chart-funnel-row">
+                    <div class="chart-funnel-label"><span class="chart-funnel-tier">SAM</span><span class="chart-funnel-desc">Cash + disbursement</span></div>
+                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="72" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div>
+                    <span class="chart-funnel-pct">72%</span>
+                  </div>
+                  <div class="chart-funnel-row">
+                    <div class="chart-funnel-label"><span class="chart-funnel-tier">SOM</span><span class="chart-funnel-desc">16-mo goal</span></div>
+                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="12" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div>
+                    <span class="chart-funnel-pct">1.2%</span>
+                  </div>
                 </div>
                 <p style="margin-top:14px;font-size:16px;color:var(--text-secondary);">The <span class="highlight">rewards market</span> is our wedge; the <span class="highlight">cash economy</span> is our expansion path. SOM = year-1 capture as % of SAM.</p>
               </div>
