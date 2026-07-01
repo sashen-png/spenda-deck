@@ -57,6 +57,7 @@
     }
     body {
       font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
       background: var(--bg-primary);
       color: var(--text-primary);
       min-height: 100vh;
@@ -90,24 +91,24 @@
       background: radial-gradient(circle, rgba(155, 77, 224, 0.1) 0%, rgba(214, 184, 242, 0.15) 40%, transparent 70%);
       pointer-events: none;
     }
-    .logo-area { display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: var(--spenda-off-white); }
+    .logo-area { display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--spenda-off-white); }
     .badge {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 10px;
       background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.25);
-      border-radius: 100px; padding: 6px 16px;
-      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 24px;
+      border-radius: 100px; padding: 10px 22px;
+      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 28px;
     }
-    .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spenda-green); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 6px var(--spenda-green); }
+    .badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--spenda-green); animation: pulseDot 2s ease-in-out infinite; box-shadow: 0 0 8px var(--spenda-green); }
     @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .title {
-      font-family: 'Poppins', sans-serif; font-size: clamp(28px, 5vw, 40px); font-weight: 900;
-      letter-spacing: -0.5px; margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif; font-size: clamp(32px, 6vw, 48px); font-weight: 900;
+      letter-spacing: -0.5px; margin-bottom: 24px;
       background: linear-gradient(135deg, var(--spenda-ink) 0%, var(--spenda-purple-deep) 45%, var(--spenda-purple) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.15;
     }
     .subtitle {
-      font-size: clamp(13px, 3.2vw, 15px);
+      font-size: clamp(16px, 3.5vw, 18px);
       color: var(--text-secondary);
       max-width: 580px;
       margin: 0 auto;
@@ -119,12 +120,12 @@
     /* Progress + Tally */
     .progress-area { margin: 32px 0 48px; }
     .progress-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
-    .progress-segment { flex: 1; height: 3px; border-radius: 3px; background: var(--border-color); transition: background 0.6s ease, box-shadow 0.6s ease; }
+    .progress-segment { flex: 1; height: 4px; border-radius: 4px; background: var(--border-color); transition: background 0.6s ease, box-shadow 0.6s ease; }
     .progress-segment.unlocked { background: var(--spenda-purple); box-shadow: 0 0 10px rgba(155, 77, 224, 0.5); }
     .progress-labels { display: flex; justify-content: space-between; align-items: center; }
-    .progress-label { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; white-space: nowrap; }
+    .progress-label { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; white-space: nowrap; }
     .voucher-tally {
-      font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--spenda-green);
+      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: var(--spenda-green);
       letter-spacing: 0.5px; transition: color 0.3s ease;
     }
 
@@ -138,13 +139,13 @@
       margin-bottom: 16px;
     }
     .section-number {
-      font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; color: var(--spenda-purple-deep);
+      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; color: var(--spenda-purple-deep);
       background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.2);
-      padding: 4px 10px; border-radius: 12px; letter-spacing: 0.05em;
+      padding: 6px 14px; border-radius: 14px; letter-spacing: 0.05em;
     }
     .section-title {
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(16px, 3.5vw, 24px);
+      font-size: clamp(22px, 4.5vw, 32px);
       font-weight: 600;
       color: var(--text-primary);
       letter-spacing: -0.2px;
@@ -166,13 +167,13 @@
       background: rgba(255, 107, 107, 0.1); border: 1px solid rgba(255, 107, 107, 0.2);
       display: flex; align-items: center; justify-content: center; font-size: 14px;
     }
-    .lock-status { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--danger); }
-    .lock-message { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+    .lock-status { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--danger); }
+    .lock-message { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
     .action-btn {
       display: inline-flex; align-items: center; gap: 8px;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-dim));
       color: #fff; border: none; border-radius: 12px; padding: 14px 28px;
-      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600;
       cursor: pointer; letter-spacing: 0.5px; transition: transform 0.15s ease, box-shadow 0.3s ease;
       box-shadow: var(--glow-purple); min-height: 48px; -webkit-tap-highlight-color: transparent;
     }
@@ -184,7 +185,7 @@
     /* Terminal */
     .terminal-output {
       display: none; background: var(--bg-terminal); border-top: 1px solid var(--border-color);
-      padding: 20px 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+      padding: 20px 28px; font-family: 'JetBrains Mono', monospace; font-size: 15px;
       line-height: 2; color: var(--spenda-purple-deep); min-height: 60px;
     }
     .terminal-output.active { display: block; }
@@ -204,13 +205,13 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .unlocked-card.revealed { border-color: rgba(155, 77, 224, 0.35); box-shadow: var(--glow-purple); }
     .unlocked-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 20px;
     }
     .unlocked-badge .check {
-      width: 18px; height: 18px; border-radius: 50%; background: rgba(155, 77, 224, 0.2);
-      display: flex; align-items: center; justify-content: center; font-size: 10px;
+      width: 22px; height: 22px; border-radius: 50%; background: rgba(155, 77, 224, 0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 12px;
     }
 
     /* Data Items */
@@ -223,10 +224,10 @@
     .data-item.visible { animation: itemReveal 0.5s ease forwards; }
     @keyframes itemReveal { to { opacity: 1; transform: translateY(0); } }
     .data-item-label {
-      font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
+      font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
       text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 8px;
     }
-    .data-item-value { font-size: 14px; color: var(--text-primary); line-height: 1.7; }
+    .data-item-value { font-size: 16px; color: var(--text-primary); line-height: 1.7; }
     .data-item-value .highlight { color: var(--spenda-green); font-family: 'Poppins', sans-serif; font-weight: 700; }
 
     /* Steps Row */
@@ -244,7 +245,7 @@
       font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700;
       color: var(--spenda-purple); margin-bottom: 6px;
     }
-    .step-label { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    .step-label { font-size: 15px; color: var(--text-secondary); line-height: 1.5; }
 
     /* Product Screenshots */
     .demo-grid {
@@ -263,8 +264,8 @@
       border: 1px solid var(--border-color); object-fit: contain;
       background: var(--spenda-off-white);
     }
-    .demo-label { font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em; color: var(--spenda-purple-deep); text-transform: uppercase; text-align: center; }
-    .demo-desc { font-size: 12px; color: var(--text-secondary); text-align: center; line-height: 1.5; }
+    .demo-label { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--spenda-purple-deep); text-transform: uppercase; text-align: center; }
+    .demo-desc { font-size: 14px; color: var(--text-secondary); text-align: center; line-height: 1.5; }
     .hero-img-row { display: flex; justify-content: center; margin: 16px 0 8px; }
     .hero-img { width: 100%; max-width: 280px; border-radius: 16px; background: var(--spenda-off-white); }
     .merchant-logos-strip {
@@ -278,7 +279,7 @@
       animation: scrollLogos 20s linear infinite;
     }
     .merchant-logos-track img {
-      height: 36px; opacity: 0.85; flex-shrink: 0;
+      height: 44px; opacity: 0.85; flex-shrink: 0;
       filter: grayscale(0.2) brightness(1.1);
       transition: opacity 0.3s, filter 0.3s;
     }
@@ -290,9 +291,9 @@
     .section-img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 12px; background: var(--spenda-off-white); }
     .logo-area .logo-header-img {
       height: auto;
-      max-height: 48px;
+      max-height: 64px;
       width: auto;
-      max-width: min(100%, 280px);
+      max-width: min(100%, 360px);
       border-radius: 0;
       object-fit: contain;
       background: var(--spenda-off-white);
@@ -317,14 +318,14 @@
     .allocation-label {
       grid-area: label;
       font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(10px, 2.8vw, 12px);
+      font-size: clamp(12px, 3vw, 14px);
       color: var(--text-secondary);
       min-width: 0;
       word-break: break-word;
     }
     .allocation-track {
       grid-area: track;
-      height: 6px;
+      height: 8px;
       background: var(--bg-secondary);
       border-radius: 6px;
       overflow: hidden;
@@ -334,18 +335,18 @@
     .allocation-pct {
       grid-area: pct;
       font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(10px, 2.8vw, 12px);
+      font-size: clamp(13px, 3vw, 15px);
       color: var(--spenda-green);
       text-align: right;
       white-space: nowrap;
     }
     .chart-panel { margin-top: 8px; }
     .chart-panel-title {
-      font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px;
       text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
     }
-    .chart-bar-container .allocation-track { height: 10px; }
-    .chart-bar-container .allocation-pct { font-size: 13px; font-weight: 700; }
+    .chart-bar-container .allocation-track { height: 12px; }
+    .chart-bar-container .allocation-pct { font-size: 16px; font-weight: 700; }
     .chart-donut-row {
       display: flex; align-items: center; gap: 20px; margin-top: 12px; flex-wrap: wrap;
     }
@@ -356,58 +357,58 @@
     .chart-donut::after {
       content: attr(data-label); position: absolute; inset: 18px; border-radius: 50%;
       background: var(--bg-card); display: flex; align-items: center; justify-content: center;
-      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; font-size: 17px; font-weight: 700;
       color: var(--spenda-green);
     }
     .chart-legend { flex: 1; min-width: 160px; }
     .chart-legend-item {
       display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
-      font-size: 13px; color: var(--text-secondary);
+      font-size: 15px; color: var(--text-secondary);
     }
     .chart-legend-swatch {
       width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0;
     }
     .chart-legend-pct {
       margin-left: auto; font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; font-weight: 600; color: var(--spenda-green);
+      font-size: 14px; font-weight: 600; color: var(--spenda-green);
     }
     .chart-funnel { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
     .chart-funnel-row {
-      display: grid; grid-template-columns: 72px 1fr 48px; gap: 10px; align-items: center;
+      display: grid; grid-template-columns: 80px 1fr 52px; gap: 10px; align-items: center;
     }
     .chart-funnel-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
       color: var(--spenda-purple-deep); letter-spacing: 0.5px;
     }
     .chart-funnel-track {
-      height: 28px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden;
+      height: 32px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden;
       border: 1px solid var(--border-color);
     }
     .chart-funnel-fill {
       height: 100%; border-radius: 5px; width: 0;
       transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
       display: flex; align-items: center; padding-left: 10px;
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: #fff;
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #fff;
     }
     .chart-funnel-pct {
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
       color: var(--spenda-green); text-align: right;
     }
 
     /* Financial Tables */
-    .fin-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 8px; font-size: 13px; }
+    .fin-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 8px; font-size: 15px; }
     .fin-table thead th {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px;
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px;
       text-transform: uppercase; color: var(--spenda-purple-deep); text-align: right;
-      padding: 8px 12px; border-bottom: 1px solid var(--border-color); white-space: nowrap;
+      padding: 10px 12px; border-bottom: 1px solid var(--border-color); white-space: nowrap;
     }
     .fin-table thead th:first-child { text-align: left; }
     .fin-table tbody td {
-      padding: 10px 12px; text-align: right; color: var(--text-primary);
+      padding: 12px 12px; text-align: right; color: var(--text-primary);
       border-bottom: 1px solid rgba(61, 31, 102, 0.1); font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; white-space: nowrap;
+      font-size: 14px; white-space: nowrap;
     }
-    .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 13px; }
+    .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 15px; }
     .fin-table tbody tr:last-child td { border-bottom: none; }
     .fin-table .row-highlight td { color: var(--spenda-green); font-weight: 600; }
     .fin-table .row-bold td { font-weight: 600; }
@@ -417,12 +418,12 @@
     .fin-table .row-accent td { background: rgba(155, 77, 224, 0.08); }
     .fin-table .row-accent td:first-child { color: var(--text-primary); font-weight: 600; }
     .cell-status {
-      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px;
-      letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px;
+      letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
     }
     .cell-status.live { color: var(--spenda-purple-deep); background: rgba(214, 184, 242, 0.35); border: 1px solid rgba(155, 77, 224, 0.25); }
     .cell-status.roadmap { color: var(--spenda-green); background: rgba(76, 175, 80, 0.1); border: 1px solid rgba(76, 175, 80, 0.25); }
-    .table-note { margin-top: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .table-note { margin-top: 10px; font-size: 15px; color: var(--text-muted); line-height: 1.5; }
 
     /* Year Cards */
     .year-cards {
@@ -458,9 +459,9 @@
       display: flex; align-items: center; justify-content: center;
       font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
     }
-    .team-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
-    .team-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 8px; }
-    .team-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+    .team-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; color: var(--text-primary); margin-bottom: 4px; }
+    .team-role { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--spenda-purple-deep); margin-bottom: 8px; }
+    .team-bio { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 
     /* Milestones */
     .milestone-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
@@ -470,7 +471,7 @@
       display: flex; align-items: center; justify-content: center;
       font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: var(--spenda-purple-light);
     }
-    .milestone-text { font-size: 14px; color: var(--text-primary); line-height: 1.6; padding-top: 3px; }
+    .milestone-text { font-size: 16px; color: var(--text-primary); line-height: 1.6; padding-top: 3px; }
     .milestone-text .highlight { color: var(--spenda-green); font-family: 'Poppins', sans-serif; font-weight: 700; }
 
     /* Voucher Reward Overlay */
@@ -512,10 +513,10 @@
     .voucher-card-top.business { background: linear-gradient(135deg, #1a4a6b, #0d2d40); }
     .voucher-card-top.investor { background: linear-gradient(135deg, #6b5a1a, #4d420d); }
     .voucher-card-top.founder { background: linear-gradient(135deg, var(--spenda-green-dim), #2E7D32); }
-    .voucher-emoji { font-size: 40px; margin-bottom: 8px; }
-    .voucher-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(245, 242, 236,0.7); margin-bottom: 6px; }
-    .voucher-amount { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .voucher-desc { font-size: 12px; color: rgba(245, 242, 236,0.6); }
+    .voucher-emoji { font-size: 48px; margin-bottom: 10px; }
+    .voucher-type { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(245, 242, 236,0.7); margin-bottom: 8px; }
+    .voucher-amount { font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .voucher-desc { font-size: 14px; color: rgba(245, 242, 236,0.6); }
     .voucher-card-bottom {
       background: var(--bg-card); padding: 16px 24px; display: flex; flex-wrap: wrap;
       align-items: center; gap: 12px; justify-content: space-between;
@@ -523,13 +524,13 @@
     }
     .voucher-brand { display: flex; align-items: center; gap: 8px; }
     .voucher-brand-mark {
-      width: 24px; height: 24px; border-radius: 6px;
+      width: 32px; height: 32px; border-radius: 8px;
       background: linear-gradient(135deg, var(--spenda-purple), var(--spenda-purple-deep));
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12px; color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 15px; color: #fff;
     }
-    .voucher-brand-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: var(--text-secondary); }
-    .voucher-redeem { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.5px; text-align: right; line-height: 1.4; }
+    .voucher-brand-name { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; color: var(--text-secondary); }
+    .voucher-redeem { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; text-align: right; line-height: 1.4; }
     .voucher-tap { text-align: center; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); animation: pulseDot 2s ease-in-out infinite; }
 
     /* Share */
@@ -557,14 +558,14 @@
     .all-unlocked { text-align: center; padding: 60px 0 40px; display: none; }
     .all-unlocked.active { display: block; animation: fadeUp 0.8s ease forwards; }
     .all-unlocked h2 {
-      font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; margin-bottom: 12px;
+      font-family: 'Poppins', sans-serif; font-size: clamp(28px, 5vw, 36px); font-weight: 600; margin-bottom: 16px;
       letter-spacing: -0.3px;
       background: linear-gradient(135deg, var(--spenda-green), var(--spenda-purple-glow));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .all-unlocked p { color: var(--text-secondary); font-size: 15px; max-width: 520px; margin: 0 auto 12px; line-height: 1.7; }
+    .all-unlocked p { color: var(--text-secondary); font-size: 17px; max-width: 520px; margin: 0 auto 12px; line-height: 1.7; }
     .final-tally {
-      font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
       color: var(--spenda-green); margin-bottom: 28px;
     }
     .cta-btn {
@@ -580,12 +581,12 @@
 
     /* Footer */
     .footer { text-align: center; padding: 32px 0 48px; border-top: 1px solid var(--border-color); }
-    .footer-brand { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
-    .footer-links { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
-    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; transition: color 0.2s ease; display: flex; align-items: center; gap: 4px; }
+    .footer-brand { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+    .footer-links { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s ease; display: flex; align-items: center; gap: 6px; }
     .footer-links a:hover { color: var(--spenda-purple); }
-    .footer-links svg { width: 16px; height: 16px; }
-    .footer-legal { font-family: 'Poppins', sans-serif; font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em; }
+    .footer-links svg { width: 18px; height: 18px; }
+    .footer-legal { font-family: 'Poppins', sans-serif; font-size: 13px; color: var(--text-muted); letter-spacing: 0.05em; }
 
     /* E-commerce Flow */
     .ecom-flow {
@@ -690,7 +691,7 @@
       border-bottom: 1px solid var(--border-color);
     }
     .game-header h3 {
-      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
       letter-spacing: 2px; text-transform: uppercase;
       background: linear-gradient(135deg, var(--spenda-green), var(--spenda-purple-light));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -833,14 +834,14 @@
         max-width: calc(100vw - 32px);
       }
       .data-item { padding: 16px clamp(14px, 4vw, 20px); }
-      .data-item-value { font-size: clamp(13px, 3.5vw, 15px); word-wrap: break-word; }
+      .data-item-value { font-size: clamp(15px, 3.8vw, 17px); word-wrap: break-word; }
       .milestone-row { gap: 10px; }
-      .milestone-text { font-size: clamp(13px, 3.2vw, 14px); }
-      .fin-table thead th { padding: 8px 10px; font-size: 10px; }
-      .fin-table tbody td { padding: 8px 10px; font-size: 11px; white-space: normal; }
-      .fin-table tbody td:first-child { font-size: 12px; }
+      .milestone-text { font-size: clamp(15px, 3.5vw, 16px); }
+      .fin-table thead th { padding: 10px 10px; font-size: 12px; }
+      .fin-table tbody td { padding: 10px 10px; font-size: 13px; white-space: normal; }
+      .fin-table tbody td:first-child { font-size: 14px; }
       .all-unlocked { padding: 40px 0 32px; }
-      .all-unlocked h2 { font-size: clamp(20px, 5vw, 24px); }
+      .all-unlocked h2 { font-size: clamp(24px, 5.5vw, 32px); }
       .cta-btn { width: 100%; max-width: 340px; justify-content: center; padding-left: 20px; padding-right: 20px; }
     }
 
@@ -849,10 +850,10 @@
     }
 
     @media (max-width: 380px) {
-      .title { font-size: clamp(20px, 9vw, 26px); }
-      .logo-area .logo-header-img { max-height: 36px; max-width: 240px; }
+      .title { font-size: clamp(24px, 9vw, 32px); }
+      .logo-area .logo-header-img { max-height: 48px; max-width: 280px; }
       .action-btn { width: 100%; justify-content: center; }
-      .badge { letter-spacing: 1px; padding: 6px 12px; font-size: 10px; }
+      .badge { letter-spacing: 1px; padding: 8px 16px; font-size: 12px; }
     }
     .pw-gate {
       position: fixed;
@@ -877,19 +878,19 @@
     }
     .pw-gate-logo {
       height: auto;
-      max-height: 48px;
+      max-height: 64px;
       width: auto;
-      max-width: min(100%, 280px);
-      margin-bottom: 32px;
+      max-width: min(100%, 360px);
+      margin-bottom: 36px;
       object-fit: contain;
       background: var(--spenda-off-white);
     }
     .pw-gate-title {
-      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 22px;
-      color: var(--text-primary); margin-bottom: 8px;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 26px;
+      color: var(--text-primary); margin-bottom: 10px;
     }
     .pw-gate-sub {
-      font-size: 14px; color: var(--text-secondary); margin-bottom: 28px; line-height: 1.5;
+      font-size: 16px; color: var(--text-secondary); margin-bottom: 28px; line-height: 1.5;
     }
     .pw-input-row {
       display: flex;
@@ -932,7 +933,8 @@
     @media (max-width: 480px) {
       .pw-input-row { flex-direction: column; }
       .pw-input-row .pw-submit { width: 100%; }
-      .pw-gate-title { font-size: clamp(18px, 5vw, 22px); }
+      .pw-gate-title { font-size: clamp(22px, 5vw, 26px); }
+      .pw-gate-logo { max-height: 52px; }
     }
   </style>
 </head>
@@ -1025,7 +1027,7 @@
           <div class="unlocked-badge"><span class="check">✓</span> UNLOCKED</div>
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">The Opportunity</div>
-            <div class="data-item-value" style="font-size:15px;line-height:1.7;">Spenda is a <span class="highlight">bank-agnostic settlement layer</span> that turns cash, rewards, and bulk disbursements into spendable digital value at <span class="highlight">800,000+ retail locations</span>.</div>
+            <div class="data-item-value" style="font-size:17px;line-height:1.7;">Spenda is a <span class="highlight">bank-agnostic settlement layer</span> that turns cash, rewards, and bulk disbursements into spendable digital value at <span class="highlight">800,000+ retail locations</span>.</div>
           </div>
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">The Problem in Numbers</div>
@@ -1134,7 +1136,7 @@
                   <div class="chart-funnel-row"><span class="chart-funnel-label">SAM</span><div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="72" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));">Cash + disbursement</div></div><span class="chart-funnel-pct">72%</span></div>
                   <div class="chart-funnel-row"><span class="chart-funnel-label">SOM</span><div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="12" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);min-width:48px;">16-mo goal</div></div><span class="chart-funnel-pct">1.2%</span></div>
                 </div>
-                <p style="margin-top:14px;font-size:14px;color:var(--text-secondary);">The <span class="highlight">rewards market</span> is our wedge; the <span class="highlight">cash economy</span> is our expansion path. SOM = year-1 capture as % of SAM.</p>
+                <p style="margin-top:14px;font-size:16px;color:var(--text-secondary);">The <span class="highlight">rewards market</span> is our wedge; the <span class="highlight">cash economy</span> is our expansion path. SOM = year-1 capture as % of SAM.</p>
               </div>
             </div>
           </div>
@@ -1154,7 +1156,7 @@
                   <div class="chart-legend-item"><span class="chart-legend-swatch" style="background:rgba(245, 242, 236,0.15);"></span>On roadmap<span class="chart-legend-pct">25%</span></div>
                 </div>
               </div>
-              <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:14px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;color:var(--text-secondary);">
+              <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:14px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6;color:var(--text-secondary);">
                 <div style="color:var(--spenda-purple-deep);">POST /v2/disbursements/batch</div>
                 <div>{ "type": "grocery", "amount": 250, "recipients": 847, "notify": "whatsapp" }</div>
                 <div style="color:var(--spenda-green);margin-top:8px;">200 OK — 847 vouchers queued</div>
@@ -1279,7 +1281,7 @@
                 <div class="chart-legend">
                   <div class="chart-legend-item"><span class="chart-legend-swatch" style="background:var(--spenda-green);"></span>SAFE discount at conversion<span class="chart-legend-pct">15%</span></div>
                   <div class="chart-legend-item"><span class="chart-legend-swatch" style="background:rgba(245, 242, 236,0.15);"></span>Standard conversion price<span class="chart-legend-pct">85%</span></div>
-                  <div class="chart-legend-item" style="margin-top:4px;font-size:12px;color:var(--text-muted);">Instrument: Post-money SAFE</div>
+                  <div class="chart-legend-item" style="margin-top:4px;font-size:14px;color:var(--text-muted);">Instrument: Post-money SAFE</div>
                 </div>
               </div>
             </div>
@@ -1309,20 +1311,20 @@
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">MH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Merishka Harilall</div>
-                  <div style="font-size:12px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CEO &amp; Co-Founder</div>
-                  <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">FinTech strategy, product vision, investor relations</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CEO &amp; Co-Founder</div>
+                  <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">FinTech strategy, product vision, investor relations</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SH</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Sashen Harilall</div>
-                  <div style="font-size:12px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">COO &amp; Co-Founder</div>
-                  <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Operations, partnerships, go-to-market</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">COO &amp; Co-Founder</div>
+                  <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">Operations, partnerships, go-to-market</div>
                 </div>
                 <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center;">
                   <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--spenda-purple),var(--spenda-green));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;font-size:20px;color:#fff;">SB</div>
                   <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px;">Siboniso Bophela</div>
-                  <div style="font-size:12px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CPO &amp; Co-Founder</div>
-                  <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Product, platform architecture, engineering</div>
+                  <div style="font-size:13px;color:var(--spenda-purple-deep);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px;">CPO &amp; Co-Founder</div>
+                  <div style="font-size:15px;color:var(--text-secondary);line-height:1.5;">Product, platform architecture, engineering</div>
                 </div>
               </div>
             </div>
