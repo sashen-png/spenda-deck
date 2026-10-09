@@ -115,17 +115,13 @@
     }
     .subtitle strong { color: var(--spenda-green); font-weight: 600; }
 
-    /* Progress + Tally */
+    /* Progress */
     .progress-area { margin: 32px 0 48px; }
     .progress-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
     .progress-segment { flex: 1; height: 4px; border-radius: 4px; background: var(--border-color); transition: background 0.6s ease, box-shadow 0.6s ease; }
     .progress-segment.unlocked { background: var(--spenda-purple); box-shadow: 0 0 10px rgba(155, 77, 224, 0.5); }
     .progress-labels { display: flex; justify-content: space-between; align-items: center; }
     .progress-label { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; white-space: nowrap; }
-    .voucher-tally {
-      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: var(--spenda-green);
-      letter-spacing: 0.5px; transition: color 0.3s ease;
-    }
 
     /* Section */
     .section { margin-bottom: 40px; }
@@ -839,7 +835,7 @@
         gap: 10px 16px;
         text-align: center;
       }
-      .progress-label, .voucher-tally { white-space: normal; text-align: center; line-height: 1.35; max-width: 100%; }
+      .progress-label { white-space: normal; text-align: center; line-height: 1.35; max-width: 100%; }
       .share-btn { bottom: max(16px, env(safe-area-inset-bottom)); right: max(16px, env(safe-area-inset-right)); width: 48px; height: 48px; }
       .share-toast {
         bottom: calc(76px + env(safe-area-inset-bottom));
@@ -1018,9 +1014,7 @@
         <div class="progress-segment" data-segment="4"></div>
       </div>
       <div class="progress-labels">
-        <span class="progress-label" id="progress-text">0 / 5 SECTIONS</span>
-        <span class="voucher-tally" id="voucher-tally">VOUCHERS EARNED: R0</span>
-      </div>
+        <span class="progress-label" id="progress-text">0 / 5 SECTIONS</span>      </div>
     </div>
 
     <!-- S1: Why Spenda Exists -->
@@ -1423,14 +1417,12 @@
 
     const TOTAL = 5;
     const state = Array(TOTAL).fill(false);
-    let tallyTotal = 0;
-
     const VOUCHERS = [
-      { logo: 'img/partner-2.png', type: 'Checkers Grocery', amount: 'R25', desc: 'Redeemable at Checkers, Pick n Pay & Shoprite', cls: 'grocery', partner: 'Checkers', value: 25 },
-      { logo: 'img/partner-3.png', type: 'Engen Fuel', amount: 'R50', desc: 'Redeemable at Engen & Shell forecourts', cls: 'fuel', partner: 'Engen', value: 50 },
-      { logo: 'img/partner-1.png', type: 'Takealot Shopping', amount: 'R100', desc: 'Spend online at Takealot.com', cls: 'shopping', partner: 'Takealot', value: 100 },
-      { logo: 'img/partner-4.png', type: 'MTN Airtime & Data', amount: 'R200', desc: 'Load airtime on MTN & Vodacom', cls: 'airtime', partner: 'MTN', value: 200 },
-      { logo: 'img/spenda-logo-horizontal-white.png', type: 'Founding Investor Pass', amount: 'VIP', desc: 'Briefing complete — you\'re in', cls: 'founder', partner: 'Spenda', value: 0 }
+      { logo: 'img/partner-2.png', type: 'Checkers Grocery', amount: 'R25', desc: 'Redeemable at Checkers, Pick n Pay & Shoprite', cls: 'grocery', partner: 'Checkers' },
+      { logo: 'img/partner-3.png', type: 'Engen Fuel', amount: 'R50', desc: 'Redeemable at Engen & Shell forecourts', cls: 'fuel', partner: 'Engen' },
+      { logo: 'img/partner-1.png', type: 'Takealot Shopping', amount: 'R100', desc: 'Spend online at Takealot.com', cls: 'shopping', partner: 'Takealot' },
+      { logo: 'img/partner-4.png', type: 'MTN Airtime & Data', amount: 'R200', desc: 'Load airtime on MTN & Vodacom', cls: 'airtime', partner: 'MTN' },
+      { logo: 'img/spenda-logo-horizontal-white.png', type: 'Founding Investor Pass', amount: 'VIP', desc: 'Briefing complete — you\'re in', cls: 'founder', partner: 'Spenda' }
     ];
 
     function showVoucher(index) {
@@ -1449,8 +1441,6 @@
       const top = document.getElementById('voucher-top');
       top.className = 'voucher-card-top ' + v.cls;
       overlay.classList.add('active');
-      tallyTotal += v.value;
-      document.getElementById('voucher-tally').textContent = 'VOUCHERS EARNED: R' + tallyTotal;
       clearTimeout(window._voucherTimer);
       window._voucherTimer = setTimeout(dismissVoucher, 4500);
     }
