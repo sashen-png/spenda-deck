@@ -413,6 +413,8 @@
     }
     .fin-table tbody td:first-child { text-align: left; color: var(--text-secondary); font-family: 'Poppins', sans-serif; font-size: 15px; }
     .fin-table tbody tr:last-child td { border-bottom: none; }
+    .fin-table.wrap tbody td { white-space: normal; }
+    .fin-table.wrap thead th:last-child, .fin-table.wrap tbody td:last-child { text-align: left; }
     .fin-table .row-highlight td { color: var(--spenda-green); font-weight: 600; }
     .fin-table .row-bold td { font-weight: 600; }
     .fin-table .row-separator td { border-top: 1px solid var(--border-color); }
@@ -1045,20 +1047,16 @@
           <div class="unlocked-badge"><span class="check">✓</span> UNLOCKED</div>
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">The Opportunity</div>
-            <div class="data-item-value" style="font-size:17px;line-height:1.7;">Spenda is a <span class="highlight">bank-agnostic settlement layer</span> that turns cash, rewards, and bulk disbursements into spendable digital value at <span class="highlight">800,000+ retail locations</span>.</div>
+            <div class="data-item-value" style="font-size:17px;line-height:1.7;">Spenda is a <span class="highlight">bank-agnostic settlement layer</span> that turns cash, rewards, and bulk disbursements into spendable digital value, accepted at <span class="highlight">800,000+ retail locations</span> through partner QR networks.</div>
           </div>
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">The Problem in Numbers</div>
             <div class="data-item-value">
-              <div class="chart-panel">
-                <div class="chart-panel-title">Scale of the gap (% of market / population)</div>
-                <div class="allocation-bar-container chart-bar-container">
-                  <div class="allocation-row"><span class="allocation-label">Unbanked adults — locked out of digital payments</span><div class="allocation-track"><div class="allocation-fill" data-width="18" style="background:linear-gradient(90deg,#e04d4d,#ff6b6b);"></div></div><span class="allocation-pct">18%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Cash economy — zero merchant transaction data</span><div class="allocation-track"><div class="allocation-fill" data-width="88" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div><span class="allocation-pct">88%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Loyalty value — trapped in closed-loop silos</span><div class="allocation-track"><div class="allocation-fill" data-width="13" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">13%</span></div>
-                </div>
-                <p class="table-note">13% = rewards economy relative to cash economy scale. 18% = unbanked share of SA adults.</p>
-              </div>
+              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>The Gap</th><th>Scale</th><th>What It Means</th></tr></thead><tbody>
+                <tr><td>Unbanked adults</td><td class="cell-stat">11M+</td><td>Locked out of digital payments</td></tr>
+                <tr><td>Cash economy</td><td class="cell-stat">R150B/yr</td><td>Zero merchant transaction data</td></tr>
+                <tr><td>Loyalty value</td><td class="cell-stat">R20.1B</td><td>Trapped in closed-loop silos</td></tr>
+              </tbody></table></div>
             </div>
           </div>
         </div>
@@ -1078,7 +1076,7 @@
           <button class="action-btn" onclick="unlockSection(1)">View Business Model <span class="arrow">→</span></button>
         </div>
         <div class="terminal-output" id="terminal-1">
-          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> INITIATING B2B AND B2C ENGINES...<span class="cursor-blink"></span></div>
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> LOADING BUSINESS MODEL...<span class="cursor-blink"></span></div>
           <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> TWO ENGINES ONLINE — SHARED MERCHANT NETWORK ✓</div>
         </div>
         <div class="unlocked-content" id="unlocked-1">
@@ -1086,11 +1084,11 @@
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">Spenda at a Glance</div>
             <div class="data-item-value">
-              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Layer</th><th>Function</th><th>Users</th></tr></thead><tbody>
+              <div class="fin-table-scroll"><table class="fin-table wrap"><thead><tr><th>Layer</th><th>Function</th><th>Users</th></tr></thead><tbody>
                 <tr><td>Settlement Layer</td><td>Bank-agnostic fiat + voucher settlement</td><td>Both engines</td></tr>
                 <tr><td>B2C Wallet</td><td>Bills, utility vouchers, QR pay</td><td>Consumers (phone-linked)</td></tr>
                 <tr><td>B2B Bulk</td><td>Aid, payroll, incentive disbursements</td><td>NGOs &amp; corporates</td></tr>
-                <tr><td>Merchant QR Network</td><td>Shared acceptance at 800,000+ locations</td><td>All transactions</td></tr>
+                <tr><td>Merchant QR Network</td><td>Acceptance at 800,000+ locations via partner QR networks</td><td>All transactions</td></tr>
               </tbody></table></div>
             </div>
           </div>
@@ -1115,10 +1113,11 @@
                   <div class="allocation-row"><span class="allocation-label">White-label vouchers</span><div class="allocation-track"><div class="allocation-fill" data-width="15" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div><span class="allocation-pct">15%</span></div>
                   <div class="allocation-row"><span class="allocation-label">Merchant services</span><div class="allocation-track"><div class="allocation-fill" data-width="10" style="background:linear-gradient(90deg,#5c6bc0,#7986cb);"></div></div><span class="allocation-pct">10%</span></div>
                 </div>
-                <div class="allocation-bar-container chart-bar-container" style="margin-top:16px;">
-                  <div class="allocation-row"><span class="allocation-label">Take rate on settled volume</span><div class="allocation-track"><div class="allocation-fill" data-width="2" style="background:linear-gradient(90deg,var(--spenda-green),var(--spenda-purple-light));min-width:4px;"></div></div><span class="allocation-pct">~2%</span></div>
-                </div>
-                <p class="table-note">At full acquisition target, ~2% take rate on monthly volume.</p>
+                <div class="fin-table-scroll" style="margin-top:16px;"><table class="fin-table"><thead><tr><th>Revenue at Target</th><th>Value</th></tr></thead><tbody>
+                  <tr><td>Monthly volume at 16-month target</td><td class="cell-stat">R168M/mo</td></tr>
+                  <tr><td>Take rate on settled volume</td><td class="cell-stat">~2%</td></tr>
+                  <tr class="row-bold row-separator row-accent"><td>Gross transaction revenue</td><td class="cell-stat">~R3.4M/mo</td></tr>
+                </tbody></table></div>
               </div>
             </div>
           </div>
@@ -1147,34 +1146,19 @@
           <div class="data-item" data-reveal="0">
             <div class="data-item-label">Market Size</div>
             <div class="data-item-value">
-              <div class="chart-panel">
-                <div class="chart-panel-title">Market funnel — from wedge to capture target</div>
-                <div class="chart-funnel">
-                  <div class="chart-funnel-row">
-                    <div class="chart-funnel-label"><span class="chart-funnel-tier">TAM</span><span class="chart-funnel-desc">Rewards wedge</span></div>
-                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="100" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div>
-                    <span class="chart-funnel-pct">100%</span>
-                  </div>
-                  <div class="chart-funnel-row">
-                    <div class="chart-funnel-label"><span class="chart-funnel-tier">SAM</span><span class="chart-funnel-desc">Cash + disbursement</span></div>
-                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="72" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div>
-                    <span class="chart-funnel-pct">72%</span>
-                  </div>
-                  <div class="chart-funnel-row">
-                    <div class="chart-funnel-label"><span class="chart-funnel-tier">SOM</span><span class="chart-funnel-desc">16-mo goal</span></div>
-                    <div class="chart-funnel-track"><div class="chart-funnel-fill" data-width="12" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div>
-                    <span class="chart-funnel-pct">1.2%</span>
-                  </div>
-                </div>
-                <p style="margin-top:14px;font-size:16px;color:var(--text-secondary);">The <span class="highlight">rewards market</span> is our wedge; the <span class="highlight">cash economy</span> is our expansion path. SOM = year-1 capture as % of SAM.</p>
-              </div>
+              <div class="fin-table-scroll"><table class="fin-table wrap"><thead><tr><th>Stage</th><th>Size</th><th>What It Means</th></tr></thead><tbody>
+                <tr><td>Wedge — loyalty &amp; rewards</td><td class="cell-stat">R20.1B</td><td>SA rewards economy, 14% CAGR to 2030</td></tr>
+                <tr><td>Expansion — cash economy</td><td class="cell-stat">R150B/yr</td><td>Consumer cash spend + enterprise disbursement, 11M+ unbanked adults</td></tr>
+                <tr class="row-bold row-separator row-accent"><td>16-month target</td><td class="cell-stat">R168M/mo</td><td>~R2B/yr from 75 enterprise clients + 10,000 B2C wallets</td></tr>
+              </tbody></table></div>
+              <p class="table-note">The <span class="highlight">R20.1B rewards market</span> is our wedge; the <span class="highlight">R150B cash economy</span> is our expansion path.</p>
             </div>
           </div>
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">Product Suite</div>
             <div class="data-item-value">
-              <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Product</th><th>Status</th><th>What It Does</th></tr></thead><tbody>
-                <tr><td>Scan-to-Pay</td><td><span class="cell-status live">Live</span></td><td>QR payments at 800,000+ merchants</td></tr>
+              <div class="fin-table-scroll"><table class="fin-table wrap"><thead><tr><th>Product</th><th>Status</th><th>What It Does</th></tr></thead><tbody>
+                <tr><td>Scan-to-Pay</td><td><span class="cell-status live">Live</span></td><td>QR payments at 800,000+ partner-network locations</td></tr>
                 <tr><td>Voucher Sales API</td><td><span class="cell-status live">Live</span></td><td>Bulk NGO/corporate disbursements</td></tr>
                 <tr><td>Merchant QR</td><td><span class="cell-status live">Live</span></td><td>Zero-hardware onboarding, tipping, split pay</td></tr>
                 <tr><td>E-commerce &amp; BNPL</td><td><span class="cell-status roadmap">Roadmap</span></td><td>Behavioural credit on essential spend</td></tr>
@@ -1221,7 +1205,7 @@
             <div class="data-item-label">Traction to Date</div>
             <div class="data-item-value">
               <div class="fin-table-scroll"><table class="fin-table"><thead><tr><th>Proof Point</th><th>Detail</th></tr></thead><tbody>
-                <tr><td>Net settled volume</td><td class="cell-stat">Proven payment network</td></tr>
+                <tr><td>Net settled volume to date</td><td class="cell-stat">R926,473</td></tr>
                 <tr><td>App installs</td><td>20,000+</td></tr>
                 <tr><td>Awards</td><td>Standard Chartered FinTech, M&amp;G Top Financial Services</td></tr>
                 <tr><td>Social impact</td><td>4 UN SDGs, 800+ literacy participants</td></tr>
@@ -1229,9 +1213,9 @@
               <div class="chart-panel" style="margin-top:16px;">
                 <div class="chart-panel-title">Channel volume mix (% of settled volume)</div>
                 <div class="allocation-bar-container chart-bar-container">
-                  <div class="allocation-row"><span class="allocation-label">Consumer App</span><div class="allocation-track"><div class="allocation-fill" data-width="76" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">76%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Legacy Web / Voucher POC</span><div class="allocation-track"><div class="allocation-fill" data-width="21" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">21%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">B2B Pre-Market MVP</span><div class="allocation-track"><div class="allocation-fill" data-width="3" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));min-width:4px;"></div></div><span class="allocation-pct">3%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">Consumer App — R703,556</span><div class="allocation-track"><div class="allocation-fill" data-width="76" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">76%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">Legacy Web / Voucher POC — R194,076</span><div class="allocation-track"><div class="allocation-fill" data-width="21" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">21%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">B2B Pre-Market MVP — R28,840</span><div class="allocation-track"><div class="allocation-fill" data-width="3" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));min-width:4px;"></div></div><span class="allocation-pct">3%</span></div>
                 </div>
               </div>
               <div class="merchant-logos-strip" style="margin-top:16px;">
@@ -1245,19 +1229,16 @@
           <div class="data-item" data-reveal="1">
             <div class="data-item-label">The Bridge: Today → Scale</div>
             <div class="data-item-value">
-              <div class="chart-panel">
-                <div class="chart-panel-title">Volume growth path (% of scale target)</div>
-                <div class="allocation-bar-container chart-bar-container">
-                  <div class="allocation-row"><span class="allocation-label">Today — proven network</span><div class="allocation-track"><div class="allocation-fill" data-width="0.6" style="background:linear-gradient(90deg,#5c6bc0,#7986cb);min-width:4px;"></div></div><span class="allocation-pct">0.6%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Post-raise — acquisition phase</span><div class="allocation-track"><div class="allocation-fill" data-width="1.5" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));min-width:6px;"></div></div><span class="allocation-pct">1.5%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">At scale — 16-month target</span><div class="allocation-track"><div class="allocation-fill" data-width="100" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">100%</span></div>
-                </div>
-              </div>
+              <div class="fin-table-scroll"><table class="fin-table wrap"><thead><tr><th>Stage</th><th>Volume</th><th>What It Shows</th></tr></thead><tbody>
+                <tr><td>Today</td><td class="cell-stat">R926K settled to date</td><td>Proven payment network, 20,000+ installs</td></tr>
+                <tr><td>Next 16 months</td><td>Funded acquisition</td><td>75 enterprise clients, 7,500 merchants, 10,000 wallets</td></tr>
+                <tr class="row-bold row-separator row-accent"><td>16-month target</td><td class="cell-stat">R168M/mo</td><td>~R3.4M/mo gross revenue at ~2% take rate</td></tr>
+              </tbody></table></div>
               <div class="chart-panel" style="margin-top:16px;">
                 <div class="chart-panel-title">At-scale volume mix (% of monthly volume)</div>
                 <div class="allocation-bar-container chart-bar-container">
-                  <div class="allocation-row"><span class="allocation-label">Enterprise clients (75)</span><div class="allocation-track"><div class="allocation-fill" data-width="89" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">89%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">B2C users (10,000)</span><div class="allocation-track"><div class="allocation-fill" data-width="11" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">11%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">Enterprise clients (75) — R150M/mo</span><div class="allocation-track"><div class="allocation-fill" data-width="89" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">89%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">B2C users (10,000) — R18M/mo</span><div class="allocation-track"><div class="allocation-fill" data-width="11" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">11%</span></div>
                 </div>
               </div>
             </div>
@@ -1269,7 +1250,7 @@
                 <div class="chart-panel-title">How we spend on growth</div>
                 <div class="allocation-bar-container chart-bar-container">
                   <div class="allocation-row"><span class="allocation-label">Enterprise clients — 75 @ R10K CAC</span><div class="allocation-track"><div class="allocation-fill" data-width="30" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">30%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Merchants — 7,500 @ R100 CAC</span><div class="allocation-track"><div class="allocation-fill" data-width="30" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">30%</span></div>
+                  <div class="allocation-row"><span class="allocation-label">Merchants onboarded directly — 7,500 @ R100 CAC</span><div class="allocation-track"><div class="allocation-fill" data-width="30" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">30%</span></div>
                   <div class="allocation-row"><span class="allocation-label">B2C wallets — 10,000 @ R100 CAC</span><div class="allocation-track"><div class="allocation-fill" data-width="40" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div><span class="allocation-pct">40%</span></div>
                 </div>
               </div>
@@ -1292,7 +1273,7 @@
           <button class="action-btn" onclick="unlockSection(4)">View Terms <span class="arrow">→</span></button>
         </div>
         <div class="terminal-output" id="terminal-4">
-          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> BIOMETRICS CONFIRMED.<span class="cursor-blink"></span></div>
+          <div class="terminal-line" data-line="0"><span class="prompt">&gt;</span> LOADING TERMS...<span class="cursor-blink"></span></div>
           <div class="terminal-line success" data-line="1"><span class="prompt">&gt;</span> R100M VALUATION CAP LOCKED. 15% DISCOUNT APPLIED. ✓</div>
         </div>
         <div class="unlocked-content" id="unlocked-4">
@@ -1360,15 +1341,10 @@
           <div class="data-item" data-reveal="3">
             <div class="data-item-label">Deal Summary</div>
             <div class="data-item-value">
-              <div class="chart-panel">
-                <div class="chart-panel-title">Investment thesis — weight by priority</div>
-                <div class="allocation-bar-container chart-bar-container">
-                  <div class="allocation-row"><span class="allocation-label">Dual-engine model (B2C + B2B)</span><div class="allocation-track"><div class="allocation-fill" data-width="30" style="background:linear-gradient(90deg,var(--spenda-purple),var(--spenda-purple-light));"></div></div><span class="allocation-pct">30%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Acquisition → 75 enterprise, 7.5K merchants, 10K B2C</span><div class="allocation-track"><div class="allocation-fill" data-width="23" style="background:linear-gradient(90deg,var(--spenda-green),#66bb6a);"></div></div><span class="allocation-pct">23%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">Funded path to scale in 16 months</span><div class="allocation-track"><div class="allocation-fill" data-width="36" style="background:linear-gradient(90deg,var(--spenda-purple-dim),var(--spenda-purple));"></div></div><span class="allocation-pct">36%</span></div>
-                  <div class="allocation-row"><span class="allocation-label">SA dominance → UAE + Africa expansion</span><div class="allocation-track"><div class="allocation-fill" data-width="11" style="background:linear-gradient(90deg,#5c6bc0,#7986cb);"></div></div><span class="allocation-pct">11%</span></div>
-                </div>
-              </div>
+              <div class="milestone-row"><span class="milestone-marker">1</span><div class="milestone-text">Two engines, one network: a consumer wallet and B2B disbursements on shared QR acceptance.</div></div>
+              <div class="milestone-row"><span class="milestone-marker">2</span><div class="milestone-text">Funded acquisition of 75 enterprise clients, 7,500 merchants and 10,000 wallets.</div></div>
+              <div class="milestone-row"><span class="milestone-marker">3</span><div class="milestone-text">A funded path to <span class="highlight">R168M/mo</span> in volume within 16 months.</div></div>
+              <div class="milestone-row"><span class="milestone-marker">4</span><div class="milestone-text">South Africa first, then the UAE and the rest of Africa.</div></div>
             </div>
           </div>
         </div>
@@ -1389,19 +1365,19 @@
     <div class="game-section" id="game-section">
       <div class="game-header">
         <h3>BONUS ROUND: SPACE INVADERS</h3>
-        <p>Earn up to <strong style="color:var(--spenda-green)">3% equity discount</strong> before negotiations. Clear each level to chip away at your discount. Think you can conquer all 5?</p>
+        <p>Just for fun, with no terms attached. Clear all 5 levels for bragging rights at your meeting.</p>
       </div>
       <div class="game-hud">
         <span class="hud-lives" id="hud-lives">LIVES: 3</span>
         <span class="hud-score" id="hud-score">SCORE: 0</span>
         <span class="hud-level" id="hud-level">LEVEL 1 / 5</span>
-        <span class="hud-discount" id="hud-discount">DISCOUNT: 0%</span>
+        <span class="hud-discount" id="hud-discount">CLEARED: 0 / 5</span>
       </div>
       <div class="game-arena">
         <canvas id="game-canvas" width="600" height="500"></canvas>
         <div class="game-overlay" id="game-overlay">
           <h4 id="overlay-title">READY TO PLAY?</h4>
-          <p id="overlay-text">Destroy the alien fleet to earn your equity discount. Use arrow keys to move, spacebar to fire.</p>
+          <p id="overlay-text">Destroy the alien fleet. Use arrow keys to move, spacebar to fire.</p>
           <button class="game-btn" id="overlay-btn" onclick="startGame()">Launch Game</button>
         </div>
       </div>
@@ -1411,10 +1387,9 @@
         <button class="touch-btn" id="touch-right" aria-label="Move right">&rarr;</button>
       </div>
       <div class="game-result" id="game-result">
-        <div class="discount-earned" id="result-discount">0% DISCOUNT</div>
+        <div class="discount-earned" id="result-discount">0 / 5 LEVELS CLEARED</div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--spenda-purple-light);letter-spacing:1px;margin-bottom:8px;" id="result-score">SCORE: 0</div>
-        <div class="discount-code" id="result-code">SPENDA-INVADER-0</div>
-        <p id="result-text">Present this code at your investor meeting.</p>
+        <p id="result-text">Thanks for playing.</p>
         <button class="cta-btn" id="result-cta" onclick="window.location.href='mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=Investor%20Meeting%20Request%20%E2%80%94%20Spenda%20Holdings'">
           Request a Meeting →
         </button>
@@ -1576,7 +1551,7 @@
     }
 
     /* ═══════════════════════════════════════════════════
-       SPACE INVADERS — EQUITY DISCOUNT GAME
+       SPACE INVADERS — BONUS GAME
        ═══════════════════════════════════════════════════ */
 
     const LEVELS = [
@@ -1586,18 +1561,6 @@
       { rows: 5, cols: 9,  speed: 1.1,  lives: 2, alienFireRate: 1000, maxBullets: 3, dropStep: 20, bulletSpeed: 4.2, diveBombers: true,  zigzag: true,  diveChance: 0.006, speedBoost: 3.0 },
       { rows: 6, cols: 9,  speed: 1.35, lives: 2, alienFireRate: 750,  maxBullets: 3, dropStep: 22, bulletSpeed: 4.8, diveBombers: true,  zigzag: true,  diveChance: 0.008, speedBoost: 3.5 }
     ];
-
-    const LEVEL_REWARDS = [0.5, 0.5, 0.5, 0.75, 0.75];
-    const _SALT = 'SP3NDA-2026-EQUITY';
-
-    function _genVerifyCode(discount, score, levelsCleared) {
-      const raw = _SALT + ':' + discount.toFixed(2) + ':' + score + ':' + levelsCleared;
-      let h = 0;
-      for (let i = 0; i < raw.length; i++) {
-        h = ((h << 5) - h + raw.charCodeAt(i)) | 0;
-      }
-      return Math.abs(h).toString(36).toUpperCase().slice(0, 6);
-    }
 
     let game = null;
 
@@ -1648,7 +1611,6 @@
         this.W = canvas.width;
         this.H = canvas.height;
         this.level = 0;
-        this._discount = 0;
         this._levelsCleared = 0;
         this._levelFlags = Array(5).fill(false);
         this.score = 0;
@@ -1739,23 +1701,12 @@
         this._updateHUD();
       }
 
-      _getDiscount() {
-        let valid = 0;
-        for (let i = 0; i < 7; i++) {
-          if (this._levelFlags[i]) valid += LEVEL_REWARDS[i];
-        }
-        return Math.min(3, Math.round(valid * 100) / 100);
-      }
-
-      _fmtDisc(d) { return d % 1 ? d.toFixed(2) : String(d); }
-
       _updateHUD() {
-        const d = this._getDiscount();
         const hearts = Array(this.lives).fill('\u2764').join(' ');
         document.getElementById('hud-lives').textContent = 'LIVES: ' + hearts;
         document.getElementById('hud-score').textContent = 'SCORE: ' + this.score;
         document.getElementById('hud-level').textContent = 'LEVEL ' + (this.level + 1) + ' / 5';
-        document.getElementById('hud-discount').textContent = 'DISCOUNT: ' + this._fmtDisc(d) + '%';
+        document.getElementById('hud-discount').textContent = 'CLEARED: ' + this._levelsCleared + ' / 5';
       }
 
       _spawnParticles(x, y, color, count) {
@@ -1905,7 +1856,6 @@
         this._levelFlags[this.level] = true;
         this._levelsCleared++;
         this._updateHUD();
-        const d = this._getDiscount();
         if (this.level >= 4) {
           setTimeout(() => this._endGame(true), 800);
           return;
@@ -1915,7 +1865,7 @@
         const text = document.getElementById('overlay-text');
         const btn = document.getElementById('overlay-btn');
         title.textContent = 'LEVEL ' + (this.level + 1) + ' CLEARED!';
-        text.textContent = 'Score: ' + this.score.toLocaleString() + ' — ' + this._fmtDisc(d) + '% discount earned. Ready for Level ' + (this.level + 2) + '?';
+        text.textContent = 'Score: ' + this.score.toLocaleString() + '. Ready for Level ' + (this.level + 2) + '?';
         btn.textContent = 'Next Level';
         btn.onclick = () => {
           overlay.classList.add('hidden');
@@ -1929,32 +1879,17 @@
         this.gameOver = true;
         this.running = false;
         if (this.rafId) cancelAnimationFrame(this.rafId);
-        const d = this._getDiscount();
         const result = document.getElementById('game-result');
-        const discEl = document.getElementById('result-discount');
-        const codeEl = document.getElementById('result-code');
+        const clearedEl = document.getElementById('result-discount');
         const textEl = document.getElementById('result-text');
-        const ctaEl = document.getElementById('result-cta');
         document.getElementById('result-score').textContent = 'SCORE: ' + this.score.toLocaleString();
-        const dFmt = this._fmtDisc(d);
-        if (d > 0) {
-          const hash = _genVerifyCode(d, this.score, this._levelsCleared);
-          const verifiedCode = 'SPENDA-' + dFmt + 'PCT-' + hash;
-          discEl.textContent = dFmt + '% EQUITY DISCOUNT';
-          codeEl.textContent = verifiedCode;
-          if (won) {
-            textEl.textContent = 'Incredible. You conquered all 5 levels and earned the maximum 3% discount. Present this verified code at your meeting.';
-          } else {
-            textEl.textContent = 'You earned ' + dFmt + '% discount. Present this verified code at your investor meeting.';
-          }
-          const subject = encodeURIComponent('Investor Meeting Request — Spenda Holdings — ' + dFmt + '% Discount [' + verifiedCode + ']');
-          ctaEl.onclick = () => {
-            window.location.href = 'mailto:sashen@spenda-sa.com?cc=merishka@spenda-sa.com,siboniso@spenda-sa.com&subject=' + subject;
-          };
+        clearedEl.textContent = this._levelsCleared + ' / 5 LEVELS CLEARED';
+        if (won) {
+          textEl.textContent = 'Incredible. You cleared all 5 levels. Tell us your score when we meet.';
+        } else if (this._levelsCleared > 0) {
+          textEl.textContent = 'Nice run. Reload to have another go, or request a meeting below.';
         } else {
-          discEl.textContent = 'NO DISCOUNT';
-          codeEl.textContent = 'TRY AGAIN';
-          textEl.textContent = 'No levels cleared. Request a meeting to discuss standard terms — or reload to try again.';
+          textEl.textContent = 'No levels cleared this time. Reload to try again.';
         }
         document.getElementById('game-overlay').classList.add('hidden');
         result.classList.add('visible');
@@ -2011,7 +1946,6 @@
       start() {
         this.running = true;
         this.gameOver = false;
-        this._discount = 0;
         this._levelsCleared = 0;
         this._levelFlags = Array(5).fill(false);
         this.score = 0;
